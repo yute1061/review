@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\ReviewController;
+Route::controller(ReviewController::class)->group(function() {
+    Route::get('post_review/create', 'add');
+    Route::post('post_review/create', 'create');
+    Route::get('post_review/edit', 'edit');
+    Route::post('pot_review/edit', 'update');
+    Route::get('post_review/delete', 'delete');
+    
+    Route::get('top', 'index');
+});
