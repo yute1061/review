@@ -45,6 +45,18 @@
         </tbody>
     </table>
     
+    <table border="0" width="100%" style="height: auto !important;">
+        <tbody>
+            <tr style="height: auto !important;">
+                <td width="100%" valign="top" class="contentbox" style="padding: 10px 0px 0px; height: auto !important;">
+                    <div class="content" style="height: auto !important;">
+                        <table width="100%" cellpadding="0" cellspacing="0" align="center" style="height: auto !important;">
+                            <tbody>
+                                <tr style="height: auto !important;">
+                                    <td style="min-width: 805px; height: auto !important;" class="centercolumn" valign="top" colspan="2">
+                                        <div class="centercolumn" style="height: auto !important;">
+    
+    
     
     <h1>トップページ</h1>
 @endsection
