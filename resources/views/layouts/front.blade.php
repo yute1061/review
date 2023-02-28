@@ -25,7 +25,7 @@
         {{-- この章の後半で作成するCSSを読み込みます --}}
         <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
     </head>
-    <body>
+    <body id="pagetop">
         <div>
             
             <nav>

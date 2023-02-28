@@ -33,9 +33,6 @@
     </tr>
     </tbody></table>
     
-    
-    
-    
     <table border="0" width="100%" style="height: auto !important;">
     <tbody><tr style="height: auto !important;">
     <td width="100%" valign="top" class="contentbox" style="padding: 10px 0px 0px; height: auto !important;">
@@ -691,3 +688,13 @@
 
 
 <iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.2b2d73daf636805223fb11d48f3e94f7.html?origin=https%3A%2F%2Fcbnanashi.net" title="Twitter settings iframe" style="display: none;"></iframe><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__uspapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__gppLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body>
+
+<td align="left" style="padding:20px 0px 20px 10px;color: #ffffff;">
+<form style="margin-top: 0px;" action="https://cbnanashi.net/cycle/user.php" method="post">
+    <input type="text" name="uname" placeholder="ID" size="15" maxlength="35">&nbsp;
+    <input type="password" name="pass" placeholder="Password" size="15" maxlength="35">
+    <input type="hidden" name="xoops_redirect" value="/cycle/">
+    <input type="hidden" name="op" value="login">
+    <input type="submit" value="LOGIN">
+</form>
+</td>
