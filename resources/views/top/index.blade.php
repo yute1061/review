@@ -3,7 +3,6 @@
 @section('title', 'トップページ') {{--サイト名--}}
 
 @section('content')
-<body id="pagetop">
     <table cellspacing="0" cellpadding="0" width="100%" border="0" style="background-color:#6bb08e;">
         <tbody>
             <tr>
@@ -55,6 +54,25 @@
                                 <tr style="height: auto !important;">
                                     <td style="min-width: 805px; height: auto !important;" class="centercolumn" valign="top" colspan="2">
                                         <div class="centercolumn" style="height: auto !important;">
+                                            <div style="height: auto !important;">
+                                                <div class="pico_body pico_block_content" style="height: auto !important;">
+                                                    <img src="https://cbnanashi.net/cycle/img_top/spacer.gif" id="id7826578083256153">
+                                                    <br>
+                                                    <table cellpadding="10" width="" style="height: auto !important;">
+                                                        <tbody>
+                                                            <tr style="height: auto !important;">
+                                                                <td valign="top">
+                                                                    <div class="request">
+                                                                        <h2><b>CBN 2月のイベント</b></h2>
+                                                                        <br><br>
+                                                                        CBNは2月も月間イベントを実施します。今月は全投稿を対象とし、有益で参考度が高い投稿・おもしろい投稿をされた方の中から3名様（最大）にamazonギフト券各1,000円分を贈呈します。発表は3月初旬、
+                                                                        <a href="https://twitter.com/cbnanashi" target="_blank"><font color="#6c85b1">CBN Twitter</font></a>にて行います。
+                                                                        <br><br>
+                                                                        サイクリング旅行の手配は <a href="http://hb.afl.rakuten.co.jp/hgc/11a620f4.f00b9017.11a620f5.c5a25bf5/?pc=http%3a%2f%2ftravel.rakuten.co.jp%2f%3fscid%3daf_link_urltxt&amp;m=http%3a%2f%2fm.travel.rakuten.co.jp%2fportal%2fi%2fi_top.main" target="_blank" rel="nofollow"><font color="#6c85b1">楽天トラベル</font></a> が便利。
+    <br><br>
+    
+    
+    
     
     
     
