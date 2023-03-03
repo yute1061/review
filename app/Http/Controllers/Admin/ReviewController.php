@@ -35,6 +35,6 @@ class ReviewController extends Controller
     
     public function index()
     {
-        return view('admin.top.index');
+        return view('admin.post_review.create');
     }
 }

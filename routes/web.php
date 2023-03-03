@@ -29,9 +29,20 @@ Route::controller(ReviewController::class)->prefix('admin')->name('admin.')->mid
 
 use App\Http\Controllers\Admin\UserController;
 Route::controller(UserController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
-    Route::get('User/create', 'add');
-    Route::
+    Route::get('user/create', 'add');
+    Route::post('user/create', 'create');
+    Route::get('user/edit', 'edit');
+    Route::post('user/edit', 'update');
+    Route::get('user/delete', 'delete');
 });
+
+use App\Http\Controllers\Admin\NavController;
+Route::controller(NavController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+    Route::get('toppage', 'toppage');
+    Route::get('guideline', 'guideline');
+    Route::get('about', 'about');
+});
+
 
 //-------- admin ここまで --------
 
