@@ -13,9 +13,9 @@ class UserController extends Controller
         return view('admin.user.create');
     }
     
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.user.create');
+        return redirect('admin.user.create');
     }
     
     public function edit()

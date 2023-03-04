@@ -1,0 +1,24 @@
+.head2011a {
+    background-color: #6c85b1;
+    padding: 7px 10px;
+    font-weight: normal;
+    color: #fff;
+    white-space: nowrap;
+    width: 150px;
+}
+
+.head2011b {
+    background-color: #F8F8FF;
+    padding: 7px 10px;
+    font-weight: normal;
+    color: #333;
+}
+
+.career {
+    display: flex;
+}
+
+.register_table {
+    display: flex; 
+    justify-content: center; 
+}

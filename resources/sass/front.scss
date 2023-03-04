@@ -1,67 +1,165 @@
-body {
-    color: #000;
+h1{
+	font-size: 50px;
+	font-weight: bold;
 }
 
-.navbar-laravel {
-    background-color: #000;
+h2{
+	font-size: 32px;
+	font-weight: bold;
 }
 
-.header {
-    .logo {
-        width: 120px;
-        height: 82px;
-    }
+h3{
+	font-size: 27px;
 }
 
-.headline {
-    .caption {
-        position: relative;
-        width: 350px;
-        .image {
-            img {
-        width: 100%
-            }
-        }
-        
-        .title {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-              left: 0;
-              background-color: rgba(0, 0, 0, 0.6);
-              h1 {
-        color: #fff;
-        font-size: 1.2em;
-              }       
-            }
-        
-        .body {
-            font-size: 0.8em;
-        }
-    }
+h4{
+	font-size: 20px;
 }
 
-.posts {
-    .post {
-        .date {
-            font-size: 0.6em;
-            color: #999999;
-        }
-        
-        .title {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        
-        .body {
-            font-size: 0.8em;
-        }
-        
-        .image {
-            img {
-        width: 250px;
-            }
-        }
-    }
+header{
+	background: #6c85b1;
+	padding: 10px;
 }
-            
+
+header .logo_wrap{
+	background: #6c85b1;
+	display: flex;
+	justify-content: space-between;
+}
+
+header .logo{
+	width: 300px;
+	height: 70px;
+	margin: 10px;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .banner{
+	width: 500px;
+	margin: 10px;
+	background: #fff;
+}
+
+header .sightmap{
+	background: #6c85b1;
+	padding: 20px 0 0 0;
+	display: flex; 
+	justify-content: space-evenly;
+	margin: 10px 0 0 0;
+}
+
+.wrap{
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.title{
+	text-align: center;
+	color: #fff;
+	background: #6c85b1;
+}
+
+.new_review{
+	margin-top: 10px;
+}
+
+.new_review_frame{
+	height: 200px; 
+	margin-bottom: 10px; 
+	border: 1px solid #333333;
+}
+
+.left_new_review{
+	width: 540px;
+	margin-left: 10px;
+	float: left;
+}
+
+.right_new_review{
+	width: 540px;
+	margin-left: 10px;
+	float: left;
+}
+
+.banner2{
+	padding: 10px;
+	background: #006400;
+	height: 100px;
+	width: 500px;
+	margin-bottom: 10px; 
+}
+
+.category_equipment{
+	margin-bottom: 180px; 
+}
+
+.left_category_equipment{
+	width: 350px;
+	margin-left: 10px;
+	float: left;
+}
+
+.center_category_equipment{
+	width: 350px;
+	margin-left: 10px;
+	float: left;
+}
+
+.right_category_equipment{
+	width: 350px;
+	margin-left: 10px;
+	float: left;
+}
+
+.category_not_equipment{
+	margin-bottom: 100px; 
+}
+
+.category_not_equipment:after{
+	clear: both;
+  	display: block;
+  	content: " ";
+}
+
+.category_wear{
+	width: 290px;
+	float: left;
+	margin-right: 10px;
+}
+
+.category_gear{
+	width: 290px;
+	float: left;
+	margin-right: 10px;
+}
+
+.category_tool{
+	width: 500px;
+	float: left;
+}
+
+.left_category_tool{
+	width: 240px;
+	margin-left: 10px;
+	float: left;
+}
+
+.right_category_tool{
+	width: 240px;
+	margin-left: 10px;
+	float: left;
+}
+
+footer{
+	color: #fff;
+	background: #6c85b1;
+	text-align: center;
+	padding: 10px 0 30px 0;
+}

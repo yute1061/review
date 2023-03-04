@@ -1,34 +1,8 @@
-@extends('layouts.toppage')
+@extends('layouts.front')
 
 @section('title', 'トップページ')
 
 @section('content')
-    <header class="wrap">
-		<form style="margin-top: 0px;" action="https://cbnanashi.net/cycle/user.php" method="post">
-		    <input type="text" name="uname" placeholder="ID" size="15" maxlength="35">&nbsp;
-		    <input type="password" name="pass" placeholder="Password" size="15" maxlength="35">
-		    <input type="hidden" name="xoops_redirect" value="/cycle/">
-		    <input type="hidden" name="op" value="login">
-		    <input type="submit" value="LOGIN">
-		</form>
-		<div class="logo_wrap">
-			<div class="logo">
-				<h1>tb Bike Product Review</h1>
-			</div>
-			<div class="banner">
-				<a href="#">banner</a>
-			</div>
-		</div>
-		<nav>
-			<ul class="sightmap">
-				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/toppage#">トップ</a></li>
-				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/post_review/create#">レビュー投稿</a></li>
-				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/user/create#">ユーザー登録</a></li>
-				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/guideline#">投稿ガイドライン</a></li>
-				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/about#">当サイトについて</a></li>
-			</ul>
-		</nav>
-	</header>
 	<div class="wrap new_review">
 		<div class="new_review_frame">
 			<div class="title">
@@ -141,9 +115,4 @@
 			</div>
 		</div>
 	</div>
-	<footer class="wrap">
-		<p>tech boost Bike Product Review は自転車レビューサイトです</p>
-		<p>自転車に関係のある様々な事物についてお気軽にご投稿下さい</p><br><br><br>
-		<p>当サイト内の全ての画像および文章の無断転載を禁じます</p>
-	</footer>
 @endsection

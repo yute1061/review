@@ -1,9 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/toppage.css": "/css/toppage.css",
+    "/css/user.css": "/css/user.css",
     "/css/reset.css": "/css/reset.css",
     "/css/front.css": "/css/front.css",
-    "/css/admin.css": "/css/admin.css",
-    "/css/user.css": "/css/user.css"
+    "/css/admin.css": "/css/admin.css"
 }

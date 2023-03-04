@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>toppage</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="front.css">
+		<link rel="stylesheet" href="user.css">
+	</head>
+	<body>
+		<header class="wrap">
+    		<form style="margin-top: 0px;" action="https://cbnanashi.net/cycle/user.php" method="post">
+    		    <input type="text" name="uname" placeholder="ID" size="15" maxlength="35">&nbsp;
+    		    <input type="password" name="pass" placeholder="Password" size="15" maxlength="35">
+    		    <input type="hidden" name="xoops_redirect" value="/cycle/">
+    		    <input type="hidden" name="op" value="login">
+    		    <input type="submit" value="LOGIN">
+    		</form>
+    		<div class="logo_wrap">
+    			<div class="logo">
+    				<h4>tb Bike Product Review</h4>
+    			</div>
+    			<div class="banner">
+    				<a href="#">banner</a>
+    			</div>
+    		</div>
+    		<nav>
+    			<ul class="sightmap">
+    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/toppage#">トップ</a></li>
+    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/post_review/create#">レビュー投稿</a></li>
+    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/user/create#">ユーザー登録</a></li>
+    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/guideline#">投稿ガイドライン</a></li>
+    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/about#">当サイトについて</a></li>
+    			</ul>
+    		</nav>
+	    </header>
+	    <main>
+	    	<div class="wrap"><br>
+		        <h2 style="text-align: center;">tech boost Bike Product Reviewへようこそ！</h2><br>
+		        <p style="text-align: center;">レビュー投稿される前に</p>
+		        <p style="text-align: center;">以下からユーザー登録を行ってください</p><br>
+		        <table class="register_table" border="1">
+	                <form action="{{ route('admin.user.create') }}" method="post" enctype="multipart/form-data">
+	                	<tr>
+	                        <td class="head2011a">
+	                        	<label class="col-md-2">ユーザー名（id）</label>
+	                        </td>
+	                        <td class="head2011b">
+	                        	<div class="col-md-4">
+	                            	<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+	                        	</div>
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td class="head2011a">
+	                        	<label class="col-md-2">パスワード</label>
+	                        </td>
+	                        <td class="head2011b">
+	                        	<div class="col-md-4">
+	                            	<input type="text" class="form-control" name="pass" value="{{ old('pass') }}">
+	                        	</div>
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                    	<td class="head2011a">
+	                        	<label class="col-md-2">性別</label>
+	                        </td>
+	                        <td class="head2011b">
+		                        <div class="col-md-10">
+		                            <label><input type="radio" class="radio" name="gender" value="男">男性</label>
+		                            <label><input type="radio" class="radio" name="gender" value="女">女性</label>
+		                        </div>
+		                    </td>
+		               	</tr>
+	                    <tr>
+	                    	<td class="head2011a">
+	                        	<label class="col-md-2">年齢</label>
+	                        </td>
+	                        <td class="head2011b">
+	                        	<div class="career">
+		                        	<div class="col-md-1">
+		                            	<input type="text" class="form-control" name="hobby" value="{{ old('hobby') }}">
+		                        	</div>
+		                        	<p>歳</p>
+		                        </div>
+	                        </td>
+                      	</tr>
+	                    <tr>
+	                    	<td class="head2011a">
+	                        	<label class="col-md-2">自転車歴</label>
+	                        </td>
+	                        <td class="head2011b">
+		                        <div class="career">
+			                        <div class="col-md-1">
+			                            <input type="text" class="form-control" name="career" value="{{ old('career') }}">
+			                        </div>
+			                        <p>年</p>
+			                    </div>
+		                    </td>
+	                  	</tr>
+	                    <tr>
+	                    	<td class="head2011a">
+	                        	<label class="col-md-2">主なライドスタイル</label>
+	                        </td>
+	                        <td class="head2011b">
+	                        	<div class="col-md-10">
+		                            <label><input type="radio" class="radio" name="ridestyle" value="race">レース</label>
+		                            <label><input type="radio" class="radio" name="ridestyle" value="brevet">ブルベ・ロングライド</label>
+		                            <label><input type="radio" class="radio" name="ridestyle" value="city">街乗り</label>
+		                            <label><input type="radio" class="radio" name="ridestyle" value="puttering">ポタリング</label>
+		                            <label><input type="radio" class="radio" name="ridestyle" value="other">その他</label>
+		                        </div>
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                    	<td>
+	                    		<input type="submit" class="btn btn-primary" value="登録">
+	                    	</td>
+	                    </tr>
+	                </form>
+            	</table>
+            	<br>
+		    </div>
+	    </main>
+	    <footer class="wrap">
+    		<p>tech boost Bike Product Review は自転車レビューサイトです</p>
+    		<p>自転車に関係のある様々な事物についてお気軽にご投稿下さい</p><br><br><br>
+    		<p>当サイト内の全ての画像および文章の無断転載を禁じます</p>
+   		</footer>
+	</body>
+</html>

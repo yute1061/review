@@ -16,6 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/admin.scss', 'public/css')
     .sass('resources/sass/front.scss', 'public/css')
     .sass('resources/sass/reset.scss', 'public/css')
-    .sass('resources/sass/toppage.scss', 'public/css')
     .sass('resources/sass/user.scss', 'public/css')
     .sourceMaps();

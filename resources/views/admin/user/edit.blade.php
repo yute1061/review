@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.front')
 
 @section('title', 'ユーザーの編集')
 
