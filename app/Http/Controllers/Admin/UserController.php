@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Register;
+
 class UserController extends Controller
 {
     //
@@ -14,8 +16,21 @@ class UserController extends Controller
     }
     
     public function create(Request $request)
-    {
-        return redirect('admin.user.create');
+    {   
+        //Validationを行う
+        $this->validate($request, Register::$rules);
+        
+        $register = new Register;
+        $form = $request->all();
+        
+        //token削除
+        unset($form['_token']);
+        
+        //データベースに保存
+        $register->fill($form);
+        $register->save();
+        
+        return redirect('admin/user/create');
     }
     
     public function edit()

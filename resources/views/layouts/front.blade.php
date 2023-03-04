@@ -25,7 +25,7 @@
         
 		<link href="{{ secure_asset('css/reset.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
-		<link rel="stylesheet" href="user.css">
+		<link href="{{ secure_asset('css/user.css') }}" rel="stylesheet">
 		
     </head>
     <body id="pagetop">

@@ -41,6 +41,13 @@
 		        <p style="text-align: center;">以下からユーザー登録を行ってください</p><br>
 		        <table class="register_table" border="1">
 	                <form action="{{ route('admin.user.create') }}" method="post" enctype="multipart/form-data">
+		                @if (count($errors) > 0)
+	                        <ul>
+	                            @foreach($errors->all() as $e)
+	                                <li>{{ $e }}</li>
+	                            @endforeach
+	                        </ul>
+	                    @endif
 	                	<tr>
 	                        <td class="head2011a">
 	                        	<label class="col-md-2">ユーザー名（id）</label>
@@ -79,7 +86,7 @@
 	                        <td class="head2011b">
 	                        	<div class="career">
 		                        	<div class="col-md-1">
-		                            	<input type="text" class="form-control" name="hobby" value="{{ old('hobby') }}">
+		                            	<input type="text" class="form-control" name="age" value="{{ old('age') }}">
 		                        	</div>
 		                        	<p>歳</p>
 		                        </div>
