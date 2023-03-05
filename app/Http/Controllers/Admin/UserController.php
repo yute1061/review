@@ -30,7 +30,7 @@ class UserController extends Controller
         $register->fill($form);
         $register->save();
         
-        return redirect('admin/user/create');
+        return redirect('admin/user/mypage');
     }
     
     public function edit()
@@ -47,4 +47,11 @@ class UserController extends Controller
     {
         return view('admin.user.create');
     }
+    
+    public function mypage_index(Request $request)
+    {  
+        $posts = Register::all()->sortByDesc('created_at')->first();
+        
+        return view('admin.user.mypage', ['posts' => $posts]);
+    }      
 }

@@ -34,6 +34,7 @@ Route::controller(UserController::class)->prefix('admin')->name('admin.')->middl
     Route::get('user/edit', 'edit');
     Route::post('user/edit', 'update');
     Route::get('user/delete', 'delete');
+    Route::get('user/mypage', 'mypage_index');
 });
 
 use App\Http\Controllers\Admin\NavController;

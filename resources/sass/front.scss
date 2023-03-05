@@ -16,13 +16,18 @@ h4{
 	font-size: 20px;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 header{
-	background: #6c85b1;
+	background: #ff7f50;
 	padding: 10px;
 }
 
 header .logo_wrap{
-	background: #6c85b1;
+	background: #ff7f50;
 	display: flex;
 	justify-content: space-between;
 }
@@ -48,7 +53,7 @@ header .banner{
 }
 
 header .sightmap{
-	background: #6c85b1;
+	background: #ff7f50;
 	padding: 20px 0 0 0;
 	display: flex; 
 	justify-content: space-evenly;
@@ -63,7 +68,7 @@ header .sightmap{
 .title{
 	text-align: center;
 	color: #fff;
-	background: #6c85b1;
+	background: #ff7f50;
 }
 
 .new_review{
@@ -159,7 +164,7 @@ header .sightmap{
 
 footer{
 	color: #fff;
-	background: #6c85b1;
+	background: #ff7f50;
 	text-align: center;
 	padding: 10px 0 30px 0;
 }
