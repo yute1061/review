@@ -47,11 +47,11 @@
     		</div>
     		<nav>
     			<ul class="sightmap">
-    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/toppage#">トップ</a></li>
-    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/post_review/create#">レビュー投稿</a></li>
-    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/user/create#">ユーザー登録</a></li>
-    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/guideline#">投稿ガイドライン</a></li>
-    				<li><a href="https://182c8b6222ca465281331fac053be27d.vfs.cloud9.us-east-1.amazonaws.com/admin/about#">当サイトについて</a></li>
+    				<li><a href="{{ route('admin.toppage') }}">トップ</a></li>
+    				<li><a href="{{ route('admin.post_review.add') }}">レビュー投稿</a></li>
+    				<li><a href="{{ route('admin.user.add') }}">ユーザー登録</a></li>
+    				<li><a href="{{ route('admin.guideline') }}">投稿ガイドライン</a></li>
+    				<li><a href="{{ route('admin.about') }}">当サイトについて</a></li>
     			</ul>
     		</nav>
 	    </header>
