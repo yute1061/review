@@ -8,17 +8,9 @@
         <h2 style="text-align: center;">tech boost Bike Product Reviewへようこそ！</h2><br>
         <p style="text-align: center;">あなたのユーザー情報です</p><br>
         <table width="100%" class="outer" cellspacing="1">
-            <form action="{{ route('admin.user.create') }}" method="post" enctype="multipart/form-data">
-                @if (count($errors) > 0)
-                    <ul>
-                        @foreach($errors->all() as $e)
-                            <li>{{ $e }}</li>
-                        @endforeach
-                    </ul>
-                @endif
                 <tr>
                     <td class="head2011a">
-                    	<label class="col-md-3">ユーザー名（id）</label>
+                    	<label class="col-md-3">{{ __('ニックネーム') }}</label>
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
@@ -28,17 +20,17 @@
                 </tr>
                 <tr>
                     <td class="head2011a">
-                    	<label class="col-md-3">パスワード</label>
+                    	<label class="col-md-3">{{ __('メールアドレス') }}</label>
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                        	<p class="pass">{{ Str::limit($posts->pass, 100) }}</p>
+                        	<p class="email">{{ Str::limit($posts->email, 100) }}</p>
                     	</div>
                     </td>
                 </tr>
                 <tr>
                 	<td class="head2011a">
-                    	<label class="col-md-3">性別</label>
+                    	<label class="col-md-3">{{ __('性別') }}</label>
                     </td>
                     <td class="head2011b">
                         <div class="col-md-4">
@@ -48,7 +40,7 @@
                	</tr>
                 <tr>
                 	<td class="head2011a">
-                    	<label class="col-md-3">年齢</label>
+                    	<label class="col-md-3">{{ __('年齢') }}</label>
                     </td>
                     <td class="head2011b">
                     	<div class="age">
@@ -61,7 +53,7 @@
               	</tr>
                 <tr>
                 	<td class="head2011a">
-                    	<label class="col-md-3">自転車歴</label>
+                    	<label class="col-md-3">{{ __('自転車歴') }}</label>
                     </td>
                     <td class="head2011b">
                         <div class="career">
@@ -74,7 +66,7 @@
               	</tr>
                 <tr>
                 	<td class="head2011a">
-                    	<label class="col-md-3">主なライドスタイル</label>
+                    	<label class="col-md-3">{{ __('主なライドスタイル') }}</label>
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-10">
@@ -83,12 +75,6 @@
                     </td>
                 </tr>
                 @csrf
-                <tr>
-                	<td>
-                		<a href="{{ route('admin.user.create') }}" role="button" class="btn btn-primary">編集</a>
-                	</td>
-                </tr>
-            </form>
         </table>
         <br>
     </div>

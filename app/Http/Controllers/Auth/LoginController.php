@@ -36,5 +36,8 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        
+        // プロパティの値を書き換えて、ユーザー登録後のリダイレクト先を変更しています。
+        $this->redirectTo = route('admin.toppage');
     }
 }

@@ -30,11 +30,10 @@ Route::controller(ReviewController::class)->prefix('admin')->name('admin.')->mid
 use App\Http\Controllers\Admin\UserController;
 Route::controller(UserController::class)->prefix('admin')->name('admin.')->group(function() {
     Route::get('user/create', 'add')->name('user.add');
-    Route::post('user/create', 'create')->name('user.create');
     Route::get('user/edit', 'edit')->name('user.edit');
     Route::post('user/edit', 'update')->name('user.update');
     Route::get('user/delete', 'delete')->name('user.delete');
-    Route::get('user/mypage', 'mypage_index')->name('user.index');
+    Route::get('user/mypage', 'mypage')->name('user.index');
 });
 
 use App\Http\Controllers\Admin\NavController;
