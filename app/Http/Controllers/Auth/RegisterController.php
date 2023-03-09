@@ -41,7 +41,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
         
         // プロパティの値を書き換えて、ユーザー登録後のリダイレクト先を変更しています。
-        $this->redirectTo = route('admin.toppage');
+        $this->redirectTo = route('admin.user.index');
     }
 
     /**

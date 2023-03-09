@@ -32,7 +32,7 @@ class UserController extends Controller
     
     public function mypage(Request $request)
     {  
-        $posts = User::first();
+        $posts = User::all()->sortByDesc('created_at')->first();
         
         return view('admin.user.mypage', ['posts' => $posts]);
     }      
