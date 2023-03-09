@@ -12,7 +12,7 @@ class UserController extends Controller
     //
     public function add()
     {
-        return view('admin.user.create');
+        return view('auth.register');
     }
     
     public function create(Request $request)

@@ -13,7 +13,7 @@ class Register extends Model
     
     public static $rules = array(
         'name' => 'required',
-        'pass' => 'required',
+        'password' => 'required',
         'gender' => 'required',
         'age' => 'required',
         'career' => 'required',
