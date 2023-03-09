@@ -12,7 +12,9 @@
             @csrf
             <tr>
                 <td class="head2011a">
-                    <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ユーザー名') }}</label>
+                    <div class="item">
+                        <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>
+                    </div>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
@@ -29,7 +31,9 @@
 
             <tr>
                 <td class="head2011a">
-                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
+                    <div class="item">
+                        <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
+                    </div>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
@@ -46,24 +50,31 @@
 
             <tr>
                 <td class="head2011a">
-                    <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('パスワード') }}</label>
+                    <div class="item">
+                        <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('パスワード') }}</label>
+                    </div>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-4">
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-    
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                    <div class="career">
+                        <div class="col-md-4">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+        
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <p class="note">　8文字以上で登録してください</P>
                     </div>
                 </td>
             </tr>
             
             <tr>
                 <td class="head2011a">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('パスワード確認') }}</label>
+                    <div class="item">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('パスワード確認') }}</label>
+                    <div>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
@@ -74,7 +85,9 @@
             
             <tr>
                 <td class="head2011a">
-                    <label class="col-md-3">性別</label>
+                    <div class="item">
+                        <label class="col-md-3">性別</label>
+                    </div>
                 </td>
                 <td class="head2011b">
                     <label><input type="radio" class="radio" name="gender" value="男">男性</label>
@@ -84,35 +97,41 @@
             
             <tr>
                 <td class="head2011a">
-                    <label class="col-md-3">年齢</label>
+                    <div class="item">
+                        <label class="col-md-3">年齢</label>
+                    </div>
                 </td>
                 <td class="head2011b">
                     <div class="career">
     	                <div class="col-md-1">
             	            <input type="text" class="form-control" name="age" value="{{ old('age') }}">
             	        </div>
-            	        <p>歳</p>
+            	        <p class="note">歳</p>
             	    </div>
         	    </td>
             </tr>
             
             <tr>
                 <td class="head2011a">
-                    <label class="col-md-3">自転車歴</label>
+                    <div class="item">
+                        <label class="col-md-3">自転車歴</label>
+                    </div>
                 </td>
                 <td class="head2011b">
                     <div class="career">
     	                <div class="col-md-1">
                             <input type="text" class="form-control" name="career" value="{{ old('career') }}">
                         </div>
-                        <p>年</p>
+                        <p class="note">年</p>
                     </div>
                 </td>
             </tr>
             
             <tr>
                 <td class="head2011a">
-                    <label class="col-md-3">主なライドスタイル</label>
+                    <div class="item">
+                        <label class="col-md-3">主なライドスタイル</label>
+                    </div>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-10">
@@ -124,7 +143,7 @@
                     </div>
                 </td>
             </tr>
-
+            
             <tr>
                 <td>
                     <button type="submit" class="btn btn-primary">
@@ -134,5 +153,9 @@
             </tr>
         </form>
     </table>
+    
+    <a class="btn btn-link" href="{{ route('login') }}">
+        {{ __('登録済みの方ははこちらからログイン') }}
+    </a>
 </div>
 @endsection

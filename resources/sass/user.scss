@@ -22,7 +22,16 @@
     display: flex;
 }
 
+.note {
+    position: relative;
+	top: 10px;
+}
+
 .register_table {
     display: flex; 
     justify-content: center; 
+}
+
+.btn-link {
+    font-size: 1em;
 }
