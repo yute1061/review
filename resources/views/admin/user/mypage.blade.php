@@ -82,6 +82,16 @@
             @csrf
         </form>
         <br>
+        
+        {{--　後でルーティングする
+        <form method="GET" action="{{ route('admin.user.edit') }}">
+        --}}
+        <button type="submit" class="btn btn-primary">
+            {{ __('投稿したレビュー一覧') }}
+        </button>
+        @csrf
+        <br>
+        <br>
         <form method="POST" action="{{ route('logout') }}">
             <button type="submit" class="btn btn-primary">
                 {{ __('ログアウト') }}

@@ -90,8 +90,8 @@
                     </div>
                 </td>
                 <td class="head2011b">
-                    <label><input type="radio" class="radio" name="gender" value="男">男性</label>
-                    <label><input type="radio" class="radio" name="gender" value="女">女性</label>
+                    <label><input type="radio" class="radio" name="gender" value="男性">男性</label>
+                    <label><input type="radio" class="radio" name="gender" value="女性">女性</label>
                 </td>
             </tr>
             

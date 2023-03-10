@@ -17,7 +17,7 @@
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user_form->name }}">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user_form->name }}" required autocomplete="name" autofocus>
 
                         @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -36,7 +36,7 @@
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user_form->email }}">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user_form->email }}" required autocomplete="email">
     
                         @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -44,6 +44,18 @@
                             </span>
                         @enderror
                     </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="head2011a">
+                    <div class="item">
+                        <label class="col-md-3">年齢</label>
+                    </div>
+                </td>
+                <td class="head2011b">
+                    <label><input type="radio" class="radio" name="gender" value="男性">男性</label>
+                    <label><input type="radio" class="radio" name="gender" value="女性">女性</label>
                 </td>
             </tr>
             
@@ -75,6 +87,23 @@
     	                    <input id="career" type="text" class="form-control" name="career" value="{{ $user_form->career }}">
                         </div>
                         <p class="note">年</p>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="head2011a">
+                    <div class="item">
+                        <label class="col-md-3">主なライドスタイル</label>
+                    </div>
+                </td>
+                <td class="head2011b">
+                    <div class="col-md-10">
+                        <label><input type="radio" class="radio" name="ridestyle" value="レース">レース</label>
+                        <label><input type="radio" class="radio" name="ridestyle" value="ブルベ・ロングライド">ブルベ・ロングライド</label>
+                        <label><input type="radio" class="radio" name="ridestyle" value="街乗り">街乗り</label>
+                        <label><input type="radio" class="radio" name="ridestyle" value="ポタリング">ポタリング</label>
+                        <label><input type="radio" class="radio" name="ridestyle" value="その他">その他</label>
                     </div>
                 </td>
             </tr>

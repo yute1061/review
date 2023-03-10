@@ -13,7 +13,14 @@ class UserController extends Controller
     //
     public function add()
     {
-        return view('auth.register');
+        $id = Auth::id();
+        $posts = User::find($id);
+        
+        if (empty($posts)) {
+            return view('auth.register');
+        } else {
+            return view('admin.user.mypage', ['posts' => $posts]);
+        }
     }
     
     public function edit(Request $request)
@@ -32,8 +39,10 @@ class UserController extends Controller
         $posts = Auth::user();
         $posts->name = $request->name;
         $posts->email = $request->email;
+        $posts->gender = $request->gender;
         $posts->age = $request->age;
         $posts->career = $request->career;
+        $posts->ridestyle = $request->ridestyle;
         $posts->save();
         
         return view('admin.user.mypage', ['posts' => $posts]);
