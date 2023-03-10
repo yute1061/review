@@ -16,14 +16,27 @@ class UserController extends Controller
         return view('auth.register');
     }
     
-    public function edit()
-    {
-        return view('admin.user.edit');
+    public function edit(Request $request)
+    {   
+        $id = Auth::id();
+        $posts = User::find($id);
+        
+        if (empty($posts)) {
+            abort(404);
+        }
+        return view('admin.user.edit', ['user_form' => $posts]);
     }
     
-    public function update()
+    public function update(Request $request)
     {
-        return view('admin.user.edit');
+        $posts = Auth::user();
+        $posts->name = $request->name;
+        $posts->email = $request->email;
+        $posts->age = $request->age;
+        $posts->career = $request->career;
+        $posts->save();
+        
+        return view('admin.user.mypage', ['posts' => $posts]);
     }
     
     public function delete()
@@ -36,10 +49,10 @@ class UserController extends Controller
         $id = Auth::id();
         $posts = User::find($id);
         
-        if ($posts != null) {
-            return view('admin.user.mypage', ['posts' => $posts]);
+        if (empty($posts)) {
+            return view('auth.login');  
         } else {
-            return view('auth.login');    
+            return view('admin.user.mypage', ['posts' => $posts]);  
         }
     }
 }
