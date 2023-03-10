@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\Admin\ReviewController;
-Route::controller(ReviewController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+Route::controller(ReviewController::class)->prefix('admin')->name('admin.')->group(function() {
     Route::get('post_review/create', 'add')->name('post_review.add');
     Route::post('post_review/create', 'create')->name('post_review.create');
     Route::get('post_review/edit', 'edit')->name('post_review.edit');
@@ -37,7 +37,7 @@ Route::controller(UserController::class)->prefix('admin')->name('admin.')->group
 });
 
 use App\Http\Controllers\Admin\NavController;
-Route::controller(NavController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+Route::controller(NavController::class)->prefix('admin')->name('admin.')->group(function() {
     Route::get('toppage', 'toppage')->name('toppage');
     Route::get('guideline', 'guideline')->name('guideline');
     Route::get('about', 'about')->name('about');

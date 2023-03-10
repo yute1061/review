@@ -1,12 +1,13 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
+use App\Models\User;
 class UserController extends Controller
 {
     //
@@ -29,11 +30,19 @@ class UserController extends Controller
     {
         return view('admin.user.create');
     }
-    
+
     public function mypage(Request $request)
-    {  
-        $posts = User::all()->sortByDesc('created_at')->first();
+    {   
+        $id = Auth::id();
+        $posts = User::find($id);
         
-        return view('admin.user.mypage', ['posts' => $posts]);
-    }      
+        if ($posts != null) {
+            return view('admin.user.mypage', ['posts' => $posts]);
+        } else {
+            return view('auth.login');    
+        }
+    }
 }
+
+//$posts = User::all()->sortByDesc('created_at')->first();
+//return view('admin.user.mypage', ['posts' => $posts]);
