@@ -26,6 +26,20 @@ header{
 	padding: 10px;
 }
 
+header .top_login{
+	display: flex;
+}
+
+header .top_form{
+	width: 100px;
+	height: 30px;
+	margin: 0 5px 0 0;
+}
+
+header .top_form_btn{
+	margin: 5px 0 0 0;
+}
+
 header .logo_wrap{
 	background: #ff7f50;
 	display: flex;

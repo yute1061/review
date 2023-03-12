@@ -30,12 +30,29 @@
     </head>
     <body id="pagetop">
         <header class="wrap">
-    		<form style="margin-top: 0px;" action="https://cbnanashi.net/cycle/user.php" method="post">
-    		    <input type="text" name="uname" placeholder="ID" size="15" maxlength="35">&nbsp;
-    		    <input type="password" name="pass" placeholder="Password" size="15" maxlength="35">
-    		    <input type="hidden" name="xoops_redirect" value="/cycle/">
-    		    <input type="hidden" name="op" value="login">
-    		    <input type="submit" value="LOGIN">
+    		<form style="margin-top: 0px;" action="{{ route('login') }}" method="post">
+    		    @csrf
+    		    <div class="top_login">
+        		    <div class="top_form">
+        		        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus size="15">
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                    </div>
+                    <div class="top_form">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                    </div>
+                    <div class="top_form_btn">
+    		            <input type="submit" value="ログイン">
+    		        </div>
+    		    </div>
     		</form>
     		<div class="logo_wrap">
     			<div class="logo">
