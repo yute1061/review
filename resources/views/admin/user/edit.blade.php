@@ -17,7 +17,7 @@
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user_form->name }}" required autocomplete="name" autofocus>
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $posts->name }}" required autocomplete="name" autofocus>
 
                         @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -36,7 +36,7 @@
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user_form->email }}" required autocomplete="email">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $posts->email }}" required autocomplete="email">
     
                         @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -68,7 +68,7 @@
                 <td class="head2011b">
                     <div class="career">
     	                <div class="col-md-1">
-    	                    <input id="age" type="text" class="form-control" name="age" value="{{ $user_form->age }}">
+    	                    <input id="age" type="text" class="form-control" name="age" value="{{ $posts->age }}">
             	        </div>
             	        <p class="note">歳</p>
             	    </div>
@@ -84,7 +84,7 @@
                 <td class="head2011b">
                     <div class="career">
     	                <div class="col-md-1">
-    	                    <input id="career" type="text" class="form-control" name="career" value="{{ $user_form->career }}">
+    	                    <input id="career" type="text" class="form-control" name="career" value="{{ $posts->career }}">
                         </div>
                         <p class="note">年</p>
                     </div>

@@ -18,6 +18,11 @@ class ReviewController extends Controller
         return view('admin.post_review.create');
     }
     
+    public function preview()
+    {
+        return view('admin.post_review.preview');
+    }
+    
     public function edit()
     {
         return view('admin.post_review.edit');

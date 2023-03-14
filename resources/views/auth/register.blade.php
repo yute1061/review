@@ -153,7 +153,6 @@
             </tr>
         </form>
     </table>
-    
     <a class="btn btn-link" href="{{ route('login') }}">
         {{ __('登録済みの方ははこちらからログイン') }}
     </a>

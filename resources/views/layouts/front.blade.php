@@ -30,30 +30,39 @@
     </head>
     <body id="pagetop">
         <header class="wrap">
-    		<form style="margin-top: 0px;" action="{{ route('login') }}" method="post">
-    		    @csrf
-    		    <div class="top_login">
-        		    <div class="top_form">
-        		        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus size="15">
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                    </div>
-                    <div class="top_form">
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                    </div>
-                    <div class="top_form_btn">
-    		            <input type="submit" value="ログイン">
-    		        </div>
-    		    </div>
-    		</form>
+            @guest
+        		<form style="margin-top: 0px;" action="{{ route('login') }}" method="post">
+        		    @csrf
+        		    <div class="top_login">
+            		    <div class="top_form">
+            		        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus size="15">
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+                        <div class="top_form">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+                        <div class="top_form_btn">
+        		            <input type="submit" value="ログイン">
+        		        </div>
+        		    </div>
+    		    </form>
+		    @else
+		        <form action="{{ route('admin.user.index') }}" method="get">
+    		        <div class="top_login">
+    		            <p>ようこそ　</p><p class="name">{{ Str::limit($posts->name, 100) }}</p><p>　さん　</p>
+        		            <input type="submit" value="マイページ">
+    	            </div>
+	            </form>
+	        @endguest
     		<div class="logo_wrap">
     			<div class="logo">
     				<h4>tb Bike Product Review</h4>
@@ -64,11 +73,11 @@
     		</div>
     		<nav>
     			<ul class="sightmap">
-    				<li><a href="{{ route('admin.toppage') }}">トップ</a></li>
+    				<li><a href="{{ route('toppage') }}">トップ</a></li>
     				<li><a href="{{ route('admin.post_review.add') }}">レビュー投稿</a></li>
     				<li><a href="{{ route('admin.user.add') }}">ユーザー登録</a></li>
-    				<li><a href="{{ route('admin.guideline') }}">投稿ガイドライン</a></li>
-    				<li><a href="{{ route('admin.about') }}">当サイトについて</a></li>
+    				<li><a href="{{ route('guideline') }}">投稿ガイドライン</a></li>
+    				<li><a href="{{ route('about') }}">当サイトについて</a></li>
     			</ul>
     		</nav>
 	    </header>

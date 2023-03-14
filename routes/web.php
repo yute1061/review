@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\ReviewController;
 Route::controller(ReviewController::class)->prefix('admin')->name('admin.')->group(function() {
     Route::get('post_review/create', 'add')->name('post_review.add');
     Route::post('post_review/create', 'create')->name('post_review.create');
+    Route::post('post_review/preview', 'preview')->name('post_review.preview');
     Route::get('post_review/edit', 'edit')->name('post_review.edit');
     Route::post('post_review/edit', 'update')->name('post_review.update');
     Route::get('post_review/delete', 'delete')->name('post_review.delete');
@@ -32,19 +33,19 @@ Route::controller(UserController::class)->prefix('admin')->name('admin.')->group
     Route::get('user/create', 'add')->name('user.add');
     Route::get('user/edit', 'edit')->name('user.edit');
     Route::post('user/edit', 'update')->name('user.update');
-    Route::get('user/delete', 'delete')->name('user.delete');
     Route::get('user/mypage', 'mypage')->name('user.index');
 });
 
-use App\Http\Controllers\Admin\NavController;
-Route::controller(NavController::class)->prefix('admin')->name('admin.')->group(function() {
-    Route::get('toppage', 'toppage')->name('toppage');
-    Route::get('guideline', 'guideline')->name('guideline');
-    Route::get('about', 'about')->name('about');
-});
 
 //-------- admin ここまで --------
 
 Auth::routes();
+
+use App\Http\Controllers\NavController as PublicNavController;
+Route::controller(PublicNavController::class)->group(function() {
+    Route::get('toppage', 'toppage')->name('toppage');
+    Route::get('guideline', 'guideline')->name('guideline');
+    Route::get('about', 'about')->name('about');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

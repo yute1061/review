@@ -31,11 +31,11 @@ class UserController extends Controller
         if (empty($posts)) {
             abort(404);
         }
-        return view('admin.user.edit', ['user_form' => $posts]);
+        return view('admin.user.edit', ['posts' => $posts]);
     }
     
     public function update(Request $request)
-    {
+    {   
         $posts = Auth::user();
         $posts->name = $request->name;
         $posts->email = $request->email;
@@ -46,11 +46,6 @@ class UserController extends Controller
         $posts->save();
         
         return view('admin.user.mypage', ['posts' => $posts]);
-    }
-    
-    public function delete()
-    {
-        return view('admin.user.create');
     }
 
     public function mypage(Request $request)
