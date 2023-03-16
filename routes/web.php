@@ -25,12 +25,10 @@ Route::controller(ReviewController::class)->prefix('admin')->name('admin.')->gro
     Route::get('post_review/edit', 'edit')->name('post_review.edit');
     Route::post('post_review/edit', 'update')->name('post_review.update');
     Route::get('post_review/delete', 'delete')->name('post_review.delete');
-    Route::get('post_review', 'index')->name('post_review.index');
 });
 
 use App\Http\Controllers\Admin\UserController;
 Route::controller(UserController::class)->prefix('admin')->name('admin.')->group(function() {
-    Route::get('user/create', 'add')->name('user.add');
     Route::get('user/edit', 'edit')->name('user.edit');
     Route::post('user/edit', 'update')->name('user.update');
     Route::get('user/mypage', 'mypage')->name('user.index');
@@ -43,9 +41,14 @@ Auth::routes();
 
 use App\Http\Controllers\NavController as PublicNavController;
 Route::controller(PublicNavController::class)->group(function() {
-    Route::get('toppage', 'toppage')->name('toppage');
+    Route::get('/', 'toppage')->name('toppage');
     Route::get('guideline', 'guideline')->name('guideline');
     Route::get('about', 'about')->name('about');
+});
+
+use App\Http\Controllers\UserController as PublicUserController;
+Route::controller(PublicUserController::class)->group(function() {
+    Route::get('user/create', 'add')->name('user.add');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

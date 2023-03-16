@@ -11,7 +11,7 @@
         <h2 style="text-align: center;">レビュー新規作成</h2>
         <br>
         <table width="100%" class="outer" cellspacing="1">
-            <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
+            <form name="formName" method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
             {{-- <form action="{{ route('admin.post_review.preview') }}" method="post" enctype="multipart/form-data">--}}
                 <tr>
                     <td class="head2011a">
@@ -19,11 +19,11 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="category">
-                    	        <option>パーツ</option>
-                                <option>ウェア</option>
-                                <option>ギア・バッグ</option>
-                                <option>工具・その他</option>
+                    	    <select name="selectName1" onChange="functionName()">
+                    	        <option value = "パーツ">パーツ</option>
+                                <option value = "ウェア">ウェア</option>
+                                <option value = "ギア・バッグ">ギア・バッグ</option>
+                                <option value = "工具・その他">工具・その他</option>
                             </select>
                     	</div>
                     </td>
@@ -34,11 +34,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="item">
-                    	        <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                    	    <select name="selectName2">
                             </select>
                     	</div>
                     </td>
@@ -49,11 +45,64 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="item">
-                    	        <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                    	    <select name="maker">
+                    	        <option> </option>
+                                <option>ARGON18</option>
+                                <option>AVEDIO</option>
+                                <option>BASSO</option>
+                                <option>BH</option>
+                                <option>BIANCHI</option>
+                                <option>BMC</option>
+                                <option>BOMA</option>
+                                <option>BOTTECCHIA</option>
+                                <option>BRIDGESTONE</option>
+                                <option>CANNONDALE</option>
+                                <option>CARRERA</option>
+                                <option>CAMPAGNOLO</option>
+                                <option>CERVELO</option>
+                                <option>CHINELLI</option>
+                                <option>COLNAGO</option>
+                                <option>CORRATEC</option>
+                                <option>DEDACCHIAI</option>
+                                <option>DEDA</option>
+                                <option>DEROSA</option>
+                                <option>EDDYMERCKX</option>
+                                <option>FELT</option>
+                                <option>FIZIK</option>
+                                <option>FOCUS</option>
+                                <option>FUJI</option>
+                                <option>GIANT</option>
+                                <option>GIOS</option>
+                                <option>GT</option>
+                                <option>INTERMAX</option>
+                                <option>JAMIS</option>
+                                <option>KHODAA BLOOM</option>
+                                <option>KUOTA</option>
+                                <option>LAPIERRE</option>
+                                <option>LITESPEED</option>
+                                <option>LOOK</option>
+                                <option>MASI</option>
+                                <option>MERIDA</option>
+                                <option>NEILPRYDE</option>
+                                
+                                <option>ORBEA</option>
+                                <option>PANASONIC</option>
+                                <option>PENNAROLA</option>
+                                <option>PINARELLO</option>
+                                <option>RALEIGH</option>
+                                <option>RIDLEY</option>
+                                <option>RITCHEY</option>
+                                <option>SCOTT</option>
+                                <option>SHIMANO</option>
+                                <option>SPECIALIZED</option>
+                                <option>SRAM</option>
+                                <option>STORCK</option>
+                                <option>TIME</option>
+                                <option>TNI</option>
+                                <option>TREK</option>
+                                <option>WILIER</option>
+                                <option>ZIPP</option>
+                                <option>その他</option>
                             </select>
                     	</div>
                     </td>

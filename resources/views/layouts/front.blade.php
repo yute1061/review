@@ -14,6 +14,82 @@
         <!-- Scripts -->
         {{-- Laravel標準で用意されているJavascriptを読み込みます --}}
         <script src="{{ secure_asset('js/app.js') }}" defer></script>
+        {{-- post_review.createのためのJavascript --}}
+        <script type = "text/javascript">
+            <!-- 
+            function functionName()
+                {
+                    var select1 = document.forms.formName.selectName1; //変数select1を宣言
+                    var select2 = document.forms.formName.selectName2; //変数select2を宣言
+                    
+                    select2.options.length = 0; //選択肢の数がそれぞれに異なる場合、これが重要
+                    
+                    if (select1.options[select1.selectedIndex].value == "パーツ")
+                        {
+                            select2.options[0] = new Option("フレーム・フォーク");
+                            select2.options[1] = new Option("ハンドル・ステム");
+                            select2.options[2] = new Option("ブレーキレバー・シフトレバー");
+                            select2.options[3] = new Option("ブレーキ");
+                            select2.options[4] = new Option("フロントディレイラー");
+                            select2.options[5] = new Option("リアディレイラー");
+                            select2.options[6] = new Option("クランク・チェーンリング");
+                            select2.options[7] = new Option("ペダル");
+                            select2.options[8] = new Option("ボトムブラケット");
+                            select2.options[9] = new Option("サドル");
+                            select2.options[10] = new Option("シートポスト");
+                            select2.options[11] = new Option("チェーン");
+                            select2.options[12] = new Option("カセットスプロケット");
+                            select2.options[13] = new Option("ホイール");
+                            select2.options[14] = new Option("タイヤ・チューブ");
+                            select2.options[15] = new Option("クイックリリース・スキュアー");
+                            select2.options[16] = new Option("ワイヤー類");
+                            select2.options[17] = new Option("その他小物");
+                        }
+                        
+                    else if (select1.options[select1.selectedIndex].value == "ウェア")
+                        {
+                            select2.options[0] = new Option("ヘルメット・キャップ");
+                            select2.options[1] = new Option("アイウェア");
+                            select2.options[2] = new Option("ジャージ・ジャケット");
+                            select2.options[3] = new Option("レッグウェア");
+                            select2.options[4] = new Option("インナー");
+                            select2.options[5] = new Option("レインウェア・ウィンドブレーカー");
+                            select2.options[6] = new Option("グローブ");
+                            select2.options[7] = new Option("シューズ");
+                            select2.options[8] = new Option("ソックス・シューズカバー");
+                            select2.options[9] = new Option("その他");
+                        }
+                        
+                    else if (select1.options[select1.selectedIndex].value == "ギア・バッグ")
+                        {
+                            select2.options[0] = new Option("フロントバッグ");
+                            select2.options[1] = new Option("サドルバッグ");
+                            select2.options[2] = new Option("トップチューブバッグ");
+                            select2.options[3] = new Option("フレームバッグ");
+                            select2.options[4] = new Option("バックパック");
+                            select2.options[5] = new Option("サコッシュ");
+                            select2.options[6] = new Option("輪行袋・輪行ケース");
+                            select2.options[7] = new Option("ホイールバッグ");
+                            select2.options[8] = new Option("その他");
+                        }
+                    
+                    else if (select1.options[select1.selectedIndex].value == "工具・その他")
+                        {
+                            select2.options[0] = new Option("工具");
+                            select2.options[1] = new Option("ケミカル類");
+                            select2.options[2] = new Option("ボトル・ボトルケージ");
+                            select2.options[3] = new Option("サイコン・GPS");
+                            select2.options[4] = new Option("スマートウォッチ");
+                            select2.options[5] = new Option("心拍計");
+                            select2.options[6] = new Option("ライト");
+                            select2.options[7] = new Option("ポンプ");
+                            select2.options[8] = new Option("鍵");
+                            select2.options[9] = new Option("ローラー台");
+                            select2.options[10] = new Option("スタンド");
+                            select2.options[11] = new Option("その他");
+                        }
+                }
+        </script>
         
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -28,7 +104,7 @@
 		<link href="{{ secure_asset('css/user.css') }}" rel="stylesheet">
 		
     </head>
-    <body id="pagetop">
+    <body id="pagetop" onLoad="functionName()">
         <header class="wrap">
             @guest
         		<form style="margin-top: 0px;" action="{{ route('login') }}" method="post">
@@ -75,7 +151,7 @@
     			<ul class="sightmap">
     				<li><a href="{{ route('toppage') }}">トップ</a></li>
     				<li><a href="{{ route('admin.post_review.add') }}">レビュー投稿</a></li>
-    				<li><a href="{{ route('admin.user.add') }}">ユーザー登録</a></li>
+    				<li><a href="{{ route('user.add') }}">ユーザー登録</a></li>
     				<li><a href="{{ route('guideline') }}">投稿ガイドライン</a></li>
     				<li><a href="{{ route('about') }}">当サイトについて</a></li>
     			</ul>

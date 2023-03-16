@@ -50,15 +50,15 @@
 			<p>ボトムブラケット</p>
 			<p>サドル</p>
 			<p>シートポスト</p>
-			<p>パワーメーター</p>
+			<p>チェーン</p>
 		</div>
 		<div class="right_category_equipment">
-			<p>チェーン</p>
 			<p>カセットスプロケット</p>
 			<p>ホイール</p>
 			<p>タイヤ・チューブ</p>
 			<p>クイックリリース・スキュアー</p>
 			<p>ワイヤー類</p>
+			<p>その他小物</p>
 		</div>
 	</div>
 	<div class="wrap category_not_equipment">
@@ -76,6 +76,7 @@
 				<p>グローブ</p>
 				<p>シューズ</p>
 				<p>ソックス・シューズカバー</p>
+				<p>その他</p>
 			</div>
 		</div>
 		<div class="category_gear">
@@ -91,6 +92,7 @@
 				<p>サコッシュ</p>
 				<p>輪行袋</p>
 				<p>ホイールバッグ</p>
+				<p>その他</p>
 			</div>
 		</div>
 		<div class="category_tool">

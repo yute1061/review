@@ -11,18 +11,6 @@ use App\Models\User;
 class UserController extends Controller
 {
     //
-    public function add()
-    {
-        $id = Auth::id();
-        $posts = User::find($id);
-        
-        if (empty($posts)) {
-            return view('auth.register');
-        } else {
-            return view('admin.user.mypage', ['posts' => $posts]);
-        }
-    }
-    
     public function edit(Request $request)
     {   
         $id = Auth::id();
