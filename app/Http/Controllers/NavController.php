@@ -15,22 +15,16 @@ class NavController extends Controller
     //
     public function toppage(Request $request)
     {   
-        $id = Auth::id();
-        $posts = User::find($id);
-        return view('toppage.index', ['posts' => $posts]);
+        return view('toppage.index');
     }
     
     public function guideline()
     {   
-        $id = Auth::id();
-        $posts = User::find($id);
-        return view('guideline.index', ['posts' => $posts]);
+        return view('guideline.index');
     }
     
     public function about()
     {   
-        $id = Auth::id();
-        $posts = User::find($id);
-        return view('about.index', ['posts' => $posts]);
+        return view('about.index');
     }
 }

@@ -33,7 +33,7 @@ class UserController extends Controller
         $posts->ridestyle = $request->ridestyle;
         $posts->save();
         
-        return view('admin.user.mypage', ['posts' => $posts]);
+        return redirect('admin/user/mypage');
     }
 
     public function mypage(Request $request)

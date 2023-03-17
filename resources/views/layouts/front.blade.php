@@ -19,8 +19,8 @@
             <!-- 
             function functionName()
                 {
-                    var select1 = document.forms.formName.selectName1; //変数select1を宣言
-                    var select2 = document.forms.formName.selectName2; //変数select2を宣言
+                    var select1 = document.forms.formName.category; //変数1を宣言
+                    var select2 = document.forms.formName.item; //変数2を宣言
                     
                     select2.options.length = 0; //選択肢の数がそれぞれに異なる場合、これが重要
                     
@@ -134,7 +134,7 @@
 		    @else
 		        <form action="{{ route('admin.user.index') }}" method="get">
     		        <div class="top_login">
-    		            <p>ようこそ　</p><p class="name">{{ Str::limit($posts->name, 100) }}</p><p>　さん　</p>
+    		            <p>ようこそ　</p><p class="name">{{ Auth::user()->name }}</p><p>　さん　</p>
         		            <input type="submit" value="マイページ">
     	            </div>
 	            </form>

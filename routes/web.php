@@ -20,8 +20,8 @@ Route::get('/', function () {
 use App\Http\Controllers\Admin\ReviewController;
 Route::controller(ReviewController::class)->prefix('admin')->name('admin.')->group(function() {
     Route::get('post_review/create', 'add')->name('post_review.add');
-    Route::post('post_review/create', 'create')->name('post_review.create');
-    Route::post('post_review/preview', 'preview')->name('post_review.preview');
+    Route::post('post_review/create', 'preview')->name('post_review.preview');
+    Route::post('post_review/preview', 'create')->name('post_review.create');
     Route::get('post_review/edit', 'edit')->name('post_review.edit');
     Route::post('post_review/edit', 'update')->name('post_review.update');
     Route::get('post_review/delete', 'delete')->name('post_review.delete');

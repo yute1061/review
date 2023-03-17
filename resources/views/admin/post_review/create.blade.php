@@ -11,7 +11,7 @@
         <h2 style="text-align: center;">レビュー新規作成</h2>
         <br>
         <table width="100%" class="outer" cellspacing="1">
-            <form name="formName" method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
+            <form name="formName" method="POST" action={{ route('admin.post_review.preview') }}>
             {{-- <form action="{{ route('admin.post_review.preview') }}" method="post" enctype="multipart/form-data">--}}
                 <tr>
                     <td class="head2011a">
@@ -19,7 +19,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="selectName1" onChange="functionName()">
+                    	    <select name="category" onChange="functionName()">
                     	        <option value = "パーツ">パーツ</option>
                                 <option value = "ウェア">ウェア</option>
                                 <option value = "ギア・バッグ">ギア・バッグ</option>
@@ -34,7 +34,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="selectName2">
+                    	    <select name="item">
                             </select>
                     	</div>
                     </td>
@@ -84,7 +84,6 @@
                                 <option>MASI</option>
                                 <option>MERIDA</option>
                                 <option>NEILPRYDE</option>
-                                
                                 <option>ORBEA</option>
                                 <option>PANASONIC</option>
                                 <option>PENNAROLA</option>
@@ -113,7 +112,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-6">
-                        	<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                        	<input type="text" class="form-control" name="product" value="{{ old('product') }}">
                     	</div>
                     </td>
                 </tr>
@@ -154,7 +153,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="cost">
+                    	    <select name="evaluation">
                     	        <option>★</option>
                                 <option>★★</option>
                                 <option>★★★</option>
@@ -164,6 +163,7 @@
                     	</div>
                     </td>
                 </tr>
+                @csrf
                 <tr>
                 	<td>
                 		<input type="submit" value="プレビュー">

@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,11 +13,14 @@ class ReviewController extends Controller
     //
     public function add(Request $request)
     {
-        $id = Auth::id();
-        $posts = User::find($id);
-        return view('admin.post_review.create', ['posts' => $posts]);
+        $user = Auth::user();
+        if (empty($user)) {
+            return view('auth.login');
+        } else {
+            return view('admin.post_review.create');
+        }
     }
-    
+
     public function create()
     {
         return view('admin.post_review.create');
@@ -44,4 +45,10 @@ class ReviewController extends Controller
     {
         return view('admin.post_review.create');
     }
+
+    public function index()
+    {
+        return view('admin.post_review.create');
+    }
 }
+
