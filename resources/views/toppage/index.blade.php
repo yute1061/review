@@ -37,20 +37,20 @@
 			<h3>パーツ</h3>
 		</div>
 		<div class="left_category_equipment">
-			<p>フレーム・フォーク</p>
-			<p>ハンドル・ステム</p>
-			<p>ブレーキレバー・シフトレバー</p>
-			<p>ブレーキ</p>
-			<p>フロントディレイラー</p>
-			<p>リアディレイラー</p>
+			<a href="{{ route('item', ['item' => 'フレーム・フォーク']) }}">フレーム・フォーク</a><br>
+			<a href="{{ route('item', ['item' => 'ハンドル・ステム']) }}">ハンドル・ステム</a><br>
+			<a href="{{ route('item', ['item' => 'ブレーキレバー・シフトレバー']) }}">ブレーキレバー・シフトレバー</a><br>
+			<a href="{{ route('item', ['item' => 'ブレーキ']) }}">ブレーキ</a><br>
+			<a href="{{ route('item', ['item' => 'フロントディレイラー']) }}">フロントディレイラー</a><br>
+			<a href="{{ route('item', ['item' => 'リアディレイラー']) }}">リアディレイラー</a>
 		</div>
 		<div class="center_category_equipment">
-			<p>クランク・チェーンリング</p>
-			<p>ペダル</p>
-			<p>ボトムブラケット</p>
-			<p>サドル</p>
-			<p>シートポスト</p>
-			<p>チェーン</p>
+			<a href="{{ route('item', ['item' => 'クランク・チェーンリング']) }}">クランク・チェーンリング</a><br>
+			<a href="{{ route('item', ['item' => 'ペダル']) }}">ペダル</a><br>
+			<a href="{{ route('item', ['item' => 'ボトムブラケット']) }}">ボトムブラケット</a><br>
+			<a href="{{ route('item', ['item' => 'サドル']) }}">サドル</a><br>
+			<a href="{{ route('item', ['item' => 'シートポスト']) }}">シートポスト</a><br>
+			<a href="{{ route('item', ['item' => 'チェーン']) }}">チェーン</a>
 		</div>
 		<div class="right_category_equipment">
 			<p>カセットスプロケット</p>

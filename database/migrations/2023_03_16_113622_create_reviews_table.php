@@ -17,11 +17,18 @@ return new class extends Migration
             $table->id();
             $table->string('category');
             $table->string('item');
-            $table->string('maker');
+            $table->string('maker')->nullable();
             $table->string('product');
             $table->string('body');
+            $table->string('image_path1')->nullable();
+            $table->string('image_path2')->nullable();
+            $table->string('image_path3')->nullable();
+            $table->string('image_path4')->nullable();
+            $table->string('image_path5')->nullable();
             $table->string('cost');
             $table->string('evaluation');
+            $table->boolean('status')->nullable(); //投稿済かどうかの判断
+            $table->string('contributor')->nullable();
             $table->timestamps();
         });
     }

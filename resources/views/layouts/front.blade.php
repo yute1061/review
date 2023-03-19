@@ -102,6 +102,7 @@
 		<link href="{{ secure_asset('css/reset.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/user.css') }}" rel="stylesheet">
+		<link href="{{ secure_asset('css/review.css') }}" rel="stylesheet">
 		
     </head>
     <body id="pagetop" onLoad="functionName()">

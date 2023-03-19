@@ -9,7 +9,13 @@
     <p style="text-align: center;">レビュー投稿の前に以下からユーザー登録を行ってください</p><br>
     <table width="100%" class="outer" cellspacing="1">
         <form method="POST" action="{{ route('register') }}">
-            @csrf
+            @if (count($errors) > 0)
+                <ul>
+                    @foreach($errors->all() as $e)
+                        <li>{{ $e }}</li>
+                    @endforeach
+                <ul>
+            @endif
             <tr>
                 <td class="head2011a">
                     <div class="item">
@@ -143,7 +149,7 @@
                     </div>
                 </td>
             </tr>
-            
+            @csrf
             <tr>
                 <td>
                     <button type="submit" class="btn btn-primary">

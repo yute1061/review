@@ -1021,6 +1021,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./resources/sass/review.scss":
+/*!************************************!*\
+  !*** ./resources/sass/review.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9yZXZpZXcuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9yZXZpZXcuc2Nzcz81ZmY5Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/review.scss\n");
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -1201,7 +1212,8 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 			"css/user": 0,
 /******/ 			"css/reset": 0,
 /******/ 			"css/front": 0,
-/******/ 			"css/admin": 0
+/******/ 			"css/admin": 0,
+/******/ 			"css/review": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1251,12 +1263,13 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin"], () => (__webpack_require__("./resources/sass/admin.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin"], () => (__webpack_require__("./resources/sass/front.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin"], () => (__webpack_require__("./resources/sass/reset.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin"], () => (__webpack_require__("./resources/sass/user.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin","css/review"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin","css/review"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin","css/review"], () => (__webpack_require__("./resources/sass/admin.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin","css/review"], () => (__webpack_require__("./resources/sass/front.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin","css/review"], () => (__webpack_require__("./resources/sass/reset.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin","css/review"], () => (__webpack_require__("./resources/sass/user.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/user","css/reset","css/front","css/admin","css/review"], () => (__webpack_require__("./resources/sass/review.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

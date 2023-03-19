@@ -11,8 +11,15 @@
         <h2 style="text-align: center;">レビュー新規作成</h2>
         <br>
         <table width="100%" class="outer" cellspacing="1">
-            <form name="formName" method="POST" action={{ route('admin.post_review.preview') }}>
+            <form name="formName" method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.preview') }}>
             {{-- <form action="{{ route('admin.post_review.preview') }}" method="post" enctype="multipart/form-data">--}}
+                @if (count($errors) > 0)
+                    <ul>
+                        @foreach($errors->all() as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                    <ul>
+                @endif
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">カテゴリー</label>
@@ -123,6 +130,8 @@
                     <td class="head2011b">
                     	<div class="col-md-6">
                     	    <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                    	</div>
+                    	<div class="col-md-6">
                     	    <input type="file" class="form-control-file" name="image1">
                     	    <input type="file" class="form-control-file" name="image2">
                     	    <input type="file" class="form-control-file" name="image3">
