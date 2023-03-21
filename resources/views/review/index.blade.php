@@ -5,10 +5,10 @@
 @section('content')
     <div class="wrap">
         <br>
-        <a>TOP &nbsp; > &nbsp; </a>
-        <a>{{ $posts->category }} &nbsp; ></a>
-        <a>{{ $posts->item }} &nbsp; > </a>
-        <a>{{ $posts->product }}</a>
+        <a>TOP &nbsp; > &nbsp;</a>
+        <a>{{ $posts->category }} &nbsp; >　&nbsp;</a>
+        <a>{{ $posts->item }} &nbsp; > &nbsp;</a>
+        <a>{{ $posts->maker }} &ensp; {{ $posts->product }}</a>
         <br>
         
         <table width="100%" class="outer" cellspacing="1">

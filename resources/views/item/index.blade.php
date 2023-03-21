@@ -3,7 +3,7 @@
 @section('title', 'カテゴリー')
 
 @section('content')
-	<div class="wrap new_review">
+	<div class="wrap">
 		<a> TOP </a>
 		<a> > </a>
 		<a> {{ $item }}</a>

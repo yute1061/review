@@ -43,10 +43,6 @@ Route::controller(PublicNavController::class)->group(function() {
     Route::get('/', 'toppage')->name('toppage');
     Route::get('guideline', 'guideline')->name('guideline');
     Route::get('about', 'about')->name('about');
-});
-
-use App\Http\Controllers\ReviewController as PublicReviewController;
-Route::controller(PublicReviewController::class)->group(function() {
     Route::get('item', 'item')->name('item');
     Route::get('reviewpage', 'review')->name('review');
 });

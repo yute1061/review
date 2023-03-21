@@ -29,21 +29,19 @@
                             select2.options[0] = new Option("フレーム・フォーク");
                             select2.options[1] = new Option("ハンドル・ステム");
                             select2.options[2] = new Option("ブレーキレバー・シフトレバー");
-                            select2.options[3] = new Option("ブレーキ");
-                            select2.options[4] = new Option("フロントディレイラー");
-                            select2.options[5] = new Option("リアディレイラー");
-                            select2.options[6] = new Option("クランク・チェーンリング");
-                            select2.options[7] = new Option("ペダル");
-                            select2.options[8] = new Option("ボトムブラケット");
-                            select2.options[9] = new Option("サドル");
-                            select2.options[10] = new Option("シートポスト");
-                            select2.options[11] = new Option("チェーン");
-                            select2.options[12] = new Option("カセットスプロケット");
-                            select2.options[13] = new Option("ホイール");
-                            select2.options[14] = new Option("タイヤ・チューブ");
-                            select2.options[15] = new Option("クイックリリース・スキュアー");
-                            select2.options[16] = new Option("ワイヤー類");
-                            select2.options[17] = new Option("その他小物");
+                            select2.options[3] = new Option("ブレーキキャリパー");
+                            select2.options[4] = new Option("ディレイラー");
+                            select2.options[5] = new Option("クランク・チェーンリング");
+                            select2.options[6] = new Option("ペダル");
+                            select2.options[7] = new Option("ボトムブラケット");
+                            select2.options[8] = new Option("サドル・シートポスト");
+                            select2.options[9] = new Option("チェーン");
+                            select2.options[10] = new Option("カセットスプロケット");
+                            select2.options[11] = new Option("ホイール");
+                            select2.options[12] = new Option("タイヤ・チューブ");
+                            select2.options[13] = new Option("クイックリリース・スキュアー");
+                            select2.options[14] = new Option("ワイヤー類");
+                            select2.options[15] = new Option("その他小物");
                         }
                         
                     else if (select1.options[select1.selectedIndex].value == "ウェア")
@@ -64,9 +62,9 @@
                         {
                             select2.options[0] = new Option("フロントバッグ");
                             select2.options[1] = new Option("サドルバッグ");
-                            select2.options[2] = new Option("トップチューブバッグ");
-                            select2.options[3] = new Option("フレームバッグ");
-                            select2.options[4] = new Option("バックパック");
+                            select2.options[2] = new Option("フレーム・トップチューブバッグ");
+                            select2.options[3] = new Option("バックパック・メッセンジャーバッグ");
+                            select2.options[4] = new Option("パニアバッグ");
                             select2.options[5] = new Option("サコッシュ");
                             select2.options[6] = new Option("輪行袋・輪行ケース");
                             select2.options[7] = new Option("ホイールバッグ");
@@ -106,66 +104,66 @@
 		
     </head>
     <body id="pagetop" onLoad="functionName()">
-        <header class="wrap">
-            @guest
-        		<form style="margin-top: 0px;" action="{{ route('login') }}" method="post">
-        		    @csrf
-        		    <div class="top_login">
-            		    <div class="top_form">
-            		        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus size="15">
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                        </div>
-                        <div class="top_form">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                        </div>
-                        <div class="top_form_btn">
-        		            <input type="submit" value="ログイン">
-        		        </div>
-        		    </div>
-    		    </form>
-		    @else
-		        <form action="{{ route('admin.user.index') }}" method="get">
-    		        <div class="top_login">
-    		            <p>ようこそ　</p><p class="name">{{ Auth::user()->name }}</p><p>　さん　</p>
-        		            <input type="submit" value="マイページ">
-    	            </div>
-	            </form>
-	        @endguest
-    		<div class="logo_wrap">
-    			<div class="logo">
-    				<h4>tb Bike Product Review</h4>
-    			</div>
-    			<div class="banner">
-    				<a href="#">banner</a>
-    			</div>
-    		</div>
-    		<nav>
-    			<ul class="sightmap">
-    				<li><a href="{{ route('toppage') }}">トップ</a></li>
-    				<li><a href="{{ route('admin.post_review.add') }}">レビュー投稿</a></li>
-    				<li><a href="{{ route('user.add') }}">ユーザー登録</a></li>
-    				<li><a href="{{ route('guideline') }}">投稿ガイドライン</a></li>
-    				<li><a href="{{ route('about') }}">当サイトについて</a></li>
-    			</ul>
-    		</nav>
+        <header>
+            <div class="wrap">
+                @guest
+            		<form style="margin-top: 0px;" action="{{ route('login') }}" method="post">
+            		    @csrf
+            		    <div class="top_login">
+                		    <div class="top_form">
+                		        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus size="15">
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                            </div>
+                            <div class="top_form">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                            </div>
+                            <div class="top_form_btn">
+            		            <input type="submit" value="ログイン">
+            		        </div>
+            		    </div>
+        		    </form>
+    		    @else
+    		        <form action="{{ route('admin.user.index') }}" method="get">
+        		        <div class="top_login">
+        		            <p>ようこそ　</p><p class="name">{{ Auth::user()->name }}</p><p>　さん　</p>
+            		            <input type="submit" value="マイページ">
+        	            </div>
+    	            </form>
+    	        @endguest
+        			<div class="logo">
+        				<h3>RANDONNEUR</h3><br>
+        				<h4>bike product review</h4>
+        			</div>
+        		<nav>
+        			<ul class="sightmap">
+        				<li><a href="{{ route('toppage') }}">トップ</a></li>
+        				<li><a href="{{ route('admin.post_review.add') }}">レビュー投稿</a></li>
+        				<li><a href="{{ route('user.add') }}">ユーザー登録</a></li>
+        				<li><a href="{{ route('guideline') }}">投稿ガイドライン</a></li>
+        				<li><a href="{{ route('about') }}">当サイトについて</a></li>
+        			</ul>
+        		</nav>
+        	</div>
 	    </header>
         <main>
             {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
             @yield('content')
         </main>
-        <footer class="wrap">
-    		<p>tech boost Bike Product Review は自転車レビューサイトです</p>
-    		<p>自転車に関係のある様々な事物についてお気軽にご投稿下さい</p><br><br><br>
-    		<p>当サイト内の全ての画像および文章の無断転載を禁じます</p>
+        <footer>
+            <div class="wrap">
+        		<p>tech boost Bike Product Review は自転車レビューサイトです</p>
+        		<p>自転車に関係のある様々な事物についてお気軽にご投稿下さい</p><br><br><br>
+        		<p>当サイト内の全ての画像および文章の無断転載を禁じます</p>
+    		</div>
 	    </footer>
     </body>
 </html>

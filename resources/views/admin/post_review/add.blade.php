@@ -55,17 +55,16 @@
                     	    <select name="maker">
                     	        <option> </option>
                                 <option>ARGON18</option>
-                                <option>AVEDIO</option>
                                 <option>BASSO</option>
                                 <option>BH</option>
                                 <option>BIANCHI</option>
                                 <option>BMC</option>
                                 <option>BOMA</option>
-                                <option>BOTTECCHIA</option>
                                 <option>BRIDGESTONE</option>
                                 <option>CANNONDALE</option>
                                 <option>CARRERA</option>
                                 <option>CAMPAGNOLO</option>
+                                <option>CASTELLI</option>
                                 <option>CERVELO</option>
                                 <option>CHINELLI</option>
                                 <option>COLNAGO</option>
@@ -74,26 +73,20 @@
                                 <option>DEDA</option>
                                 <option>DEROSA</option>
                                 <option>EDDYMERCKX</option>
+                                <option>ENVE</option>
                                 <option>FELT</option>
                                 <option>FIZIK</option>
                                 <option>FOCUS</option>
                                 <option>FUJI</option>
                                 <option>GIANT</option>
                                 <option>GIOS</option>
-                                <option>GT</option>
-                                <option>INTERMAX</option>
-                                <option>JAMIS</option>
                                 <option>KHODAA BLOOM</option>
                                 <option>KUOTA</option>
                                 <option>LAPIERRE</option>
-                                <option>LITESPEED</option>
                                 <option>LOOK</option>
-                                <option>MASI</option>
                                 <option>MERIDA</option>
-                                <option>NEILPRYDE</option>
                                 <option>ORBEA</option>
                                 <option>PANASONIC</option>
-                                <option>PENNAROLA</option>
                                 <option>PINARELLO</option>
                                 <option>RALEIGH</option>
                                 <option>RIDLEY</option>
@@ -103,6 +96,7 @@
                                 <option>SPECIALIZED</option>
                                 <option>SRAM</option>
                                 <option>STORCK</option>
+                                <option>SUNBOLT</option>
                                 <option>TIME</option>
                                 <option>TNI</option>
                                 <option>TREK</option>

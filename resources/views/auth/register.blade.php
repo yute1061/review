@@ -6,7 +6,7 @@
 <div class="wrap">
     <br>
     <h2 style="text-align: center;">tech boost Bike Product Reviewへようこそ！</h2><br>
-    <p style="text-align: center;">レビュー投稿の前に以下からユーザー登録を行ってください</p><br>
+    <p style="text-align: center;">レビューの投稿にはユーザー登録が必要です</p><br>
     <table width="100%" class="outer" cellspacing="1">
         <form method="POST" action="{{ route('register') }}">
             @if (count($errors) > 0)
