@@ -111,6 +111,7 @@
             		    @csrf
             		    <div class="top_login">
                 		    <div class="top_form">
+                		        <a>メールアドレス</a>
                 		        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus size="15">
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -119,6 +120,7 @@
                                     @enderror
                             </div>
                             <div class="top_form">
+                                <a>パスワード</a>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -139,10 +141,15 @@
         	            </div>
     	            </form>
     	        @endguest
-        			<div class="logo">
-        				<h3>RANDONNEUR</h3><br>
-        				<h4>bike product review</h4>
-        			</div>
+    	        <div class="logo">
+    	            <img src="{{ secure_asset('storage/image/logo.jpg/') }}">
+        			<span class="logo2">
+        				<h1>RANDONNEUR</h1>
+        			</span>
+    				<span class="logo3">
+    				    <h4>bike product review</h4>
+    				</span>
+        		</div>
         		<nav>
         			<ul class="sightmap">
         				<li><a href="{{ route('toppage') }}">トップ</a></li>

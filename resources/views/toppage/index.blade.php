@@ -7,11 +7,14 @@
 		
 		<div class="left_column">
 			<div class="category_index">
-				<div>
+				<div class="category">
 					<div class="title">
-						<h3>パーツ</h3>
+						<img src="{{ secure_asset('storage/image/icon_parts.jpeg/') }}">
+						<div class="title2">
+							<h3>Parts Category</h3>
+						</div>
 					</div>
-					<div class="item">
+					<div class="item"><br>
 						<a href="{{ route('item', ['item' => 'フレーム・フォーク']) }}">フレーム・フォーク</a><br>
 						<a href="{{ route('item', ['item' => 'ハンドル・ステム']) }}">ハンドル・ステム</a><br>
 						<a href="{{ route('item', ['item' => 'ブレーキレバー・シフトレバー']) }}">ブレーキレバー・シフトレバー</a><br>
@@ -29,10 +32,15 @@
 						<a href="{{ route('item', ['item' => 'ワイヤー類']) }}">ワイヤー類</a><br>
 						<a href="{{ route('item', ['item' => 'その他小物']) }}">その他小物</a><br>
 					</div>
+				</div>
+				<div class="category">
 					<div class="title">
-						<h3>ウェア</h3>
+						<img src="{{ secure_asset('storage/image/icon_wear.jpeg/') }}">
+						<div class="title2">
+							<h3>Wear Category</h3>
+						</div>
 					</div>
-					<div class="item">
+					<div class="item"><br>
 						<a href="{{ route('item', ['item' => 'ヘルメット・キャップ']) }}">ヘルメット・キャップ</a><br>
 						<a href="{{ route('item', ['item' => 'アイウェア']) }}">アイウェア</a><br>
 						<a href="{{ route('item', ['item' => 'ジャージ・ジャケット']) }}">ジャージ・ジャケット</a><br>
@@ -44,10 +52,15 @@
 						<a href="{{ route('item', ['item' => 'ソックス・シューズカバー']) }}">ソックス・シューズカバー</a><br>
 						<a href="{{ route('item', ['item' => 'その他']) }}">その他</a><br>
 					</div>
+				</div>
+				<div class="category">
 					<div class="title">
-						<h3>ギア・バッグ</h3>
+						<img src="{{ secure_asset('storage/image/icon_gear.jpeg/') }}">
+						<div class="title2">
+							<h3>Gear・Bag Category</h3>
+						</div>
 					</div>
-					<div class="item">
+					<div class="item"><br>
 						<a href="{{ route('item', ['item' => 'サドルバッグ']) }}">サドルバッグ</a><br>
 						<a href="{{ route('item', ['item' => 'フロントバッグ']) }}">フロントバッグ</a><br>
 						<a href="{{ route('item', ['item' => 'フレーム・トップチューブバッグ']) }}">フレーム・トップチューブバッグ</a><br>
@@ -58,10 +71,15 @@
 						<a href="{{ route('item', ['item' => 'ホイールバッグ']) }}"></a>ホイールバッグ<br>
 						<a href="{{ route('item', ['item' => 'その他']) }}"></a>その他<br>
 					</div>
+				</div>
+				<div class="category">
 					<div class="title">
-						<h3>その他</h3>
+						<img src="{{ secure_asset('storage/image/icon_etc.jpeg/') }}">
+						<div class="title2">
+							<h3>etc Category</h3>
+						</div>
 					</div>
-					<div class="item">
+					<div class="item"><br>
 						<a href="{{ route('item', ['item' => '工具']) }}">工具</a><br>
 						<a href="{{ route('item', ['item' => 'ケミカル類']) }}">ケミカル類</a><br>
 						<a href="{{ route('item', ['item' => 'ボトル・ボトルケージ']) }}">ボトル・ボトルケージ</a><br>
@@ -81,7 +99,10 @@
 		
 		<div class="right_column">
 			<div class="title">
-				<h3>新着レビュー</h3>
+				<img src="{{ secure_asset('storage/image/icon_new.jpeg/') }}">
+				<div class="title3">
+					<h3>Latest Review</h3>
+				</div>
 			</div>
 			@foreach ($posts as $post)
 				@if ($post->status == 1)

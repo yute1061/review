@@ -5,7 +5,7 @@
 @section('content')
     <div class="wrap">
         <br>
-        <h2 style="text-align: center;">tech boost Bike Product Reviewへようこそ！</h2><br>
+        <h2 style="text-align: center;">RANDONNEUR bike product reviewへようこそ！</h2><br>
         <p style="text-align: center;">あなたのユーザー情報です</p><br>
         <table width="100%" class="outer" cellspacing="1">
             <tr>

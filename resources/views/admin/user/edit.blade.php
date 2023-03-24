@@ -5,7 +5,7 @@
 @section('content')
     <div class="wrap">
     <br>
-    <h2 style="text-align: center;">ユーザー情報の編集ができます</h2><br>
+    <h4 style="text-align: center;">ユーザー情報の編集ができます</h4><br>
     <table width="100%" class="outer" cellspacing="1">
         <form method="POST" action="{{ route('admin.user.update') }}">
             @csrf
