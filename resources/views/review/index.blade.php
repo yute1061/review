@@ -108,6 +108,11 @@
                 <input type="submit" value="編集">
                 @csrf
             </form>
+            &emsp;
+            <form method="get" action="{{ route('admin.post_review.delete') }}">
+                <input type="hidden" name="id" value="{{ $posts->id }}">
+                <input type="submit" value="削除" >
+            </form>
         @else
             <br>
         @endif

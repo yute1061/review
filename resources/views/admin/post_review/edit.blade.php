@@ -8,7 +8,7 @@
 @section('content')
     <div class="wrap">
         <br>
-        <h4 style="text-align: center;">ユーザー情報の編集ができます</h4>
+        <h4 style="text-align: center;">投稿内容の編集ができます</h4>
         <br>
         <table width="100%" class="outer" cellspacing="1">
             <form name="formName" method="POST" enctype="multipart/form-data" action="{{ route('admin.post_review.update') }}">
@@ -20,6 +20,7 @@
                     <td class="head2011b">
                     	<div class="col-md-4">
                     	    <select name="category" onChange="functionName()">
+                    	        <option>{{ $posts->category }}</option>　{{--元々の内容--}}
                     	        <option value = "パーツ">パーツ</option>
                                 <option value = "ウェア">ウェア</option>
                                 <option value = "ギア・バッグ">ギア・バッグ</option>
@@ -50,7 +51,7 @@
                     <td class="head2011b">
                     	<div class="col-md-4">
                     	    <select name="maker">
-                    	        <option> </option>
+                    	        <option>{{ $posts->maker }}</option>
                                 <option>ARGON18</option>
                                 <option>BASSO</option>
                                 <option>BH</option>
@@ -113,7 +114,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-6">
-                        	<input type="text" class="form-control" name="product" value="{{ $posts->product }}" required autocomplete="product">
+                        	<input type="text" class="form-control" name="product" value="{{ $posts->product }}">
                     	</div>
                     </td>
                 </tr>
@@ -124,7 +125,7 @@
                     </td>
                     <td class="head2011b">
                         <div class="col-md-6">
-                    	    <textarea class="form-control" name="body" rows="20" value="{{ $posts->body }}" required autocomplete="body">{{ $posts->body }}</textarea>
+                    	    <textarea class="form-control" name="body" rows="20" value="{{ $posts->body }}">{{ $posts->body }}</textarea>
                     	</div>
                     	<div class="col-md-6">
                     	    @if ($posts->image_path1 == null)
@@ -133,8 +134,8 @@
                     	        <div class="caption">
                         	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}">
                         	        設定中: {{ $posts->image_path1 }}
-                        	        <input type="file" class="form-control-file" name="image1" required autocomplete="image1"><br>
-                        	        <input type="checkbox" class="form-check-innput" name="remove" value="true">画像を削除
+                        	        <input type="file" class="form-control-file" name="image1"><br>
+                        	        <input type="checkbox" class="form-check-innput" name="remove1" value="true">画像を削除
                         	    </div>
                     	    @endif
                     	    
@@ -144,8 +145,8 @@
                     	        <div class="caption">
                         	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}">
                         	        設定中: {{ $posts->image_path2 }}
-                        	        <input type="file" class="form-control-file" name="image2" required autocomplete="image2"><br>
-                        	        <input type="checkbox" class="form-check-innput" name="remove" value="true">画像を削除
+                        	        <input type="file" class="form-control-file" name="image2"><br>
+                        	        <input type="checkbox" class="form-check-innput" name="remove2" value="true">画像を削除
                         	    </div>
                     	    @endif
                     	    
@@ -155,8 +156,8 @@
                     	        <div class="caption">
                         	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}">
                         	        設定中: {{ $posts->image_path3 }}
-                        	        <input type="file" class="form-control-file" name="image3" equired autocomplete="image3"><br>
-                        	        <input type="checkbox" class="form-check-innput" name="remove" value="true">画像を削除
+                        	        <input type="file" class="form-control-file" name="image3"><br>
+                        	        <input type="checkbox" class="form-check-innput" name="remove3" value="true">画像を削除
                         	    </div>
                     	    @endif
                     	    
@@ -166,8 +167,8 @@
                     	        <div class="caption">
                         	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}">
                         	        設定中: {{ $posts->image_path4 }}
-                        	        <input type="file" class="form-control-file" name="image4" equired autocomplete="image4"><br>
-                        	        <input type="checkbox" class="form-check-innput" name="remove" value="true">画像を削除
+                        	        <input type="file" class="form-control-file" name="image4"><br>
+                        	        <input type="checkbox" class="form-check-innput" name="remove4" value="true">画像を削除
                         	    </div>
                     	    @endif
                     	    
@@ -177,8 +178,8 @@
                     	        <div class="caption">
                         	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}">
                         	        設定中: {{ $posts->image_path5 }}
-                        	        <input type="file" class="form-control-file" name="image5" equired autocomplete="image5"><br>
-                        	        <input type="checkbox" class="form-check-innput" name="remove" value="true">画像を削除
+                        	        <input type="file" class="form-control-file" name="image5"><br>
+                        	        <input type="checkbox" class="form-check-innput" name="remove5" value="true">画像を削除
                         	    </div>
                     	    @endif
                         </div>
@@ -223,6 +224,8 @@
                 
                 <tr>
                 	<td>
+                	    <input type="hidden" name="id" value="{{ $posts->id }}">
+                	    {{-- hidden...隠しファイル これを使うことでidをcreateに送れる --}}
                 		<input type="submit" value="更新">
                 	</td>
                 </tr>
@@ -230,7 +233,4 @@
         </table>
         <br>
     </div>
-            
-        
-    <h1>レビュー編集</h1>
 @endsection

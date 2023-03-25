@@ -104,8 +104,11 @@
 					<h3>Latest Review</h3>
 				</div>
 			</div>
+			
+			<?php $count=0; ?>
 			@foreach ($posts as $post)
 				@if ($post->status == 1)
+					<?php $count++; ?>
 					<div class="new_review">
 						<a href="{{ route('review', ['id' => $post->id]) }}">
 							<div class="new_review_img">
@@ -122,10 +125,10 @@
 							<a href="{{ route('review', ['id' => $post->id]) }}">{{ $post->maker }}</a>
 							<a href="{{ route('review', ['id' => $post->id]) }}">{{ $post->product }}</a><br>
 						</div>
-						@if ($loop->index == 10)
-							@break
-						@endif
 					</div>
+					@if ($count == 10)
+						@break
+					@endif
 				@endif
 			@endforeach
 		</div>
