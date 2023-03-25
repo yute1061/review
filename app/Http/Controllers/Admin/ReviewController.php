@@ -93,9 +93,13 @@ class ReviewController extends Controller
         return redirect('/');
     }
     
-    public function edit()
+    public function edit(Request $request)
     {
-        return view('admin.post_review.edit');
+        $review = Review::find($request->id);
+        if (empty($review)) {
+            abort(404);
+        }
+        return view('admin.post_review.edit', ['review_form' => $review]);
     }
     
     public function update()

@@ -102,5 +102,15 @@
                 </td>
             </tr>
         </table>
+        @if ($user->email == $posts->contributor)
+            <form method="POST" action="{{ route('admin.post_review.edit') }}">
+                <button type="submit" class="btn btn-primary">
+                    {{ __('編集') }}
+                </button>
+                @csrf
+            </form>
+        @else
+            <br>
+        @endif
     </div>
 @endsection

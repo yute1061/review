@@ -14,7 +14,7 @@
 							<h3>Parts Category</h3>
 						</div>
 					</div>
-					<div class="item"><br>
+					<div class="item">
 						<a href="{{ route('item', ['item' => 'フレーム・フォーク']) }}">フレーム・フォーク</a><br>
 						<a href="{{ route('item', ['item' => 'ハンドル・ステム']) }}">ハンドル・ステム</a><br>
 						<a href="{{ route('item', ['item' => 'ブレーキレバー・シフトレバー']) }}">ブレーキレバー・シフトレバー</a><br>
@@ -40,7 +40,7 @@
 							<h3>Wear Category</h3>
 						</div>
 					</div>
-					<div class="item"><br>
+					<div class="item">
 						<a href="{{ route('item', ['item' => 'ヘルメット・キャップ']) }}">ヘルメット・キャップ</a><br>
 						<a href="{{ route('item', ['item' => 'アイウェア']) }}">アイウェア</a><br>
 						<a href="{{ route('item', ['item' => 'ジャージ・ジャケット']) }}">ジャージ・ジャケット</a><br>
@@ -60,7 +60,7 @@
 							<h3>Gear・Bag Category</h3>
 						</div>
 					</div>
-					<div class="item"><br>
+					<div class="item">
 						<a href="{{ route('item', ['item' => 'サドルバッグ']) }}">サドルバッグ</a><br>
 						<a href="{{ route('item', ['item' => 'フロントバッグ']) }}">フロントバッグ</a><br>
 						<a href="{{ route('item', ['item' => 'フレーム・トップチューブバッグ']) }}">フレーム・トップチューブバッグ</a><br>
@@ -79,7 +79,7 @@
 							<h3>etc Category</h3>
 						</div>
 					</div>
-					<div class="item"><br>
+					<div class="item">
 						<a href="{{ route('item', ['item' => '工具']) }}">工具</a><br>
 						<a href="{{ route('item', ['item' => 'ケミカル類']) }}">ケミカル類</a><br>
 						<a href="{{ route('item', ['item' => 'ボトル・ボトルケージ']) }}">ボトル・ボトルケージ</a><br>

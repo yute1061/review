@@ -33,10 +33,16 @@ class NavController extends Controller
     
     public function review(Request $request)
     {   
+        $user_id = Auth::id();
+        if (empty($user_id)) {
+            $user = User::find(3); //ダミー情報
+        } else {
+            $user = User::find($user_id);
+        }
         $id = $request->id;
         $posts = Review::find($id);
 
-        return view('review.index', ['posts' => $posts]);
+        return view('review.index', ['posts' => $posts, 'user' => $user]);
     }
     
     public function guideline()
