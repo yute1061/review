@@ -76,9 +76,7 @@
             </tr>
         </table>
         <form method="GET" action="{{ route('admin.user.edit') }}">
-            <button type="submit" class="btn btn-primary">
-                {{ __('編集') }}
-            </button>
+            <input type="submit" value="編集">
             @csrf
         </form>
         <br>
@@ -93,9 +91,7 @@
         <br>
         <br>
         <form method="POST" action="{{ route('logout') }}">
-            <button type="submit" class="btn btn-primary">
-                {{ __('ログアウト') }}
-            </button>
+            <input type="submit" value="ログアウト">
             @csrf
         </form>
         <br>

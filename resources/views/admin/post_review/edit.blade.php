@@ -13,6 +13,13 @@
         <table width="100%" class="outer" cellspacing="1">
             <form name="formName" method="POST" enctype="multipart/form-data" action="{{ route('admin.post_review.update') }}">
                 @csrf
+                @if (count($errors) > 0)
+                    <ul>
+                        @foreach($errors->all() as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                    <ul>
+                @endif
                 <tr>
                     <td class="head2011a">
                         <label class="col-md-3">カテゴリー</label>

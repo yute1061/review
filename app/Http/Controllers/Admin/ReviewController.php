@@ -183,10 +183,5 @@ class ReviewController extends Controller
         
         return redirect('/');
     }
-
-    public function index()
-    {
-        return view('admin.post_review.create');
-    }
 }
 
