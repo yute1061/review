@@ -95,11 +95,11 @@ class ReviewController extends Controller
     
     public function edit(Request $request)
     {
-        $review = Review::find($request->id);
-        if (empty($review)) {
+        $posts = Review::find($request->id);
+        if (empty($posts)) {
             abort(404);
         }
-        return view('admin.post_review.edit', ['review_form' => $review]);
+        return view('admin.post_review.edit', ['posts' => $posts]);
     }
     
     public function update()

@@ -13,6 +13,7 @@
         <table width="100%" class="outer" cellspacing="1">
             <form name="formName" method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.preview') }}>
             {{-- <form action="{{ route('admin.post_review.preview') }}" method="post" enctype="multipart/form-data">--}}
+                @csrf
                 @if (count($errors) > 0)
                     <ul>
                         @foreach($errors->all() as $e)
@@ -35,6 +36,7 @@
                     	</div>
                     </td>
                 </tr>
+                
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">アイテム</label>
@@ -46,6 +48,7 @@
                     	</div>
                     </td>
                 </tr>
+                
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">メーカー</label>
@@ -107,6 +110,7 @@
                     	</div>
                     </td>
                 </tr>
+                
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">製品名</label>
@@ -117,6 +121,7 @@
                     	</div>
                     </td>
                 </tr>
+                
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">レビュー本文</label>
@@ -134,6 +139,7 @@
                     	</div>
                     </td>
                 </tr>
+                
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">価格評価</label>
@@ -150,6 +156,7 @@
                     	</div>
                     </td>
                 </tr>
+                
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">総合評価</label>
@@ -166,7 +173,7 @@
                     	</div>
                     </td>
                 </tr>
-                @csrf
+                
                 <tr>
                 	<td>
                 		<input type="submit" value="プレビュー">

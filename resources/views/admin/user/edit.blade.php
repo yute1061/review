@@ -3,7 +3,7 @@
 @section('title', 'ユーザーの編集')
 
 @section('content')
-    <div class="wrap">
+<div class="wrap">
     <br>
     <h4 style="text-align: center;">ユーザー情報の編集ができます</h4><br>
     <table width="100%" class="outer" cellspacing="1">

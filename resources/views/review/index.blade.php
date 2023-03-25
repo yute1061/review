@@ -103,10 +103,9 @@
             </tr>
         </table>
         @if ($user->email == $posts->contributor)
-            <form method="POST" action="{{ route('admin.post_review.edit') }}">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('編集') }}
-                </button>
+            <form method="get" action="{{ route('admin.post_review.edit') }}">
+                <input type="hidden" name="id" value="{{ $posts->id }}">
+                <input type="submit" value="編集">
                 @csrf
             </form>
         @else
