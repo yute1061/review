@@ -54,10 +54,23 @@
             </tr>
             <tr>
                 <td class="head2011a">
+                    <label class="col-md-3">投稿者プロフィール</label>
+                </td>
+                <td class="head2011b">
+                    <div class="col-md-10">
+                        <a>{{ $posts->gender }}</a>&nbsp;
+                        <a>{{ $posts->age }}歳</a>&nbsp;
+                        <a>自転車歴：{{ $posts->career }}年</a>&nbsp;
+                        <a>ライドスタイル：{{ $posts->ridestyle }}</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="head2011a">
                 	<label class="col-md-3">本文</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
+                	<div class="col-md-10">
                 	    <p>{{ $posts->body }}</p>
                 	</div>
                 	<div class="col-md-4">

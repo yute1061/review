@@ -18,9 +18,7 @@
             @endif
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>
-                    </div>
+                    <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
@@ -37,9 +35,7 @@
 
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
-                    </div>
+                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
@@ -56,9 +52,7 @@
 
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('パスワード') }}</label>
-                    </div>
+                    <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('パスワード') }}</label>
                 </td>
                 <td class="head2011b">
                     <div class="career">
@@ -78,9 +72,7 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('パスワード確認') }}</label>
-                    <div>
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('パスワード確認') }}</label>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-4">
@@ -91,9 +83,7 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">性別</label>
-                    </div>
+                    <label class="col-md-3">性別</label>
                 </td>
                 <td class="head2011b">
                     <label><input type="radio" class="radio" name="gender" value="男性">男性</label>
@@ -103,9 +93,7 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">年齢</label>
-                    </div>
+                    <label class="col-md-3">年齢</label>
                 </td>
                 <td class="head2011b">
                     <div class="career">
@@ -119,9 +107,7 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">自転車歴</label>
-                    </div>
+                    <label class="col-md-3">自転車歴</label>
                 </td>
                 <td class="head2011b">
                     <div class="career">
@@ -135,9 +121,7 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">主なライドスタイル</label>
-                    </div>
+                    <label class="col-md-3">主なライドスタイル</label>
                 </td>
                 <td class="head2011b">
                     <div class="col-md-10">
@@ -152,9 +136,7 @@
             @csrf
             <tr>
                 <td>
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('登録') }}
-                    </button>
+                    <input type="submit" value="登録">
                 </td>
             </tr>
         </form>

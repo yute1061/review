@@ -57,7 +57,7 @@
                     	<label class="col-md-3">本文</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
+                    	<div class="col-md-6">
                     	    <p>{{ $review->body }}</p>
                     	</div>
                     	<div class="col-md-4">

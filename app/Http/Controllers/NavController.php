@@ -19,6 +19,12 @@ class NavController extends Controller
     public function toppage(Request $request)
     {   
         $posts = Review::all()->sortByDesc('id');
+        $delete = Review::all()->sortBy('status')->first(); //トップページを開くたびにstatusが1じゃない＝表示されないデータを削除する
+        
+        if ($delete->status != 1) {
+            $delete->delete();
+        } else {
+        }
         
         return view('toppage.index', ['posts' => $posts]);
     }

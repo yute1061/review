@@ -9,7 +9,7 @@
 			<div class="category_index">
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_parts.jpeg/') }}">
+						<img src="{{ secure_asset('storage/image/icon_parts.png/') }}">
 						<div class="title2">
 							<h3>Parts Category</h3>
 						</div>
@@ -35,7 +35,7 @@
 				</div>
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_wear.jpeg/') }}">
+						<img src="{{ secure_asset('storage/image/icon_wear.png/') }}">
 						<div class="title2">
 							<h3>Wear Category</h3>
 						</div>
@@ -55,7 +55,7 @@
 				</div>
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_gear.jpeg/') }}">
+						<img src="{{ secure_asset('storage/image/icon_gear.png/') }}">
 						<div class="title2">
 							<h3>Gear・Bag Category</h3>
 						</div>
@@ -74,7 +74,7 @@
 				</div>
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_etc.jpeg/') }}">
+						<img src="{{ secure_asset('storage/image/icon_etc.png/') }}">
 						<div class="title2">
 							<h3>etc Category</h3>
 						</div>

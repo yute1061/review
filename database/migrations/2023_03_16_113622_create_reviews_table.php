@@ -29,6 +29,10 @@ return new class extends Migration
             $table->string('evaluation');
             $table->boolean('status')->nullable(); //投稿済かどうかの判断
             $table->string('contributor')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('age')->nullable();
+            $table->string('career')->nullable();
+            $table->string('ridestyle')->nullable();
             $table->timestamps();
         });
     }

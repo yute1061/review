@@ -23,13 +23,20 @@ a {
 }
 
 body {
+  font-family: "Arial unicode ms";
   background: #ffffff;
 }
 
 header {
   width: 100%;
-  border-bottom: 3px solid #f6ba33;
+  background: #000080;
+  color: #ffffff;
+  border-bottom: 3px solid #556b2f;
   padding: 10px;
+}
+
+header a {
+  color: #ffffff;
 }
 
 header .top_login {
@@ -59,12 +66,14 @@ header .logo img {
 }
 
 header .logo2 {
+  color: #ffffff;
   font-family: Arial Black;
   display: inline-block;
   _display: inline;
 }
 
 header .logo3 {
+  color: #ffffff;
   font-family: Arial Black;
   padding: 20px 0 0 3px;
   display: inline-block;
@@ -72,6 +81,7 @@ header .logo3 {
 }
 
 header .sightmap {
+  color: #ffffff;
   display: flex;
   justify-content: space-evenly;
   margin: 10px 0 0 0;
@@ -101,11 +111,16 @@ header .sightmap {
   font-family: Arial Black;
   text-align: center;
   color: #fff;
-  background: #696969;
+  background: #000080;
   display: flex;
 }
 .title img {
   width: 10%;
+}
+
+.item {
+  font-size: 20px;
+  padding: 0 0 0 80px;
 }
 
 .title2 {
@@ -113,6 +128,7 @@ header .sightmap {
 }
 
 .title3 {
+  background: #000080;
   padding: 0 0 0 10px;
 }
 
@@ -143,7 +159,7 @@ header .sightmap {
 
 footer {
   color: #fff;
-  background: #696969;
+  background: #000080;
   text-align: center;
   padding: 10px 0 30px 0;
 }

@@ -80,14 +80,37 @@
             @csrf
         </form>
         <br>
-        
-        {{--　後でルーティングする
-        <form method="GET" action="{{ route('admin.user.edit') }}">
-        --}}
-        <button type="submit" class="btn btn-primary">
-            {{ __('投稿したレビュー一覧') }}
-        </button>
-        @csrf
+        <p>Myレビュー</p>
+        <table width="60%" class="outer" cellspacing="1">
+            <?php $count=0; ?>
+            @foreach ($review as $my_review)
+                @if ($my_review->status == 1)
+                    @if ($my_review->contributor == $posts->email)
+                        <?php $count++; ?>
+                        <tr>
+                            <td class="head2011c">
+                                <div class="col-md-3">
+                                    <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->maker) }}</a>
+                                </div>
+                            </td>
+                            <td class="head2011c">
+                                <div class="col-md-10">
+                                    <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->product) }}</a>
+                                </div>
+                            <td class="head2011c">
+                                <div class="col-md-10">
+                                    <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->created_at) }}</a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    @endif
+                @endif
+            @endforeach
+        </table>
+        @if ($count == 0)
+            <a>投稿レビューがありません</a>
+        @endif
         <br>
         <br>
         <form method="POST" action="{{ route('logout') }}">

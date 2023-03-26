@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
+use App\Models\Review;
+
 class UserController extends Controller
 {
     //
@@ -16,11 +18,12 @@ class UserController extends Controller
     {
         $id = Auth::id();
         $posts = User::find($id);
+        $review = Review::all()->sortBy('id');
         
         if (empty($posts)) {
             return view('auth.register');
         } else {
-            return view('admin.user.mypage', ['posts' => $posts]);
+            return view('admin.user.mypage', ['posts' => $posts, 'review' => $review]);
         }
     }
 }

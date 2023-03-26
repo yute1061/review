@@ -68,6 +68,7 @@ class ReviewController extends Controller
             $review->image_path5 = null;
         }
 
+        
         unset($form['_token']);
         unset($form['image1']);
         unset($form['image2']);
@@ -88,6 +89,11 @@ class ReviewController extends Controller
 
         $review->status = 1;
         $review->contributor = $user->email;
+        $review->gender = $user->gender;
+        $review->age = $user->age;
+        $review->career = $user->career;
+        $review->ridestyle = $user->ridestyle;
+        
         $review->save();
         
         return redirect('/');
@@ -170,7 +176,7 @@ class ReviewController extends Controller
         $review->fill($form);
         $review->save();
         
-        return redirect('/');
+        return view('admin.post_review.preview', ['review' => $review]);
     }
     
     public function delete(Request $request)
