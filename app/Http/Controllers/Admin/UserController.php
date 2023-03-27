@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule; // 追加
+
 use App\Models\User;
 use App\Models\Review;
+
 
 class UserController extends Controller
 {
@@ -26,6 +30,11 @@ class UserController extends Controller
     
     public function update(Request $request)
     {   
+        $this->validate($request, Validator::$rules);
+        $request->validate([
+            'email' => ['required', Rule::unique('users')->ignore($request->id, 'id') ] //重複チェック（email変更のとき、他人が登録したアドレスだと弾く）
+        ]);
+            
         $posts = Auth::user();
         $posts->name = $request->name;
         $posts->email = $request->email;

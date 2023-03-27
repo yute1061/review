@@ -8,6 +8,13 @@
     <h4 style="text-align: center;">ユーザー情報の編集ができます</h4><br>
     <table width="100%" class="outer" cellspacing="1">
         <form method="POST" action="{{ route('admin.user.update') }}">
+            @if (count($errors) > 0)
+                <ul>
+                    @foreach($errors->all() as $e)
+                        <li>{{ $e }}</li>
+                    @endforeach
+                <ul>
+            @endif
             @csrf
             <tr>
                 <td class="head2011a">
@@ -50,7 +57,7 @@
             <tr>
                 <td class="head2011a">
                     <div class="item">
-                        <label class="col-md-3">年齢</label>
+                        <label class="col-md-3">性別</label>
                     </div>
                 </td>
                 <td class="head2011b">
@@ -109,7 +116,8 @@
             </tr>
             
             <tr>
-                <td>        
+                <td>
+                    <input type="hidden" name="id" value="{{ $posts->id }}">
                     <button type="submit" class="btn btn-primary">
                         {{ __('更新') }}
                     </button>
