@@ -6,8 +6,8 @@
 <div class="wrap">
     <br>
     <h4 style="text-align: center;">ユーザー情報の編集ができます</h4><br>
-    <table width="100%" class="outer" cellspacing="1">
-        <form method="POST" action="{{ route('admin.user.update') }}">
+    <form method="POST" action="{{ route('admin.user.update') }}">
+        <table style="margin: 0 auto;" width="70%" class="outer" cellspacing="1">
             @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -18,12 +18,10 @@
             @csrf
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>
-                    </div>
+                    <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $posts->name }}" required autocomplete="name" autofocus>
 
                         @error('name')
@@ -37,12 +35,10 @@
 
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
-                    </div>
+                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-4">
+                    <div class="col-md-8">
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $posts->email }}" required autocomplete="email">
     
                         @error('email')
@@ -56,9 +52,7 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">性別</label>
-                    </div>
+                    <label class="col-md-3">性別</label>
                 </td>
                 <td class="head2011b">
                     <label><input type="radio" class="radio" name="gender" value="男性">男性</label>
@@ -68,13 +62,11 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">年齢</label>
-                    </div>
+                    <label class="col-md-3">年齢</label>
                 </td>
                 <td class="head2011b">
                     <div class="career">
-    	                <div class="col-md-1">
+    	                <div class="col-md-2">
     	                    <input id="age" type="text" class="form-control" name="age" value="{{ $posts->age }}">
             	        </div>
             	        <p class="note">歳</p>
@@ -84,13 +76,11 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">自転車歴</label>
-                    </div>
+                    <label class="col-md-3">自転車歴</label>
                 </td>
                 <td class="head2011b">
                     <div class="career">
-    	                <div class="col-md-1">
+    	                <div class="col-md-2">
     	                    <input id="career" type="text" class="form-control" name="career" value="{{ $posts->career }}">
                         </div>
                         <p class="note">年</p>
@@ -100,12 +90,10 @@
             
             <tr>
                 <td class="head2011a">
-                    <div class="item">
-                        <label class="col-md-3">主なライドスタイル</label>
-                    </div>
+                    <label class="col-md-3">主なライドスタイル</label>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <label><input type="radio" class="radio" name="ridestyle" value="レース">レース</label>
                         <label><input type="radio" class="radio" name="ridestyle" value="ブルベ・ロングライド">ブルベ・ロングライド</label>
                         <label><input type="radio" class="radio" name="ridestyle" value="街乗り">街乗り</label>
@@ -114,17 +102,14 @@
                     </div>
                 </td>
             </tr>
-            
-            <tr>
-                <td>
-                    <input type="hidden" name="id" value="{{ $posts->id }}">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('更新') }}
-                    </button>
-                </td>
-            </tr>
-        </form>
-    </table>
+        </table>
+        <br>
+        <div class="register_btn">
+    	    <input type="hidden" name="id" value="{{ $posts->id }}">
+    	    {{-- hidden...隠しファイル これを使うことでidをcreateに送れる --}}
+    	    <input class="btn btn--red btn--cubic" type="submit" value="更新">
+	    </div>
+    </form>
     <br>
 </div>
 @endsection

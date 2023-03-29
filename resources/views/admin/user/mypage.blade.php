@@ -7,7 +7,7 @@
         <br>
         <h2 style="text-align: center;">RANDONNEUR bike product reviewへようこそ！</h2><br>
         <p style="text-align: center;">あなたのユーザー情報です</p><br>
-        <table width="100%" class="outer" cellspacing="1">
+        <table style="margin: 0 auto;" width="50%" class="outer" cellspacing="1">
             <tr>
                 <td class="head2011a">
                 	<label class="col-md-3">{{ __('ニックネーム') }}</label>
@@ -75,13 +75,18 @@
                 </td>
             </tr>
         </table>
+        <br>
         <form method="GET" action="{{ route('admin.user.edit') }}">
-            <input type="submit" value="編集">
             @csrf
+            <div class="register_btn">
+                <input class="btn btn--red btn--cubic" type="submit" value="編集">
+            </div>
         </form>
         <br>
-        <p>Myレビュー</p>
-        <table width="60%" class="outer" cellspacing="1">
+        <br>
+        <p style="text-align: center;">Myレビュー</p>
+        <br>
+        <table style="margin: 0 auto;" width="50%" class="outer" cellspacing="1">
             <?php $count=0; ?>
             @foreach ($review as $my_review)
                 @if ($my_review->status == 1)
@@ -89,18 +94,13 @@
                         <?php $count++; ?>
                         <tr>
                             <td class="head2011c">
-                                <div class="col-md-3">
-                                    <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->maker) }}</a>
-                                </div>
+                                <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->item) }}</a>
                             </td>
                             <td class="head2011c">
-                                <div class="col-md-10">
-                                    <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->product) }}</a>
-                                </div>
+                                <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->product) }}</a>
+                            </td>
                             <td class="head2011c">
-                                <div class="col-md-10">
-                                    <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->created_at) }}</a>
-                                </div>
+                                <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->created_at) }}</a>
                             </td>
                         </tr>
                         
@@ -109,13 +109,13 @@
             @endforeach
         </table>
         @if ($count == 0)
-            <a>投稿レビューがありません</a>
+            <p style="text-align: center;">投稿レビューがありません</p>
         @endif
         <br>
         <br>
-        <form method="POST" action="{{ route('logout') }}">
-            <input type="submit" value="ログアウト">
+        <form style="text-align: center;" method="POST" action="{{ route('logout') }}">
             @csrf
+            <input class="btn btn--gray btn--cubic" type="submit" value="ログアウト">
         </form>
         <br>
     </div>  

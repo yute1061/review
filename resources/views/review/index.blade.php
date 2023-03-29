@@ -11,7 +11,7 @@
         <a>{{ $posts->maker }} &ensp; {{ $posts->product }}</a>
         <br>
         
-        <table width="100%" class="outer" cellspacing="1">
+        <table style="margin: 0 auto;" width="70%" class="outer" cellspacing="1">
             <tr>
                 <td class="head2011a">
                 	<label class="col-md-3">カテゴリー</label>
@@ -115,19 +115,23 @@
                 </td>
             </tr>
         </table>
+        <br>
         @if ($user->email == $posts->contributor)
-            <form method="get" action="{{ route('admin.post_review.edit') }}">
-                <input type="hidden" name="id" value="{{ $posts->id }}">
-                <input type="submit" value="編集">
-                @csrf
-            </form>
-            &emsp;
-            <form method="get" action="{{ route('admin.post_review.delete') }}">
-                <input type="hidden" name="id" value="{{ $posts->id }}">
-                <input type="submit" value="削除" >
-            </form>
+            <div class="register_btn">
+                <form method="get" action="{{ route('admin.post_review.edit') }}">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $posts->id }}">
+                    <input class="btn btn--red btn--cubic" type="submit" value="編集">
+                </form>
+                <br>
+                <form method="get" action="{{ route('admin.post_review.delete') }}">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $posts->id }}">
+                    <input class="btn btn--gray btn--cubic" type="submit" value="削除">
+                </form>
+            </div>
         @else
-            <br>
         @endif
     </div>
+    <br>
 @endsection

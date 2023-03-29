@@ -4,7 +4,6 @@
 
 @section('content')
 	<div class="wrap top">
-		
 		<div class="left_column">
 			<div class="category_index">
 				<div class="category">

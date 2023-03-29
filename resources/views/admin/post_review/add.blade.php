@@ -10,9 +10,8 @@
         <br>
         <h2 style="text-align: center;">レビュー新規作成</h2>
         <br>
-        <table width="100%" class="outer" cellspacing="1">
-            <form name="formName" method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.preview') }}>
-            {{-- <form action="{{ route('admin.post_review.preview') }}" method="post" enctype="multipart/form-data">--}}
+        <form name="formName" method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.preview') }}>
+            <table style="margin: 0 auto;" width="60%" class="outer" cellspacing="1">
                 @csrf
                 @if (count($errors) > 0)
                     <ul>
@@ -96,6 +95,7 @@
                                 <option>RITCHEY</option>
                                 <option>SCOTT</option>
                                 <option>SHIMANO</option>
+                                <option>SIDI</option>
                                 <option>SPECIALIZED</option>
                                 <option>SRAM</option>
                                 <option>STORCK</option>
@@ -127,7 +127,7 @@
                     	<label class="col-md-3">レビュー本文</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-6">
+                    	<div class="col-md-10">
                     	    <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
                     	</div>
                     	<div class="col-md-6">
@@ -173,13 +173,12 @@
                     	</div>
                     </td>
                 </tr>
-                
-                <tr>
-                	<td>
-                		<input type="submit" value="プレビュー">
-                	</td>
-                </tr>
-            </form>
-        </table>
+            </table>
+            <br>
+            <div class="register_btn">
+                <input class="btn btn--blue btn--cubic" type="submit" value="プレビュー">
+            </div>
+        </form>
     </div>
+    <br>
 @endsection

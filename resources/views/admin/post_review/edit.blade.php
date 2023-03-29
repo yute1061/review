@@ -10,8 +10,8 @@
         <br>
         <h4 style="text-align: center;">投稿内容の編集ができます</h4>
         <br>
-        <table width="100%" class="outer" cellspacing="1">
-            <form name="formName" method="POST" enctype="multipart/form-data" action="{{ route('admin.post_review.update') }}">
+        <form name="formName" method="POST" enctype="multipart/form-data" action="{{ route('admin.post_review.update') }}">
+            <table style="margin: 0 auto;" width="60%" class="outer" cellspacing="1">
                 @csrf
                 @if (count($errors) > 0)
                     <ul>
@@ -51,9 +51,7 @@
                 
                 <tr>
                     <td class="head2011a">
-                        <div class="item">
-                            <label class="col-md-3">メーカー</label>
-                        </div>
+                        <label class="col-md-3">メーカー</label>
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
@@ -98,6 +96,7 @@
                                 <option>RITCHEY</option>
                                 <option>SCOTT</option>
                                 <option>SHIMANO</option>
+                                <option>SIDI</option>
                                 <option>SPECIALIZED</option>
                                 <option>SRAM</option>
                                 <option>STORCK</option>
@@ -115,9 +114,7 @@
                 
                 <tr>
                     <td class="head2011a">
-                        <div class="item">
-                            <label class="col-md-3">製品名</label>
-                        </div>
+                        <label class="col-md-3">製品名</label>
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-6">
@@ -131,7 +128,7 @@
                     	<label class="col-md-3">レビュー本文</label>
                     </td>
                     <td class="head2011b">
-                        <div class="col-md-6">
+                        <div class="col-md-10">
                     	    <textarea class="form-control" name="body" rows="20" value="{{ $posts->body }}">{{ $posts->body }}</textarea>
                     	</div>
                     	<div class="col-md-6">
@@ -228,16 +225,13 @@
                     	</div>
                     </td>
                 </tr>
-                
-                <tr>
-                	<td>
-                	    <input type="hidden" name="id" value="{{ $posts->id }}">
-                	    {{-- hidden...隠しファイル これを使うことでidをcreateに送れる --}}
-                		<input type="submit" value="更新">
-                	</td>
-                </tr>
-            </form>
-        </table>
+            </table>
+            <br>
+            <div class="register_btn">
+                <input type="hidden" name="id" value="{{ $posts->id }}">
+                <input class="btn btn--blue btn--cubic" type="submit" value="プレビュー">
+            </div>
+        </form>
         <br>
     </div>
 @endsection

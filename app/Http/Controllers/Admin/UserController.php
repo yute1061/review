@@ -32,7 +32,8 @@ class UserController extends Controller
     {   
         $this->validate($request, Validator::$rules);
         $request->validate([
-            'email' => ['required', Rule::unique('users')->ignore($request->id, 'id') ] //重複チェック（email変更のとき、他人が登録したアドレスだと弾く）
+            //重複チェック（email変更のとき、登録済のアドレスだと弾くが、元々の自分のアドレスだけは通す）
+            'email' => ['required', Rule::unique('users')->ignore($request->id, 'id') ] 
         ]);
             
         $posts = Auth::user();

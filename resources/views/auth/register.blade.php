@@ -7,8 +7,9 @@
     <br>
     <h2 style="text-align: center;">tech boost Bike Product Reviewへようこそ！</h2><br>
     <p style="text-align: center;">レビューの投稿にはユーザー登録が必要です</p><br>
-    <table width="100%" class="outer" cellspacing="1">
-        <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+        <table style="margin: 0 auto;" width="80%" class="outer" cellspacing="1">
             @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -21,7 +22,7 @@
                     <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                         @error('name')
@@ -38,7 +39,7 @@
                     <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-4">
+                    <div class="col-md-7">
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
     
                         @error('email')
@@ -56,7 +57,7 @@
                 </td>
                 <td class="head2011b">
                     <div class="career">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
         
                             @error('password')
@@ -75,7 +76,7 @@
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('パスワード確認') }}</label>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     </div>
                 </td>
@@ -133,16 +134,18 @@
                     </div>
                 </td>
             </tr>
-            @csrf
-            <tr>
-                <td>
-                    <input type="submit" value="登録">
-                </td>
-            </tr>
-        </form>
-    </table>
-    <a class="btn btn-link" href="{{ route('login') }}">
-        {{ __('登録済みの方ははこちらからログイン') }}
-    </a>
+        </table>
+        <br>
+        <div class="register_btn">
+            <input class="btn btn--red btn--cubic" type="submit" value="登録">
+        </div>
+    </form>
+    <br>
+    <div class="register_btn">
+        <a class="btn btn--green btn--cubic" href="{{ route('login') }}">
+            {{ __('登録済みの方はこちらからログイン') }}
+        </a>
+    </div>
 </div>
+<br>
 @endsection

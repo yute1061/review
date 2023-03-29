@@ -58,21 +58,22 @@
                                 </div>
                             </div>
                             @csrf
-                            <div class="row mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('ログイン') }}
-                                    </button>
-                                </div>
+                            <div class="register_btn">
+                                <input class="btn btn--red btn--cubic" type="submit" value="ログイン">
                             </div>
                         </form>
-                        <a class="btn btn-link" href="{{ route('register') }}">
-                            {{ __('新規登録はこちら') }}
-                        </a>
+                        <br>
+                            <div class="register_btn">
+                                <a class="btn btn--green btn--cubic" href="{{ route('register') }}">
+                                    {{ __('新規登録はこちら') }}
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<br>
 @endsection

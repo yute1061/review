@@ -100,6 +100,7 @@
         <!-- Styles -->
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
         
 		<link href="{{ secure_asset('css/reset.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
@@ -133,7 +134,7 @@
                                     @enderror
                             </div>
                             <div class="top_form_btn">
-            		            <input type="submit" value="ログイン">
+                                <input class="btn btn--red_2 btn--cubic" type="submit" value="ログイン">
             		        </div>
             		    </div>
         		    </form>
@@ -141,10 +142,11 @@
     		        <form action="{{ route('admin.user.index') }}" method="get">
         		        <div class="top_login">
         		            <p>ようこそ　</p><p class="name">{{ Auth::user()->name }}</p><p>　さん　</p>
-            		            <input type="submit" value="マイページ">
+        		            <input class="btn btn--red_2 btn--cubic" type="submit" value="マイページ">
         	            </div>
     	            </form>
     	        @endguest
+    	        <br>
     	        <div class="logo">
     	            <img src="{{ secure_asset('storage/image/logo.png/') }}">
         			<span class="logo2">

@@ -10,8 +10,9 @@
         <br>
         <h2 style="text-align: center;">レビューのプレビュー</h2>
         <br>
-        <table width="100%" class="outer" cellspacing="1">
-            <form method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.create') }}>
+        <form method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.create') }}>
+            <table style="margin: 0 auto;" width="60%" class="outer" cellspacing="1">
+                @csrf
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">カテゴリー</label>
@@ -27,7 +28,7 @@
                     	<label class="col-md-3">アイテム</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
+                    	<div class="col-md-7">
                     	    <p>{{ $review->item }}</p>
                     	</div>
                     </td>
@@ -57,7 +58,7 @@
                     	<label class="col-md-3">本文</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-6">
+                    	<div class="col-md-11">
                     	    <p>{{ $review->body }}</p>
                     	</div>
                     	<div class="col-md-4">
@@ -101,20 +102,18 @@
                     	</div>
                     </td>
                 </tr>
-                @csrf
-                <tr>
-                	<td>
-                	    <input type="hidden" name="id" value="{{ $review->id }}">
-                	    {{-- hidden...隠しファイル これを使うことでidをcreateに送れる --}}
-                		<input type="submit" value="投稿">
-                	</td>
-                </tr>
-            </form>
-            <tr>
-                <td>
-        		    <input type="submit" onclick="history.back()" value="戻る">
-    		    </td>
-		    </tr>
-        </table>
+            </table>
+            <br>
+            <div class="register_btn">
+        	    <input type="hidden" name="id" value="{{ $review->id }}">
+        	    {{-- hidden...隠しファイル これを使うことでidをcreateに送れる --}}
+        	    <input class="btn btn--blue btn--cubic" type="submit" value="投稿">
+    	    </div>
+        </form>
+        <br>
+        <div class="register_btn">
+            <input class="btn btn--gray btn--cubic" type="submit" onclick="history.back()" value="戻る">
+		</div>
     </div>
+    <br>
 @endsection
