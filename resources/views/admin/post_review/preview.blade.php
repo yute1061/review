@@ -11,7 +11,7 @@
         <h2 style="text-align: center;">レビューのプレビュー</h2>
         <br>
         <form method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.create') }}>
-            <table style="margin: 0 auto;" width="60%" class="outer" cellspacing="1">
+            <table style="margin: 0 auto;" width="80%" class="outer" cellspacing="1">
                 @csrf
                 <tr>
                     <td class="head2011a">
@@ -58,8 +58,8 @@
                     	<label class="col-md-3">本文</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-11">
-                    	    <p>{{ $review->body }}</p>
+                    	<div class="col-md-10">
+                    	    <a>{!! nl2br(e($review->body)) !!}</a> {{-- 改行を反映させるための表記 --}}
                     	</div>
                     	<div class="col-md-4">
                     	    <div class="caption">

@@ -96,7 +96,7 @@ class ReviewController extends Controller
         
         $review->save();
         
-        return redirect('/');
+        return view('review.index', ['posts' => $review, 'user' => $user]); //NavControllerのfunction reviewと統一するため'posts'を指定
     }
     
     public function edit(Request $request)
@@ -181,13 +181,17 @@ class ReviewController extends Controller
     
     public function delete(Request $request)
     {
-        // 該当するNews Modelを取得
+        // 該当するReview Modelを取得
         $review = Review::find($request->id);
+        $category = $review->category;
+        $item = $review->item;
         
         // 削除する
         $review->delete();
         
-        return redirect('/');
+        $posts = Review::all()->sortBy('maker');
+        
+        return view('item.index', ['posts' => $posts, 'category' => $category, 'item' => $item]);
     }
 }
 

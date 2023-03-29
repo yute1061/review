@@ -4,53 +4,11 @@
 
 @section('content')
 	<div class="wrap">
-		<a> TOP </a>
+		<a> {{ $category }}</a>
 		<a> > </a>
 		<a> {{ $item }}</a>
 		
-		<table width="100%" class="outer" cellspacing="1">
-			
-			<!--sort-->
-			<tr class="foot">
-				<td colspan="3" align="right">
-					<small>並べ替え:</small>
-					<select name="sortname">
-					  <option value="t.topic_title" selected="selected">アルファベット順で</option>
-					  <option value="t.topic_replies">レビューの数で</option>
-					  <option value="t.topic_views">閲覧数で</option>
-					  <option value="p.post_time">投稿日時で</option>
-				  </select>
-				  <select name="sortorder">
-				    <option value="ASC" selected="selected">昇順</option>
-				    <option value="DESC">降順</option>
-			    </select>
-			    <select name="sortsince">
-			      <option value="1">過去1日分</option>
-			      <option value="2">過去2日分</option>
-			      <option value="5">過去5日分</option>
-			      <option value="10">過去10日分</option>
-			      <option value="20">過去20日分</option>
-			      <option value="30">過去30日分</option>
-			      <option value="40">過去40日分</option>
-			      <option value="60">過去60日分</option>
-			      <option value="90">過去90日分</option>
-			      <option value="180">過去180日分</option>
-			      <option value="365">過去1年分</option>
-			      <option value="20000" selected="selected">全て</option>
-		      </select>
-		      <input type="hidden" name="forum" value="6">
-		      <input type="submit" class="formButton3" name="refresh" value="ゴー!">
-		    </td>
-		  </tr>
-		  
-		  <!--Reviews and Views-->
-      <tr style="font-size:x-small;background-color:#FFFFFF;">
-        <td>
-        </td>
-        <td nowrap="" align="center">&nbsp;投稿数&nbsp;</td>
-        <td nowrap="" align="center">閲覧数</td>
-      </tr>
-      
+		<table width="60%" style="margin: 0 auto;" class="outer" cellspacing="1">
       @foreach ($posts as $post)
         @if ($post->status == 1)
           @if ($post->item == $item)

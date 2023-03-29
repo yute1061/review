@@ -19,11 +19,12 @@ class NavController extends Controller
     public function toppage(Request $request)
     {   
         $posts = Review::all()->sortByDesc('id');
-        $delete = Review::all()->sortBy('status')->first(); //トップページを開くたびにstatusが1じゃない＝表示されないデータを削除する
+        $delete = Review::all()->sortBy('status')->first(); //トップページを開くたびにstatusが1じゃない＝保存だけされて表示されていないデータを削除する
         
-        if ($delete->status != 1) {
-            $delete->delete();
-        } else {
+        if (!empty($delete)) {
+            if ($delete->status != 1) {
+                $delete->delete();
+        }
         }
         
         return view('toppage.index', ['posts' => $posts]);
@@ -32,9 +33,10 @@ class NavController extends Controller
     public function item(Request $request)
     {   
         $posts = Review::all()->sortBy('maker');
+        $category = $request->category;
         $item = $request->item;
         
-        return view('item.index', ['posts' => $posts, 'item' => $item]);
+        return view('item.index', ['posts' => $posts, 'category' => $category, 'item' => $item]);
     }
     
     public function review(Request $request)

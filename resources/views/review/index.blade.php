@@ -5,13 +5,14 @@
 @section('content')
     <div class="wrap">
         <br>
-        <a>TOP &nbsp; > &nbsp;</a>
-        <a>{{ $posts->category }} &nbsp; >　&nbsp;</a>
-        <a>{{ $posts->item }} &nbsp; > &nbsp;</a>
+        <a>{{ $posts->category }}</a>
+        <a> > </a>
+        <a>{{ $posts->item }}</a>
+        <a> > </a>
         <a>{{ $posts->maker }} &ensp; {{ $posts->product }}</a>
         <br>
         
-        <table style="margin: 0 auto;" width="70%" class="outer" cellspacing="1">
+        <table style="margin: 0 auto;" width="80%" class="outer" cellspacing="1">
             <tr>
                 <td class="head2011a">
                 	<label class="col-md-3">カテゴリー</label>
@@ -71,7 +72,7 @@
                 </td>
                 <td class="head2011b">
                 	<div class="col-md-10">
-                	    <p>{{ $posts->body }}</p>
+                	    <a>{!! nl2br(e($posts->body)) !!}</a> {{-- 改行を反映させるための表記 --}}
                 	</div>
                 	<div class="col-md-4">
                 	    <div class="caption">
