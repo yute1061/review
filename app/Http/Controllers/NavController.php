@@ -62,4 +62,5 @@ class NavController extends Controller
     {   
         return view('about.index');
     }
+    
 }
