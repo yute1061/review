@@ -74,6 +74,7 @@
                 	<div class="col-md-10">
                 	    <a>{!! nl2br(e($posts->body)) !!}</a> {{-- 改行を反映させるための表記 --}}
                 	</div>
+                	<br>
                 	<div class="col-md-4">
                 	    <div class="caption">
                     	    @if ($posts->image_path1)

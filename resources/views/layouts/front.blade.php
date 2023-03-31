@@ -118,20 +118,15 @@
                 		    <div class="top_form">
                 		        <a>メールアドレス</a>
                 		        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus size="15">
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
+                		        @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="top_form">
                                 <a>パスワード</a>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                             </div>
                             <div class="top_form_btn">
                                 <input class="btn btn--red_2 btn--cubic" type="submit" value="ログイン">
@@ -146,6 +141,7 @@
         	            </div>
     	            </form>
     	        @endguest
+    	        <br>
     	        <br>
     	        <div class="logo">
     	            <img src="{{ secure_asset('storage/image/logo.png/') }}">

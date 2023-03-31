@@ -86,7 +86,7 @@
         <br>
         <p style="text-align: center;">Myレビュー</p>
         <br>
-        <table style="margin: 0 auto;" width="50%" class="outer" cellspacing="1">
+        <table style="margin: 0 auto;" width="50%" cellspacing="1">
             <?php $count=0; ?>
             @foreach ($review as $my_review)
                 @if ($my_review->status == 1)
@@ -94,16 +94,18 @@
                         <?php $count++; ?>
                         <tr>
                             <td class="head2011c">
-                                <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->item) }}</a>
+                                <a href="{{ route('review', ['id' => $my_review->id])}}"></a>
+                                <span>{{ Str::limit($my_review->item) }}</span>
                             </td>
                             <td class="head2011c">
-                                <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->product) }}</a>
+                                <a href="{{ route('review', ['id' => $my_review->id])}}"></a>
+                                <span>{{ Str::limit($my_review->product) }}</span>
                             </td>
                             <td class="head2011c">
-                                <a href="{{ route('review', ['id' => $my_review->id])}}">{{ Str::limit($my_review->created_at) }}</a>
+                                <a href="{{ route('review', ['id' => $my_review->id])}}"></a>
+                                <span>{{ Str::limit($my_review->created_at) }}</span>
                             </td>
                         </tr>
-                        
                     @endif
                 @endif
             @endforeach

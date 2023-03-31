@@ -23,6 +23,8 @@
 }
 
 .head2011c a {
+  color: #000;
+  text-decoration: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -50,8 +52,4 @@
 
 .btn-link {
   font-size: 1em;
-}
-
-.register_btn {
-  text-align: center;
 }

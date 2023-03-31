@@ -41,12 +41,6 @@
                 <td class="head2011b">
                     <div class="col-md-7">
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-    
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                     </div>
                 </td>
             </tr>
@@ -59,14 +53,8 @@
                     <div class="career">
                         <div class="col-md-6">
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-        
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                         </div>
-                        <p class="note">　8文字以上で登録してください</P>
+                        <p class="note">　8文字以上で登録してください。</p>
                     </div>
                 </td>
             </tr>
@@ -101,7 +89,7 @@
     	                <div class="col-md-1">
             	            <input type="text" class="form-control" name="age" value="{{ old('age') }}">
             	        </div>
-            	        <p class="note">歳</p>
+            	        <p class="note">歳　　半角数字で入力してください。</p>
             	    </div>
         	    </td>
             </tr>
@@ -115,7 +103,7 @@
     	                <div class="col-md-1">
                             <input type="text" class="form-control" name="career" value="{{ old('career') }}">
                         </div>
-                        <p class="note">年</p>
+                        <p class="note">年　　半角数字で入力してください。</p>
                     </div>
                 </td>
             </tr>

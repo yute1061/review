@@ -13,13 +13,7 @@
                 <div class="card">
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
-                            @if (count($errors) > 0)
-                                <ul>
-                                    @foreach($errors->all() as $e)
-                                        <li>{{ $e }}</li>
-                                    @endforeach
-                                <ul>
-                            @endif
+                            @csrf
                             <div class="row mb-3">
                                 <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
     
@@ -57,7 +51,6 @@
                                     </div>
                                 </div>
                             </div>
-                            @csrf
                             <div class="register_btn">
                                 <input class="btn btn--red btn--cubic" type="submit" value="ログイン">
                             </div>

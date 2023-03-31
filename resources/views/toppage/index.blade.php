@@ -119,10 +119,11 @@
 							</div>
 						</a>
 						<div class="new_review_outline">
-							<a href="{{ route('review', ['id' => $post->id]) }}">{{ $post->created_at }}></a><br>
-							<a href="{{ route('review', ['id' => $post->id]) }}">{{ $post->item }}</a><br>
-							<a href="{{ route('review', ['id' => $post->id]) }}">{{ $post->maker }}</a>
-							<a href="{{ route('review', ['id' => $post->id]) }}">{{ $post->product }}</a><br>
+							<a href="{{ route('review', ['id' => $post->id]) }}"></a>
+							<span>{{ $post->created_at }}</span><br>
+							<span>{{ $post->item }}</span><br>
+							<span>{{ $post->maker }}</span>
+							<span>{{ $post->product }}</span><br>
 						</div>
 					</div>
 					@if ($count == 10)
