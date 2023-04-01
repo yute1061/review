@@ -75,7 +75,7 @@
                     <label class="col-md-3">性別</label>
                 </td>
                 <td class="head2011b">
-                    <label><input type="radio" class="radio" name="gender" value="男性">男性</label>
+                    <label><input type="radio" class="radio" name="gender" value="男性" checked>男性</label>
                     <label><input type="radio" class="radio" name="gender" value="女性">女性</label>
                 </td>
             </tr>
@@ -114,7 +114,7 @@
                 </td>
                 <td class="head2011b">
                     <div class="col-md-10">
-                        <label><input type="radio" class="radio" name="ridestyle" value="レース">レース</label>
+                        <label><input type="radio" class="radio" name="ridestyle" value="レース" checked>レース</label>
                         <label><input type="radio" class="radio" name="ridestyle" value="ブルベ・ロングライド">ブルベ・ロングライド</label>
                         <label><input type="radio" class="radio" name="ridestyle" value="街乗り">街乗り</label>
                         <label><input type="radio" class="radio" name="ridestyle" value="ポタリング">ポタリング</label>
