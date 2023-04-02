@@ -115,8 +115,24 @@
 							<div class="new_review_img">
 								@if ($post->image_path1 != null)
 									<img src="{{ secure_asset('storage/image/' . $post->image_path1) }}" class="img_new_review">
+								@else
+									@if ($post->image_path2 != null)
+										<img src="{{ secure_asset('storage/image/' . $post->image_path2) }}" class="img_new_review">
 									@else
-									<img src="{{ secure_asset('storage/image/NO_IMAGE.jpg/') }}" class="img_new_review">
+										@if ($post->image_path3 != null)
+											<img src="{{ secure_asset('storage/image/' . $post->image_path3) }}" class="img_new_review">
+										@else
+											@if ($post->image_path4 != null)
+												<img src="{{ secure_asset('storage/image/' . $post->image_path4) }}" class="img_new_review">
+											@else
+												@if ($post->image_path5 != null)
+													<img src="{{ secure_asset('storage/image/' . $post->image_path5) }}" class="img_new_review">
+												@else
+													<img src="{{ secure_asset('storage/image/NO_IMAGE.jpg/') }}" class="img_new_review">
+												@endif
+											@endif
+										@endif
+									@endif
 								@endif
 							</div>
 						</a>

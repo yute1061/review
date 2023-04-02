@@ -11,7 +11,7 @@
         <h4 style="text-align: center;">投稿内容の編集ができます</h4>
         <br>
         <form name="formName" method="POST" enctype="multipart/form-data" action="{{ route('admin.post_review.update') }}">
-            <table style="margin: 0 auto;" width="60%" class="outer" cellspacing="1">
+            <table style="margin: 0 auto;" width="80%" class="outer" cellspacing="1">
                 @csrf
                 @if (count($errors) > 0)
                     <ul>

@@ -8,19 +8,45 @@
 		<a> > </a>
 		<a> {{ $item }}</a>
 		
-		<table width="60%" style="margin: 0 auto;" class="outer" cellspacing="1">
+		<?php $count=0; ?>
+		<table width="80%" style="margin: 0 auto;" class="itemlist" cellspacing="1">
+		  <tr>
+		    <th class="head2011d">
+		      <span>メーカー</span>
+		    </th>
+		    <th class="head2011d">
+		      <span>製品名</span>
+		    </th>
+		    <th class="head2011d">
+		      <span>投稿日</span>
+		    </th>
+		  </tr>
       @foreach ($posts as $post)
         @if ($post->status == 1)
           @if ($post->item == $item)
+            <?php $count++; ?>
             <tr>
-              <td>
-                <a href="{{ route('review', ['id' => $post->id])}}">{{ $post->maker }} &emsp; {{ $post->product }}</a>
+              <td class="head2011d">
+                <a href="{{ route('review', ['id' => $post->id])}}"></a>
+                <span>{{ $post->maker }}</span>
+              </td>
+              <td class="head2011d">
+                <a href="{{ route('review', ['id' => $post->id])}}"></a>
+                <span>{{ $post->product }}</span>
+              </td>
+              <td style="text-align: center;" class="head2011d">
+                <a href="{{ route('review', ['id' => $post->id])}}"></a>
+                <span>{{ $post->created_at }}</span>
               </td>
             </tr>
           @endif
         @endif
       @endforeach
 		</table>
+      @if ($count == 0)
+        <p style="text-align: center;">まだレビューがありません</p>
+			@endif
+		<br>
 	</div>
 @endsection
 
