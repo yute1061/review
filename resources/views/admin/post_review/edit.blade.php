@@ -43,7 +43,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="item">
+                    	    <select name="item" value="{{ old('item') }}">
                             </select>
                     	</div>
                     </td>
@@ -136,7 +136,7 @@
                     	        <input type="file" class="form-control-file" name="image1">
                     	    @else
                     	        <div class="caption">
-                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}">
+                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}" class="img-review">
                         	        設定中: {{ $posts->image_path1 }}
                         	        <input type="file" class="form-control-file" name="image1"><br>
                         	        <input type="checkbox" class="form-check-innput" name="remove1" value="true">画像を削除
@@ -147,7 +147,7 @@
                     	        <input type="file" class="form-control-file" name="image2">
                     	    @else
                     	        <div class="caption">
-                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}">
+                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}" class="img-review">
                         	        設定中: {{ $posts->image_path2 }}
                         	        <input type="file" class="form-control-file" name="image2"><br>
                         	        <input type="checkbox" class="form-check-innput" name="remove2" value="true">画像を削除
@@ -158,7 +158,7 @@
                     	        <input type="file" class="form-control-file" name="image3">
                     	    @else
                     	        <div class="caption">
-                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}">
+                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}" class="img-review">
                         	        設定中: {{ $posts->image_path3 }}
                         	        <input type="file" class="form-control-file" name="image3"><br>
                         	        <input type="checkbox" class="form-check-innput" name="remove3" value="true">画像を削除
@@ -169,7 +169,7 @@
                     	        <input type="file" class="form-control-file" name="image4">
                     	    @else
                     	        <div class="caption">
-                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}">
+                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}" class="img-review">
                         	        設定中: {{ $posts->image_path4 }}
                         	        <input type="file" class="form-control-file" name="image4"><br>
                         	        <input type="checkbox" class="form-check-innput" name="remove4" value="true">画像を削除
@@ -180,7 +180,7 @@
                     	        <input type="file" class="form-control-file" name="image5">
                     	    @else
                     	        <div class="caption">
-                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}">
+                        	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}" class="img-review">
                         	        設定中: {{ $posts->image_path5 }}
                         	        <input type="file" class="form-control-file" name="image5"><br>
                         	        <input type="checkbox" class="form-check-innput" name="remove5" value="true">画像を削除
@@ -192,7 +192,43 @@
                 
                 <tr>
                     <td class="head2011a">
-                    	<label class="col-md-3">価格評価</label>
+                    	<label class="col-md-3">耐久性</label>
+                    </td>
+                    <td class="head2011b">
+                    	<div class="col-md-4">
+                    	    <select name="durability">
+                    	        <option>{{ $posts->durability }}</option>
+                    	        <option>★</option>
+                                <option>★★</option>
+                                <option>★★★</option>
+                                <option>★★★★</option>
+                    	        <option>★★★★★</option>
+                            </select>
+                    	</div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="head2011a">
+                    	<label class="col-md-3">使いやすさ</label>
+                    </td>
+                    <td class="head2011b">
+                    	<div class="col-md-4">
+                    	    <select name="usability">
+                    	        <option>{{ $posts->usability }}</option>
+                    	        <option>★</option>
+                                <option>★★</option>
+                                <option>★★★</option>
+                                <option>★★★★</option>
+                    	        <option>★★★★★</option>
+                            </select>
+                    	</div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="head2011a">
+                    	<label class="col-md-3">コストパフォーマンス</label>
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">

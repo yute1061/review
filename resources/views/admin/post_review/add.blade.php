@@ -54,7 +54,7 @@
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">
-                    	    <select name="maker">
+                    	    <select name="maker" value="{{ old('maker') }}">
                     	        <option> </option>
                                 <option>ARGON18</option>
                                 <option>BASSO</option>
@@ -142,7 +142,41 @@
                 
                 <tr>
                     <td class="head2011a">
-                    	<label class="col-md-3">価格評価</label>
+                    	<label class="col-md-3">耐久性</label>
+                    </td>
+                    <td class="head2011b">
+                    	<div class="col-md-4">
+                    	    <select name="durability">
+                    	        <option>★</option>
+                                <option>★★</option>
+                                <option>★★★</option>
+                                <option>★★★★</option>
+                    	        <option>★★★★★</option>
+                            </select>
+                    	</div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="head2011a">
+                    	<label class="col-md-3">使いやすさ</label>
+                    </td>
+                    <td class="head2011b">
+                    	<div class="col-md-4">
+                    	    <select name="usability">
+                    	        <option>★</option>
+                                <option>★★</option>
+                                <option>★★★</option>
+                                <option>★★★★</option>
+                    	        <option>★★★★★</option>
+                            </select>
+                    	</div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="head2011a">
+                    	<label class="col-md-3">コストパフォーマンス</label>
                     </td>
                     <td class="head2011b">
                     	<div class="col-md-4">

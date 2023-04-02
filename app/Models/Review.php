@@ -18,7 +18,6 @@ class Review extends Model
         'product' => 'required',
         'body' => 'required',
         //imageもなくてもいい
-        'cost' => 'required',
-        'evaluation' => 'required',
+        //各評価はなにかしら必ず入る
     );
 }

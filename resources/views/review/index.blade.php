@@ -78,19 +78,19 @@
                 	<div class="col-md-4">
                 	    <div class="caption">
                     	    @if ($posts->image_path1)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}">
+                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}" class="img-review">
                 	        @endif
                 	        @if ($posts->image_path2)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}">
+                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}" class="img-review">
                 	        @endif
                 	        @if ($posts->image_path3)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}">
+                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}" class="img-review">
                 	        @endif
                 	        @if ($posts->image_path4)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}">
+                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}" class="img-review">
                 	        @endif
                 	        @if ($posts->image_path5)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}">
+                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}" class="img-review">
                 	        @endif
             	        </div>
                 	</div>
@@ -98,7 +98,27 @@
             </tr>
             <tr>
                 <td class="head2011a">
-                	<label class="col-md-3">価格評価</label>
+                	<label class="col-md-3">耐久性</label>
+                </td>
+                <td class="head2011b">
+                	<div class="col-md-4">
+                	    <p>{{ $posts->durability }}</p>
+                	</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="head2011a">
+                	<label class="col-md-3">使いやすさ</label>
+                </td>
+                <td class="head2011b">
+                	<div class="col-md-4">
+                	    <p>{{ $posts->usability }}</p>
+                	</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="head2011a">
+                	<label class="col-md-3">コストパフォーマンス</label>
                 </td>
                 <td class="head2011b">
                 	<div class="col-md-4">

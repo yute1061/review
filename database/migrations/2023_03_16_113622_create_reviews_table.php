@@ -19,12 +19,14 @@ return new class extends Migration
             $table->string('item');
             $table->string('maker')->nullable();
             $table->string('product');
-            $table->string('body');
+            $table->text('body');
             $table->string('image_path1')->nullable();
             $table->string('image_path2')->nullable();
             $table->string('image_path3')->nullable();
             $table->string('image_path4')->nullable();
             $table->string('image_path5')->nullable();
+            $table->string('durability');
+            $table->string('usability');
             $table->string('cost');
             $table->string('evaluation');
             $table->boolean('status')->nullable(); //投稿済かどうかの判断

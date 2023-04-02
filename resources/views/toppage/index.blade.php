@@ -3,7 +3,9 @@
 @section('title', 'トップページ')
 
 @section('content')
-	<div class="wrap top">
+	<div class="wrap">
+		<h2 style="text-align: center;">RANDONNEUR bike product reviewへようこそ！</h2><br>
+		<p style="text-align: center;">当サイトはユーザー参加型の自転車パーツレビューサイトです。</p><br>
 		<div class="left_column">
 			<div class="category_index">
 				<div class="category">
@@ -63,12 +65,12 @@
 						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'サドルバッグ']) }}">サドルバッグ</a><br>
 						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'フロントバッグ']) }}">フロントバッグ</a><br>
 						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'フレーム・トップチューブバッグ']) }}">フレーム・トップチューブバッグ</a><br>
-						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'バックパック・メッセンジャーバッグ']) }}"></a>バックパック・メッセンジャーバッグ<br>
-						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'パニアバッグ']) }}"></a>パニアバッグ<br>
-						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'サコッシュ']) }}"></a>サコッシュ<br>
-						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => '輪行袋・輪行ケース']) }}"></a>輪行袋・輪行ケース<br>
-						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'ホイールバッグ']) }}"></a>ホイールバッグ<br>
-						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'その他']) }}"></a>その他<br>
+						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'バックパック・メッセンジャーバッグ']) }}">バックパック・メッセンジャーバッグ</a><br>
+						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'パニアバッグ']) }}">パニアバッグ</a><br>
+						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'サコッシュ']) }}">サコッシュ</a><br>
+						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => '輪行袋・輪行ケース']) }}">輪行袋・輪行ケース</a><br>
+						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'ホイールバッグ']) }}">ホイールバッグ</a><br>
+						<a href="{{ route('item', ['category' => 'ギア・バッグ', 'item' => 'その他']) }}">その他</a><br>
 					</div>
 				</div>
 				<div class="category">
@@ -112,9 +114,9 @@
 						<a href="{{ route('review', ['id' => $post->id]) }}">
 							<div class="new_review_img">
 								@if ($post->image_path1 != null)
-									<img src="{{ secure_asset('storage/image/' . $post->image_path1) }}">
+									<img src="{{ secure_asset('storage/image/' . $post->image_path1) }}" class="img_new_review">
 									@else
-									<img src="{{ secure_asset('storage/image/NO_IMAGE.jpg/') }}">
+									<img src="{{ secure_asset('storage/image/NO_IMAGE.jpg/') }}" class="img_new_review">
 								@endif
 							</div>
 						</a>
@@ -122,7 +124,7 @@
 							<a href="{{ route('review', ['id' => $post->id]) }}"></a>
 							<span>{{ $post->created_at }}</span><br>
 							<span>{{ $post->item }}</span><br>
-							<span>{{ $post->maker }}</span>
+							<span>{{ $post->maker }}</span><br>
 							<span>{{ $post->product }}</span><br>
 						</div>
 					</div>
