@@ -72,13 +72,13 @@
                             <a href="{{ route('review', ['id' => $my_review->id])}}">
                                 <div class="myreview_link">
                                     <div class="myreview_item">
-                                        <p class="ellipsis">{{ Str::limit($my_review->item) }}</p>
+                                        <p class="overflow_myreview">{{ Str::limit($my_review->item) }}</p>
                                     </div>
                                     <div class="myreview_item">
-                                        <p class="ellipsis">{{ Str::limit($my_review->product) }}</p>
+                                        <p class="overflow_myreview">{{ Str::limit($my_review->product) }}</p>
                                     </div>
                                     <div class="myreview_item">
-                                        <p class="ellipsis">{{ Str::limit($my_review->created_at) }}</p>
+                                        <p class="overflow_myreview">{{ Str::limit($my_review->created_at) }}</p>
                                     </div>
                                 </div>
                             </a>

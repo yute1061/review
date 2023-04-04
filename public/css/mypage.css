@@ -33,7 +33,7 @@
   margin: 10px 0 0 15px;
 }
 
-.ellipsis { /* 指定サイズ以上の文字列は省略する */
+.overflow_myreview { /* 指定サイズ以上の文字列は省略する */
   width: 200px; /* 省略せずに表示するサイズを指定 */
   white-space: nowrap;
   overflow: hidden;

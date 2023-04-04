@@ -23,3 +23,10 @@
     background-color: #000080;
     color: #fff;
 }
+
+.overflow_itemlist { /* 指定サイズ以上の文字列は省略する */
+    width: 300px; /* 省略せずに表示するサイズを指定 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

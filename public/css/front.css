@@ -194,6 +194,13 @@ header .sightmap a {
   content: " ";
 }
 
+.overflow_new_review { /* 指定サイズ以上の文字列は省略する */
+  width: 200px; /* 省略せずに表示するサイズを指定 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 footer {
   color: #fff;
   background: #000080;

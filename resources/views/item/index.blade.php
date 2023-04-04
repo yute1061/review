@@ -30,15 +30,15 @@
             <tr>
               <td class="head2011d">
                 <a href="{{ route('review', ['id' => $post->id])}}"></a>
-                <span>{{ $post->maker }}</span>
+                <p>{{ $post->maker }}</p>
               </td>
               <td class="head2011d">
                 <a href="{{ route('review', ['id' => $post->id])}}"></a>
-                <span>{{ $post->product }}</span>
+                <p class="overflow_itemlist">{{ $post->product }}</p>
               </td>
               <td style="text-align: center;" class="head2011d">
                 <a href="{{ route('review', ['id' => $post->id])}}"></a>
-                <span>{{ $post->created_at }}</span>
+                <p>{{ $post->created_at }}</p>
               </td>
             </tr>
           @endif

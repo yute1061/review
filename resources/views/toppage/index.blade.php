@@ -44,10 +44,10 @@
 								@endif
 							</div>
 							<div class="new_review_outline">
-								<p>{{ $post->created_at }}</p>
-								<p>{{ $post->item }}</p>
-								<p>{{ $post->maker }}</p>
-								<p>{{ $post->product }}</p>
+								<p class="ellipsis">{{ $post->created_at }}</p>
+								<p class="ellipsis">{{ $post->item }}</p>
+								<p class="ellipsis">{{ $post->maker }}</p>
+								<p style="font-size: 1.1rem;" class="overflow_new_review">{{ $post->product }}</p>
 							</div>
 						</div>
 					</a>
