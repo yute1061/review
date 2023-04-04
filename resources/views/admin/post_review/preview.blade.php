@@ -7,20 +7,16 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="wrap">
-        <br>
         <h2 style="text-align: center;">レビューのプレビュー</h2>
-        <br>
         <form method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.create') }}>
-            <table style="margin: 0 auto;" width="80%" class="outer" cellspacing="1">
+            <table style="margin: 20px auto 0 auto;" width="70%" class="outer" cellspacing="1">
                 @csrf
                 <tr>
                     <td class="head2011a">
                     	<label class="col-md-3">カテゴリー</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
-                    	    <p>{{ $review->category }}</p>
-                    	</div>
+                	    <p>{{ $review->category }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -28,9 +24,7 @@
                     	<label class="col-md-3">アイテム</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-7">
-                    	    <p>{{ $review->item }}</p>
-                    	</div>
+                	    <p>{{ $review->item }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -38,9 +32,7 @@
                     	<label class="col-md-3">メーカー</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
-                    	    <p>{{ $review->maker }}</p>
-                    	</div>
+                	    <p>{{ $review->maker }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -48,9 +40,7 @@
                     	<label class="col-md-3">製品名</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
-                    	    <p>{{ $review->product }}</p>
-                    	</div>
+                	    <p>{{ $review->product }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -58,28 +48,24 @@
                     	<label class="col-md-3">本文</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-10">
-                    	    <a>{!! nl2br(e($review->body)) !!}</a> {{-- 改行を反映させるための表記 --}}
-                    	</div>
-                    	<div class="col-md-4">
-                    	    <div class="caption">
-                        	    @if ($review->image_path1)
-                        	        <img src="{{ secure_asset('storage/image/' . $review->image_path1) }}" class="img-review">
-                    	        @endif
-                    	        @if ($review->image_path2)
-                        	        <img src="{{ secure_asset('storage/image/' . $review->image_path2) }}" class="img-review">
-                    	        @endif
-                    	        @if ($review->image_path3)
-                        	        <img src="{{ secure_asset('storage/image/' . $review->image_path3) }}" class="img-review">
-                    	        @endif
-                    	        @if ($review->image_path4)
-                        	        <img src="{{ secure_asset('storage/image/' . $review->image_path4) }}" class="img-review">
-                    	        @endif
-                    	        @if ($review->image_path5)
-                        	        <img src="{{ secure_asset('storage/image/' . $review->image_path5) }}" class="img-review">
-                    	        @endif
-                	        </div>
-                    	</div>
+                	    <p>{!! nl2br(e($review->body)) !!}</p> {{-- 改行を反映させるための表記 --}}
+                	    <div class="caption">
+                    	    @if ($review->image_path1)
+                    	        <img src="{{ secure_asset('storage/image/' . $review->image_path1) }}" class="img-review">
+                	        @endif
+                	        @if ($review->image_path2)
+                    	        <img src="{{ secure_asset('storage/image/' . $review->image_path2) }}" class="img-review">
+                	        @endif
+                	        @if ($review->image_path3)
+                    	        <img src="{{ secure_asset('storage/image/' . $review->image_path3) }}" class="img-review">
+                	        @endif
+                	        @if ($review->image_path4)
+                    	        <img src="{{ secure_asset('storage/image/' . $review->image_path4) }}" class="img-review">
+                	        @endif
+                	        @if ($review->image_path5)
+                    	        <img src="{{ secure_asset('storage/image/' . $review->image_path5) }}" class="img-review">
+                	        @endif
+            	        </div>
                     </td>
                 </tr>
                 <tr>
@@ -87,9 +73,7 @@
                     	<label class="col-md-3">耐久性</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
-                    	    <p>{{ $review->durability }}</p>
-                    	</div>
+                	    <p>{{ $review->durability }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -97,9 +81,7 @@
                     	<label class="col-md-3">使いやすさ</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
-                    	    <p>{{ $review->usability }}</p>
-                    	</div>
+                	    <p>{{ $review->usability }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -107,9 +89,7 @@
                     	<label class="col-md-3">価格評価</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
-                    	    <p>{{ $review->cost }}</p>
-                    	</div>
+                	    <p>{{ $review->cost }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -117,23 +97,18 @@
                     	<label class="col-md-3">総合評価</label>
                     </td>
                     <td class="head2011b">
-                    	<div class="col-md-4">
-                    	    <p>{{ $review->evaluation }}</p>
-                    	</div>
+                	    <p>{{ $review->evaluation }}</p>
                     </td>
                 </tr>
             </table>
-            <br>
             <div class="register_btn">
         	    <input type="hidden" name="id" value="{{ $review->id }}">
         	    {{-- hidden...隠しファイル これを使うことでidをcreateに送れる --}}
         	    <input class="btn btn--blue btn--cubic" type="submit" value="投稿">
     	    </div>
         </form>
-        <br>
         <div class="register_btn">
             <input class="btn btn--gray btn--cubic" type="submit" onclick="history.back()" value="戻る">
 		</div>
     </div>
-    <br>
 @endsection

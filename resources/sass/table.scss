@@ -1,4 +1,3 @@
-
 .head2011a {
     background-color: #000080;
     padding: 7px 10px;
@@ -34,24 +33,18 @@
     width: 100%;
 }
 
-.age {
-    display: flex;
-}
-
-.career {
-    display: flex;
-}
-
-.note {
+.head2011d {
+    height: 30px;
+    font-weight: normal;
+    
     position: relative;
-	top: 10px;
 }
 
-.register_table {
-    display: flex; 
-    justify-content: center; 
-}
-
-.btn-link {
-    font-size: 1em;
+.head2011d a {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
 }

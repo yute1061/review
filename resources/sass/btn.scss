@@ -1,0 +1,82 @@
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 0.5;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+}
+
+/*主な共通部分は省略*/
+
+.btn--red.btn--cubic {
+  font-size: 1.8rem;
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  background: #d70035;
+  border-bottom: 5px solid #9f000c;
+}
+
+.btn--red_2.btn--cubic {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  color: #fff;
+  background: #d70035;
+  border-bottom: 5px solid #9f000c;
+}
+
+.btn--green.btn--cubic {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  background: #008080;
+  border-bottom: 5px solid #2f4f4f
+}
+
+.btn--blue.btn--cubic {
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  background: #0000fd;
+  border-bottom: 5px solid #0000cd;
+}
+
+.btn--gray.btn--cubic {
+  font-size: 1rem;
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  background: #c0c0c0;
+  border-bottom: 5px solid #a9a9a9;
+}
+
+.register_btn {
+	margin-top: 20px;
+    text-align: center;
+}
+
+.btn-link {
+    font-size: 1em;
+}

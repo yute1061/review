@@ -4,23 +4,21 @@
 
 @section('content')
     <div class="wrap">
-        <br>
-        <a>{{ $posts->category }}</a>
-        <a> > </a>
-        <a>{{ $posts->item }}</a>
-        <a> > </a>
-        <a>{{ $posts->maker }} &ensp; {{ $posts->product }}</a>
-        <br>
+        <div style="margin: 20px 0 20px 170px;">
+            <a>{{ $posts->category }}</a>
+            <a> > </a>
+            <a>{{ $posts->item }}</a>
+            <a> > </a>
+            <a>{{ $posts->maker }} &ensp; {{ $posts->product }}</a>
+        </div>
         
-        <table style="margin: 0 auto;" width="80%" class="outer" cellspacing="1">
+        <table style="margin: 0 auto;" width="70%" class="outer" cellspacing="1">
             <tr>
                 <td class="head2011a">
                 	<label class="col-md-3">カテゴリー</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->category }}</p>
-                	</div>
+            	    <p>{{ $posts->category }}</p>
                 </td>
             </tr>
             <tr>
@@ -28,9 +26,7 @@
                 	<label class="col-md-3">アイテム</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->item }}</p>
-                	</div>
+            	    <p>{{ $posts->item }}</p>
                 </td>
             </tr>
             <tr>
@@ -38,9 +34,7 @@
                 	<label class="col-md-3">メーカー</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->maker }}</p>
-                	</div>
+            	    <p>{{ $posts->maker }}</p>
                 </td>
             </tr>
             <tr>
@@ -48,9 +42,7 @@
                 	<label class="col-md-3">製品名</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->product }}</p>
-                	</div>
+            	    <p>{{ $posts->product }}</p>
                 </td>
             </tr>
             <tr>
@@ -58,12 +50,10 @@
                     <label class="col-md-3">投稿者プロフィール</label>
                 </td>
                 <td class="head2011b">
-                    <div class="col-md-10">
-                        <a>{{ $posts->gender }}</a>&nbsp;
-                        <a>{{ $posts->age }}歳</a>&nbsp;
-                        <a>自転車歴：{{ $posts->career }}年</a>&nbsp;
-                        <a>ライドスタイル：{{ $posts->ridestyle }}</a>
-                    </div>
+                    <a>{{ $posts->gender }}</a>&nbsp;
+                    <a>{{ $posts->age }}歳</a>&nbsp;
+                    <a>自転車歴：{{ $posts->career }}年</a>&nbsp;
+                    <a>ライドスタイル：{{ $posts->ridestyle }}</a>
                 </td>
             </tr>
             <tr>
@@ -71,29 +61,24 @@
                 	<label class="col-md-3">本文</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-10">
-                	    <a>{!! nl2br(e($posts->body)) !!}</a> {{-- 改行を反映させるための表記 --}}
-                	</div>
-                	<br>
-                	<div class="col-md-4">
-                	    <div class="caption">
-                    	    @if ($posts->image_path1)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}" class="img-review">
-                	        @endif
-                	        @if ($posts->image_path2)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}" class="img-review">
-                	        @endif
-                	        @if ($posts->image_path3)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}" class="img-review">
-                	        @endif
-                	        @if ($posts->image_path4)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}" class="img-review">
-                	        @endif
-                	        @if ($posts->image_path5)
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}" class="img-review">
-                	        @endif
-            	        </div>
-                	</div>
+            	    <p>{!! nl2br(e($posts->body)) !!}</p> {{-- 改行を反映させるための表記 --}}
+            	    <div class="caption">
+                	    @if ($posts->image_path1)
+                	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}" class="img-review">
+            	        @endif
+            	        @if ($posts->image_path2)
+                	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}" class="img-review">
+            	        @endif
+            	        @if ($posts->image_path3)
+                	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}" class="img-review">
+            	        @endif
+            	        @if ($posts->image_path4)
+                	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}" class="img-review">
+            	        @endif
+            	        @if ($posts->image_path5)
+                	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}" class="img-review">
+            	        @endif
+        	        </div>
                 </td>
             </tr>
             <tr>
@@ -101,9 +86,7 @@
                 	<label class="col-md-3">耐久性</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->durability }}</p>
-                	</div>
+            	    <p>{{ $posts->durability }}</p>
                 </td>
             </tr>
             <tr>
@@ -111,9 +94,7 @@
                 	<label class="col-md-3">使いやすさ</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->usability }}</p>
-                	</div>
+            	    <p>{{ $posts->usability }}</p>
                 </td>
             </tr>
             <tr>
@@ -121,9 +102,7 @@
                 	<label class="col-md-3">コストパフォーマンス</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->cost }}</p>
-                	</div>
+            	    <p>{{ $posts->cost }}</p>
                 </td>
             </tr>
             <tr>
@@ -131,13 +110,10 @@
                 	<label class="col-md-3">総合評価</label>
                 </td>
                 <td class="head2011b">
-                	<div class="col-md-4">
-                	    <p>{{ $posts->evaluation }}</p>
-                	</div>
+        	        <p>{{ $posts->evaluation }}</p>
                 </td>
             </tr>
         </table>
-        <br>
         @if ($user->email == $posts->contributor)
             <div class="register_btn">
                 <form method="get" action="{{ route('admin.post_review.edit') }}">
@@ -145,7 +121,8 @@
                     <input type="hidden" name="id" value="{{ $posts->id }}">
                     <input class="btn btn--red btn--cubic" type="submit" value="編集">
                 </form>
-                <br>
+            </div>
+            <div class="register_btn">
                 <form method="get" action="{{ route('admin.post_review.delete') }}">
                     @csrf
                     <input type="hidden" name="id" value="{{ $posts->id }}">
@@ -155,5 +132,4 @@
         @else
         @endif
     </div>
-    <br>
 @endsection

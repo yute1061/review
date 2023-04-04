@@ -4,10 +4,9 @@
 
 @section('content')
 <div class="wrap">
-    <br>
     <h2 style="text-align: center;">tech boost Bike Product Reviewへようこそ！</h2><br>
     <p style="text-align: center;">ユーザー登録がお済みの方はログインして下さい</p><br>
-    <div class="container">
+    <div class="container" style="margin-bottom: 30px;">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -51,16 +50,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="register_btn">
+                            <div class="register_btn" style="margin-bottom: 20px;">
                                 <input class="btn btn--red btn--cubic" type="submit" value="ログイン">
                             </div>
                         </form>
-                        <br>
-                            <div class="register_btn">
-                                <a class="btn btn--green btn--cubic" href="{{ route('register') }}">
-                                    {{ __('新規登録はこちら') }}
-                                </a>
-                            </div>
+                        <div class="register_btn">
+                            <a class="btn btn--green btn--cubic" href="{{ route('register') }}">
+                                {{ __('新規登録はこちら') }}
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -68,5 +65,4 @@
         </div>
     </div>
 </div>
-<br>
 @endsection

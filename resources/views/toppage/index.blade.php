@@ -4,8 +4,60 @@
 
 @section('content')
 	<div class="wrap">
-		<h2 style="text-align: center;">RANDONNEUR bike product reviewへようこそ！</h2><br>
-		<p style="text-align: center;">当サイトはユーザー参加型の自転車パーツレビューサイトです。</p><br>
+		<h2 style="text-align: center; margin-bottom: 20px;">RANDONNEUR bike product reviewへようこそ！</h2>
+		<p style="text-align: center; margin-bottom: 20px;">当サイトはユーザー参加型の自転車パーツレビューサイトです。</p>
+		<div class="right_column">
+			<div class="title">
+				<img src="{{ secure_asset('storage/image/icon_new.jpeg/') }}">
+				<div class="title3">
+					<h3>Latest Review</h3>
+				</div>
+			</div>
+			<h4 style="text-align: center;">最新のレビュー10件です</h4>
+			<?php $count=0; ?>
+			@foreach ($posts as $post)
+				@if ($post->status == 1)
+					<?php $count++; ?>
+					<a href="{{ route('review', ['id' => $post->id]) }}">
+						<div class="new_review">
+							<div class="new_review_img">
+								@if ($post->image_path1 != null)
+									<img src="{{ secure_asset('storage/image/' . $post->image_path1) }}" class="img_new_review">
+								@else
+									@if ($post->image_path2 != null)
+										<img src="{{ secure_asset('storage/image/' . $post->image_path2) }}" class="img_new_review">
+									@else
+										@if ($post->image_path3 != null)
+											<img src="{{ secure_asset('storage/image/' . $post->image_path3) }}" class="img_new_review">
+										@else
+											@if ($post->image_path4 != null)
+												<img src="{{ secure_asset('storage/image/' . $post->image_path4) }}" class="img_new_review">
+											@else
+												@if ($post->image_path5 != null)
+													<img src="{{ secure_asset('storage/image/' . $post->image_path5) }}" class="img_new_review">
+												@else
+													<img src="{{ secure_asset('storage/image/NO_IMAGE.jpg/') }}" class="img_new_review">
+												@endif
+											@endif
+										@endif
+									@endif
+								@endif
+							</div>
+							<div class="new_review_outline">
+								<p>{{ $post->created_at }}</p>
+								<p>{{ $post->item }}</p>
+								<p>{{ $post->maker }}</p>
+								<p>{{ $post->product }}</p>
+							</div>
+						</div>
+					</a>
+					@if ($count == 10)
+						@break
+					@endif
+				@endif
+			@endforeach
+		</div>
+		
 		<div class="left_column">
 			<div class="category_index">
 				<div class="category">
@@ -96,59 +148,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="right_column">
-			<div class="title">
-				<img src="{{ secure_asset('storage/image/icon_new.jpeg/') }}">
-				<div class="title3">
-					<h3>Latest Review</h3>
-				</div>
-			</div>
-			<a>最新のレビュー10件です</a>
-			<?php $count=0; ?>
-			@foreach ($posts as $post)
-				@if ($post->status == 1)
-					<?php $count++; ?>
-					<div class="new_review">
-						<a href="{{ route('review', ['id' => $post->id]) }}">
-							<div class="new_review_img">
-								@if ($post->image_path1 != null)
-									<img src="{{ secure_asset('storage/image/' . $post->image_path1) }}" class="img_new_review">
-								@else
-									@if ($post->image_path2 != null)
-										<img src="{{ secure_asset('storage/image/' . $post->image_path2) }}" class="img_new_review">
-									@else
-										@if ($post->image_path3 != null)
-											<img src="{{ secure_asset('storage/image/' . $post->image_path3) }}" class="img_new_review">
-										@else
-											@if ($post->image_path4 != null)
-												<img src="{{ secure_asset('storage/image/' . $post->image_path4) }}" class="img_new_review">
-											@else
-												@if ($post->image_path5 != null)
-													<img src="{{ secure_asset('storage/image/' . $post->image_path5) }}" class="img_new_review">
-												@else
-													<img src="{{ secure_asset('storage/image/NO_IMAGE.jpg/') }}" class="img_new_review">
-												@endif
-											@endif
-										@endif
-									@endif
-								@endif
-							</div>
-						</a>
-						<div class="new_review_outline">
-							<a href="{{ route('review', ['id' => $post->id]) }}"></a>
-							<span>{{ $post->created_at }}</span><br>
-							<span>{{ $post->item }}</span><br>
-							<span>{{ $post->maker }}</span><br>
-							<span>{{ $post->product }}</span><br>
-						</div>
-					</div>
-					@if ($count == 10)
-						@break
-					@endif
-				@endif
-			@endforeach
 		</div>
 	</div>
 @endsection

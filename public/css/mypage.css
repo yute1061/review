@@ -1,0 +1,41 @@
+@charset "UTF-8";
+.career {
+  display: flex;
+}
+
+.note {
+  position: relative;
+  top: 10px;
+}
+
+.myreview {
+  width: 600px;
+  margin: 0 auto;
+  background: #F8F8FF;
+}
+
+.myreview a {
+  color: #000;
+  text-decoration: none;
+}
+
+.myreview a:hover { /* マウスオーバー時に色変更*/
+  opacity: 0.5;
+  background-color: #000000;
+}
+
+.myreview_link {
+  display: flex;
+}
+
+.myreview_item {
+  width: 200px;
+  margin: 10px 0 0 15px;
+}
+
+.ellipsis { /* 指定サイズ以上の文字列は省略する */
+  width: 200px; /* 省略せずに表示するサイズを指定 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

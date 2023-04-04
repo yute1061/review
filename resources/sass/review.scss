@@ -4,7 +4,7 @@
 }
 
 .img-review {
-	  width: 100%;
+    width: 100%;
     height: 350px;
     object-fit: cover; /* width, heightといっしょに使います */
 }
@@ -22,20 +22,4 @@
 .itemlist tr:nth-child(1){
     background-color: #000080;
     color: #fff;
-}
-
-.head2011d {
-    height: 30px;
-    font-weight: normal;
-    
-    position: relative;
-}
-
-.head2011d a {
-    text-decoration: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height:100%;
-    width: 100%;
 }

@@ -99,13 +99,16 @@
         
         <!-- Styles -->
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/reset.css') }}" rel="stylesheet">
         
-		<link href="{{ secure_asset('css/reset.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/btn.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
-		<link href="{{ secure_asset('css/user.css') }}" rel="stylesheet">
+		<link href="{{ secure_asset('css/guideline.css') }}" rel="stylesheet">
+		<link href="{{ secure_asset('css/mypage.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/review.css') }}" rel="stylesheet">
+		<link href="{{ secure_asset('css/table.css') }}" rel="stylesheet">
 		
     </head>
     <body id="pagetop" onLoad="functionName()">

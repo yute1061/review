@@ -25,18 +25,3 @@
   background-color: #000080;
   color: #fff;
 }
-
-.head2011d {
-  height: 30px;
-  font-weight: normal;
-  position: relative;
-}
-
-.head2011d a {
-  text-decoration: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}

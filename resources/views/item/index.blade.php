@@ -4,9 +4,11 @@
 
 @section('content')
 	<div class="wrap">
-		<a> {{ $category }}</a>
-		<a> > </a>
-		<a> {{ $item }}</a>
+	  <div style="margin: 20px 0 20px 115px;">
+  		<a> {{ $category }}</a>
+  		<a> > </a>
+  		<a> {{ $item }}</a>
+  	</div>
 		
 		<?php $count=0; ?>
 		<table width="80%" style="margin: 0 auto;" class="itemlist" cellspacing="1">
@@ -43,10 +45,10 @@
         @endif
       @endforeach
 		</table>
+		<div style="margin-top: 20px;">
       @if ($count == 0)
         <p style="text-align: center;">まだレビューがありません</p>
 			@endif
-		<br>
 	</div>
 @endsection
 
