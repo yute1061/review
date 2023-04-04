@@ -131,7 +131,7 @@
                                 <a>パスワード</a>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             </div>
-                            <div class="top_form_btn">
+                            <div class="top_login_btn">
                                 <input class="btn btn--red_2 btn--cubic" type="submit" value="ログイン">
             		        </div>
             		    </div>
@@ -140,12 +140,12 @@
     		        <form action="{{ route('admin.user.index') }}" method="get">
         		        <div class="top_login">
         		            <p>ようこそ　</p><p class="name">{{ Auth::user()->name }}</p><p>　さん　</p>
-        		            <input class="btn btn--red_2 btn--cubic" type="submit" value="マイページ">
+        		            <div class="top_mypage_btn">
+        		                <input class="btn btn--red_2 btn--cubic" type="submit" value="マイページ">
+        		            </div>
         	            </div>
     	            </form>
     	        @endguest
-    	        <br>
-    	        <br>
     	        <div class="logo">
     	            <img src="{{ secure_asset('storage/image/logo.png/') }}">
         			<span class="logo2">
@@ -159,7 +159,11 @@
         			<ul class="sightmap">
         				<li><a href="{{ route('toppage') }}">トップ</a></li>
         				<li><a href="{{ route('admin.post_review.add') }}">レビュー投稿</a></li>
-        				<li><a href="{{ route('user.add') }}">ユーザー登録</a></li>
+        				@guest
+        				    <li><a href="{{ route('user.add') }}">ユーザー登録</a></li>
+        				@else
+        				    <li><a href="{{ route('user.add') }}">マイページ</a></li>
+        				@endguest
         				<li><a href="{{ route('guideline') }}">投稿ガイドライン</a></li>
         				<li><a href="{{ route('about') }}">当サイトについて</a></li>
         			</ul>
@@ -173,7 +177,7 @@
         <footer>
             <div class="wrap">
         		<p>tech boost Bike Product Review は自転車レビューサイトです</p>
-        		<p>自転車に関係のある様々な事物についてお気軽にご投稿下さい</p><br><br><br>
+        		<p>自転車に関係のある様々な事物についてお気軽にご投稿下さい</p>
         		<p>当サイト内の全ての画像および文章の無断転載を禁じます</p>
     		</div>
 	    </footer>

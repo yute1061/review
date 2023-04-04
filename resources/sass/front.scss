@@ -46,24 +46,8 @@ header a {
 	color: #ffffff;
 }
 
-header figure {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-}
-
-header figure img {
-	width: 100%;
-	height: 50%;
-	object-fit: cover;
-}
-
 header .top_login{
 	display: flex;
-	
 }
 
 header .top_form{
@@ -72,13 +56,18 @@ header .top_form{
 	margin: 0 5px 0 0;
 }
 
-header .top_form_btn{
-	margin: 25px 0 0 0;
+header .top_login_btn{
+	margin: 35px 0 0 0;
+}
+
+header .top_mypage_btn{
+	margin:  0 0 20px 0;
 }
 
 header .logo{
 	height: 180px;
-	color: #000;
+	margin-top: 40px;
+	font-family: Arial Black;
 	font-weight: bold;
 	display: flex;
 	justify-content: center;
@@ -89,15 +78,11 @@ header .logo{
 }
 
 header .logo2{
-	color: #ffffff;
-	font-family: Arial Black;
 	display: inline-block; 
 	_display: inline;
 }
 
 header .logo3{
-	color: #ffffff;
-	font-family: Arial Black;
 	padding: 20px 0 0 3px;
 	display: inline-block; 
 	_display: inline;
@@ -105,7 +90,6 @@ header .logo3{
 
 header .sightmap{
 	font-size: 1.2rem;
-	color: #ffffff;
 	display: flex; 
 	justify-content: space-evenly;
 }
