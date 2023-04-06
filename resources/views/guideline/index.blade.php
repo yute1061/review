@@ -46,7 +46,7 @@
             <br>
             <a>■パスワードの文字数は8文字以上で入力してください。</a><br>
             <br>
-            <a>■登録完了後、サイト上部のメールアドレス・パスワード欄にそれぞれ入力するか、<a style="text-decoration:underline; text-decoration-color:#FF0000;" href="{{ route('login') }}">こちら</a>からログインしてください。以降、書き込みができるようになります。</a><br>
+            <a>■登録完了後、サイト上部のメールアドレス・パスワード欄にそれぞれ入力してログインしてください。以降、投稿ができるようになります。</a><br>
         </div>
         <div class="guide_box">
             <span class="box-title">その他注意事項</span>
