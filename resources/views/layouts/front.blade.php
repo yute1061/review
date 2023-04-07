@@ -176,7 +176,7 @@
         </main>
         <footer>
             <div class="wrap">
-        		<p>tech boost Bike Product Review は自転車レビューサイトです</p>
+        		<p>RANDONNEUR bike product review は自転車レビューサイトです</p>
         		<p>自転車に関係のある様々な事物についてお気軽にご投稿下さい</p>
         		<p>当サイト内の全ての画像および文章の無断転載を禁じます</p>
     		</div>
