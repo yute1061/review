@@ -86,6 +86,7 @@
                             <option>MONTBELL</option>
                             <option>ORBEA</option>
                             <option>PANASONIC</option>
+                            <option>PEARL IZUMI</option>
                             <option>PINARELLO</option>
                             <option>RALEIGH</option>
                             <option>RIDLEY</option>
