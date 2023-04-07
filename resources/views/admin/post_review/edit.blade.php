@@ -83,6 +83,7 @@
                             <option>LAPIERRE</option>
                             <option>LOOK</option>
                             <option>MERIDA</option>
+                            <option>MONTBELL</option>
                             <option>ORBEA</option>
                             <option>PANASONIC</option>
                             <option>PINARELLO</option>
