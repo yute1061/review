@@ -147,7 +147,7 @@
     	            </form>
     	        @endguest
     	        <div class="logo">
-    	            <img src="{{ secure_asset('storage/image/logo.png/') }}">
+    	            <img src="{{ secure_asset('images/logo.png') }}">
         			<span class="logo2">
         				<h1>RANDONNEUR</h1>
         			</span>
