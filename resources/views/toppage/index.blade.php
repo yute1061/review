@@ -36,7 +36,7 @@
 												@if ($post->image_path5 != null)
 													<img src="{{ secure_asset('storage/image/' . $post->image_path5) }}" class="img_new_review">
 												@else
-													<img src="{{ secure_asset('storage/image/NO_IMAGE.jpg/') }}" class="img_new_review">
+													<img src="{{ secure_asset('images/NO_IMAGE.jpg/') }}" class="img_new_review">
 												@endif
 											@endif
 										@endif
