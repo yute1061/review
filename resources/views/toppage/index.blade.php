@@ -8,7 +8,7 @@
 		<p style="text-align: center; margin-bottom: 20px;">当サイトはユーザー参加型の自転車パーツレビューサイトです。</p>
 		<div class="right_column">
 			<div class="title">
-				<img src="{{ secure_asset('storage/image/icon_new.jpeg/') }}">
+				<img src="{{ secure_asset('images/icon_new.jpeg/') }}">
 				<div class="title3">
 					<h3>Latest Review</h3>
 				</div>
@@ -62,7 +62,7 @@
 			<div class="category_index">
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_parts.png/') }}">
+						<img src="{{ secure_asset('images/icon_parts.png/') }}">
 						<div class="title2">
 							<h3>Parts Category</h3>
 						</div>
@@ -88,7 +88,7 @@
 				</div>
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_wear.png/') }}">
+						<img src="{{ secure_asset('images/icon_wear.png/') }}">
 						<div class="title2">
 							<h3>Wear Category</h3>
 						</div>
@@ -108,7 +108,7 @@
 				</div>
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_gear.png/') }}">
+						<img src="{{ secure_asset('images/icon_gear.png/') }}">
 						<div class="title2">
 							<h3>Gear・Bag Category</h3>
 						</div>
@@ -127,7 +127,7 @@
 				</div>
 				<div class="category">
 					<div class="title">
-						<img src="{{ secure_asset('storage/image/icon_etc.png/') }}">
+						<img src="{{ secure_asset('images/icon_etc.png/') }}">
 						<div class="title2">
 							<h3>etc Category</h3>
 						</div>
