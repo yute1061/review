@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@media screen and (max-width: 768px) {
+  /* スクリーンサイズが768px以下の場合に適用 */
+}
 h1 {
   font-size: 60px;
   font-weight: bold;
@@ -33,6 +36,7 @@ body {
 
 .wrap {
   width: 700px;
+  margin: 20px auto;
 }
 @media screen and (min-width: 768px) {
   .wrap {
@@ -43,6 +47,7 @@ body {
 
 header {
   width: 700px;
+  font-family: "Arial unicode ms";
   background: #000080;
   color: #ffffff;
   border-bottom: 3px solid #556b2f;
@@ -126,19 +131,12 @@ header .sightmap a {
 }
 
 @media screen and (min-width: 768px) {
-  .left_column {
-    width: 670px;
+  .right_column {
+    width: 400px;
+    margin-left: 30px;
     margin-bottom: 10px;
-    float: left;
+    float: right;
   }
-}
-
-.category {
-  margin-bottom: 20px;
-}
-
-.category a:hover { /* マウスオーバー時に色変更*/
-  opacity: 0.5;
 }
 
 .title {
@@ -152,31 +150,20 @@ header .sightmap a {
   width: 10%;
 }
 
-.item {
-  font-size: 20px;
-  padding: 0 0 0 80px;
-}
-
-.item a {
-  color: #000;
-  text-decoration: none;
-}
-
-.title2 {
-  padding: 10px 0 0 10px;
-}
-
 .title3 {
   background: #000080;
-  padding: 0 0 0 10px;
+  padding: 10px 0 0 10px;
 }
-
+.title3 h3 {
+  font-size: 40px;
+}
 @media screen and (min-width: 768px) {
-  .right_column {
-    width: 400px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    float: right;
+  .title3 {
+    background: #000080;
+    padding: 10px 0 0 10px;
+  }
+  .title3 h3 {
+    font-size: 32px;
   }
 }
 
@@ -241,6 +228,39 @@ header .sightmap a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 768px) {
+  .left_column {
+    width: 670px;
+    margin-bottom: 10px;
+    float: left;
+  }
+}
+
+.category {
+  margin-bottom: 20px;
+}
+
+.category a:hover { /* マウスオーバー時に色変更*/
+  opacity: 0.5;
+}
+
+.title2 {
+  padding: 10px 0 0 15px;
+}
+.title2 h3 {
+  font-size: 40px;
+}
+
+.item {
+  font-size: 20px;
+  padding: 0 0 0 80px;
+}
+
+.item a {
+  color: #000;
+  text-decoration: none;
 }
 
 footer {
