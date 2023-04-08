@@ -1,0 +1,41 @@
+.register_error {
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .register_error {
+    margin-left: 190px;
+    color: red;
+  }
+}
+
+.mypage_error {
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .mypage_error {
+    margin-left: 190px;
+    color: red;
+  }
+}
+
+.review_add_error {
+  margin-left: 10px;
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .review_add_error {
+    margin-left: 190px;
+    color: red;
+  }
+}
+
+.review_edit_error {
+  margin-left: 10px;
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .review_edit_error {
+    margin-left: 135px;
+    color: red;
+  }
+}

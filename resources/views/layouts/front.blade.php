@@ -105,6 +105,7 @@
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/btn.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/error.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/guideline.css') }}" rel="stylesheet">
 		<link href="{{ secure_asset('css/mypage.css') }}" rel="stylesheet">

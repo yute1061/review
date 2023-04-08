@@ -8,13 +8,15 @@
     <form method="POST" action="{{ route('admin.user.update') }}">
         @csrf
         <table class="mypage_edit_tbl" cellspacing="1">
-            @if (count($errors) > 0)
-                <ul>
-                    @foreach($errors->all() as $e)
-                        <li>{{ $e }}</li>
-                    @endforeach
-                <ul>
-            @endif
+            <div class="mypage_error">
+                @if (count($errors) > 0)
+                    <ul>
+                        @foreach($errors->all() as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                    <ul>
+                @endif
+            </div>
             <tr>
                 <td class="head2011a">
                     <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>

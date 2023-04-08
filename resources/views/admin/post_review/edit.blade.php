@@ -11,7 +11,7 @@
         <form name="formName" method="POST" enctype="multipart/form-data" action="{{ route('admin.post_review.update') }}">
             <table class="review_edit_tbl" cellspacing="1">
                 @csrf
-                <div style="margin-left: 135px; color: red;">
+                <div class="review_edit_error">
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)

@@ -1,0 +1,43 @@
+$pc-width: 1024px;
+$ipad-width: 768px;
+$side-width: 568px;
+
+@mixin media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+.register_error {
+    color: red;
+    @include media-query($ipad-width){
+        margin-left: 190px;
+        color: red;
+    }
+}
+
+.mypage_error {
+    color: red;
+    @include media-query($ipad-width){
+        margin-left: 190px;
+        color: red;
+    }
+}
+
+.review_add_error {
+    margin-left: 10px;
+    color: red;
+    @include media-query($ipad-width){
+        margin-left: 190px; 
+        color: red;
+    }
+}
+
+.review_edit_error {
+    margin-left: 10px;
+    color: red;
+    @include media-query($ipad-width){
+        margin-left: 135px; 
+        color: red;
+    }
+}

@@ -9,7 +9,7 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
         <table class="register_tbl" cellspacing="1">
-            <div style="margin-left: 190px; color: red;">
+            <div class="register_error">
                 @if (count($errors) > 0)
                     <ul>
                         @foreach($errors->all() as $e)

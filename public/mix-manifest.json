@@ -1,12 +1,13 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/guideline.css": "/css/guideline.css",
     "/css/front.css": "/css/front.css",
+    "/css/error.css": "/css/error.css",
     "/css/btn.css": "/css/btn.css",
     "/css/admin.css": "/css/admin.css",
     "/css/table.css": "/css/table.css",
     "/css/review.css": "/css/review.css",
     "/css/reset.css": "/css/reset.css",
-    "/css/mypage.css": "/css/mypage.css"
+    "/css/mypage.css": "/css/mypage.css",
+    "/css/guideline.css": "/css/guideline.css"
 }
