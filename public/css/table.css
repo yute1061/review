@@ -1,3 +1,80 @@
+.register_tbl {
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .register_tbl {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+.mypage_tbl {
+  margin: 0 auto;
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .mypage_tbl {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+.mypage_edit_tbl {
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .mypage_edit_tbl {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+.review_add_tbl {
+  margin: 20px auto 0 auto;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .review_add_tbl {
+    margin: 20px auto 0 auto;
+    width: 60%;
+  }
+}
+
+.review_preview_tbl {
+  margin: 20px auto 0 auto;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .review_preview_tbl {
+    margin: 20px auto 0 auto;
+    width: 70%;
+  }
+}
+
+.review_index_tbl {
+  margin: 0 auto;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .review_index_tbl {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.review_edit_tbl {
+  margin: 0 auto;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .review_edit_tbl {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
 .head2011a {
   background-color: #000080;
   padding: 7px 10px;

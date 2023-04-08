@@ -9,7 +9,7 @@
     <div class="wrap" style="margin-bottom: 20px;">
         <h2 style="text-align: center;">レビュー新規作成</h2>
         <form name="formName" method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.preview') }}>
-            <table style="margin: 20px auto 0 auto;" width="60%" cellspacing="1">
+            <table class="review_add_tbl" cellspacing="1">
                 @csrf
                 <div style="margin-left: 190px; color: red;">
                     @if (count($errors) > 0)

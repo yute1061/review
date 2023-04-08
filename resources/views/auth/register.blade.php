@@ -8,7 +8,7 @@
     <p style="text-align: center;">レビューの投稿にはユーザー登録が必要です</p>
     <form method="POST" action="{{ route('register') }}">
         @csrf
-        <table style="margin: 0 auto;" width="60%" class="outer" cellspacing="1">
+        <table class="register_tbl" cellspacing="1">
             <div style="margin-left: 190px; color: red;">
                 @if (count($errors) > 0)
                     <ul>

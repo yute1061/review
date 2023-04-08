@@ -6,7 +6,7 @@
     <div class="wrap">
         <h2 style="text-align: center;">RANDONNEUR bike product reviewへようこそ！</h2>
         <p style="text-align: center;">あなたのユーザー情報です</p>
-        <table style="margin: 0 auto;" width="50%" class="outer" cellspacing="1">
+        <table class="mypage_tbl" cellspacing="1">
             <tr>
                 <td class="head2011a">
                 	<label>{{ __('ニックネーム') }}</label>

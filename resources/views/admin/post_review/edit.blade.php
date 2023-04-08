@@ -9,7 +9,7 @@
     <div class="wrap" style="margin-bottom: 20px;">
         <h4 style="text-align: center;">投稿内容の編集ができます</h4>
         <form name="formName" method="POST" enctype="multipart/form-data" action="{{ route('admin.post_review.update') }}">
-            <table style="margin: 0 auto 0 auto;" width="70%" class="outer" cellspacing="1">
+            <table class="review_edit_tbl" cellspacing="1">
                 @csrf
                 <div style="margin-left: 135px; color: red;">
                     @if (count($errors) > 0)
@@ -122,13 +122,15 @@
                     	<label class="col-md-3">レビュー本文</label>
                     </td>
                     <td class="head2011b">
-                	    <textarea class="form-control" name="body" rows="20" value="{{ $posts->body }}">{{ $posts->body }}</textarea>
+                	    <textarea  style="margin-bottom: 10px;" class="form-control" name="body" rows="20" value="{{ $posts->body }}">{{ $posts->body }}</textarea>
                 	    @if ($posts->image_path1 == null)
                 	        <input type="file" class="form-control-file" name="image1"><br>
                 	    @else
                 	        <div class="caption">
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}" class="img-review">
-                    	        設定中: {{ $posts->image_path1 }}
+                	            <div>
+                    	            <img src="{{ secure_asset('storage/image/' . $posts->image_path1) }}" class="img-review">
+                    	        </div>
+                    	        <span>設定中: {{ $posts->image_path1 }}</span>
                     	        <input type="file" class="form-control-file" name="image1"><br>
                     	        <input type="checkbox" class="form-check-innput" name="remove1" value="true">画像を削除
                     	    </div>
@@ -138,8 +140,10 @@
                 	        <input type="file" class="form-control-file" name="image2"><br>
                 	    @else
                 	        <div class="caption">
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}" class="img-review">
-                    	        設定中: {{ $posts->image_path2 }}
+                	            <div>
+                    	            <img src="{{ secure_asset('storage/image/' . $posts->image_path2) }}" class="img-review">
+                    	        </div>
+                    	        <span>設定中: {{ $posts->image_path2 }}</span>
                     	        <input type="file" class="form-control-file" name="image2"><br>
                     	        <input type="checkbox" class="form-check-innput" name="remove2" value="true">画像を削除
                     	    </div>
@@ -149,8 +153,10 @@
                 	        <input type="file" class="form-control-file" name="image3"><br>
                 	    @else
             	            <div class="caption">
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}" class="img-review">
-                    	        設定中: {{ $posts->image_path3 }}
+                    	        <div>
+                    	            <img src="{{ secure_asset('storage/image/' . $posts->image_path3) }}" class="img-review">
+                    	        </div>
+                    	        <span>設定中: {{ $posts->image_path3 }}</span>
                     	        <input type="file" class="form-control-file" name="image3"><br>
                     	        <input type="checkbox" class="form-check-innput" name="remove3" value="true">画像を削除
                     	    </div>
@@ -160,8 +166,10 @@
                 	        <input type="file" class="form-control-file" name="image4"><br>
                 	    @else
                 	        <div class="caption">
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}" class="img-review">
-                    	        設定中: {{ $posts->image_path4 }}
+                    	        <div>
+                    	            <img src="{{ secure_asset('storage/image/' . $posts->image_path4) }}" class="img-review">
+                    	        </div>
+                    	        <span>設定中: {{ $posts->image_path4 }}</span>
                     	        <input type="file" class="form-control-file" name="image4"><br>
                     	        <input type="checkbox" class="form-check-innput" name="remove4" value="true">画像を削除
                     	    </div>
@@ -171,8 +179,10 @@
                 	        <input type="file" class="form-control-file" name="image5"><br>
                 	    @else
                 	        <div class="caption">
-                    	        <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}" class="img-review">
-                    	        設定中: {{ $posts->image_path5 }}
+                    	        <div>
+                    	            <img src="{{ secure_asset('storage/image/' . $posts->image_path5) }}" class="img-review">
+                    	        </div>
+                    	        <span>設定中: {{ $posts->image_path5 }}</span>
                     	        <input type="file" class="form-control-file" name="image5"><br>
                     	        <input type="checkbox" class="form-check-innput" name="remove5" value="true">画像を削除
                     	    </div>

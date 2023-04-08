@@ -148,12 +148,12 @@
     	        @endguest
     	        <div class="logo">
     	            <img src="{{ secure_asset('images/logo.png') }}">
-        			<span class="logo2">
+        			<div class="logo2">
         				<h1>RANDONNEUR</h1>
-        			</span>
-    				<span class="logo3">
+        			</div>
+    				<div class="logo3">
     				    <h4>bike product review</h4>
-    				</span>
+    				</div>
         		</div>
         		<nav>
         			<ul class="sightmap">

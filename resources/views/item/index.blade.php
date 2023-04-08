@@ -4,7 +4,7 @@
 
 @section('content')
 	<div class="wrap">
-	  <div style="margin: 20px 0 20px 115px;">
+	  <div class="item_pankuzu">
   		<a> {{ $category }}</a>
   		<a> > </a>
   		<a> {{ $item }}</a>

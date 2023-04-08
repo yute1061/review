@@ -8,21 +8,25 @@ $side-width: 568px;
     }
 }
 
-h1{
+h1 {
 	font-size: 60px;
 	font-weight: bold;
 }
 
-h2{
-	font-size: 32px;
+h2 {
+	font-size: 28px;
 	font-weight: bold;
+	@include media-query($ipad-width){
+		font-size: 32px;
+		font-weight: bold;
+	}
 }
 
-h3{
+h3 {
 	font-size: 30px;
 }
 
-h4{
+h4 {
 	font-size: 22px;
 	font-weight: bold;
 }
@@ -34,37 +38,51 @@ body {
     flex-direction: column;
 }
 
+.wrap {
+	width: 700px;
+	@include media-query($ipad-width){
+		width: 1100px;
+		margin: 20px auto;
+	}
+}
+
 header {
-	font-family: "Arial unicode ms";
-	width: 100%;
+	width: 700px;
 	background: #000080;
 	color: #ffffff;
 	border-bottom: 3px solid #556b2f;
+	@include media-query($ipad-width){
+		font-family: "Arial unicode ms";
+		width: 100%;
+		background: #000080;
+		color: #ffffff;
+		border-bottom: 3px solid #556b2f;
+	}
 }
 
 header a {
 	color: #ffffff;
 }
 
-header .top_login{
+header .top_login {
 	display: flex;
 }
 
-header .top_form{
+header .top_form {
 	width: 150px;
 	height: 60px;
 	margin: 0 5px 0 0;
 }
 
-header .top_login_btn{
+header .top_login_btn {
 	margin: 35px 0 0 0;
 }
 
-header .top_mypage_btn{
+header .top_mypage_btn {
 	margin:  0 0 20px 0;
 }
 
-header .logo{
+header .logo {
 	height: 180px;
 	margin-top: 40px;
 	font-family: Arial Black;
@@ -77,33 +95,36 @@ header .logo{
 	}
 }
 
-header .logo2{
+header .logo2 {
 	display: inline-block; 
 	_display: inline;
 }
 
-header .logo3{
-	padding: 20px 0 0 3px;
-	display: inline-block; 
-	_display: inline;
+header .logo3 {
+	padding: 0 10px 0 10px;
+	@include media-query($ipad-width){
+		padding: 28px 0 0 3px;
+		display: inline-block; 
+		_display: inline;
+	}
 }
 
-header .sightmap{
-	font-size: 1.2rem;
+header .sightmap {
+	font-size: 0.8rem;
 	display: flex; 
 	justify-content: space-evenly;
+	@include media-query($ipad-width){
+		font-size: 1.2rem;
+		display: flex; 
+		justify-content: space-evenly;
+	}
 }
 
 header .sightmap a {
 	text-decoration: none;
 }
-	
-.wrap{
-	width: 1100px;
-	margin: 20px auto;
-}
 
-.left_column{
+.left_column {
 	@include media-query($ipad-width){
 		width: 670px;
 		margin-bottom: 10px; 
@@ -111,7 +132,7 @@ header .sightmap a {
 	}
 }
 
-.category{
+.category {
 	margin-bottom: 20px;
 }
 
@@ -119,7 +140,7 @@ header .sightmap a {
     opacity: 0.5;
 }
 
-.title{
+.title {
 	font-family: Arial Black;
 	text-align: center;
 	color: #fff;
@@ -140,16 +161,16 @@ header .sightmap a {
 	text-decoration: none;
 }
 
-.title2{
+.title2 {
 	padding: 10px 0 0 10px;
 }
 
-.title3{
+.title3 {
 	background: #000080;
 	padding: 0 0 0 10px;
 }
 
-.right_column{
+.right_column {
 	@include media-query($ipad-width){
 		width: 400px;
 		margin-left: 30px;
@@ -158,15 +179,24 @@ header .sightmap a {
 	}
 }
 
-.new_review{
+.new_review {
+	width: 700px;
 	height: 150px;
 	margin: 1em auto;
     background: #fff7f9; /* 背景色 */
     border: 2px dashed #f79eb6; /* 線の色 */
     box-shadow: 2px 2px 2px #ccc; /* 影の色 */
+	@include media-query($ipad-width){
+		width: 400px;
+		height: 150px;
+		margin: 1em auto;
+	    background: #fff7f9; /* 背景色 */
+	    border: 2px dashed #f79eb6; /* 線の色 */
+	    box-shadow: 2px 2px 2px #ccc; /* 影の色 */
+	}
 }
 
-.new_review_img{
+.new_review_img {
 	width: 150px;
 	float: left;
 	img {
@@ -196,7 +226,7 @@ header .sightmap a {
     background-color: #000000;
 }
 
-.new_review_outline:after{
+.new_review_outline:after {
 	clear: both;
 	display: block;
 	content: " ";
@@ -209,9 +239,18 @@ header .sightmap a {
     text-overflow: ellipsis;
 }
 
-footer{
+footer {
+	width: 700px;
 	color: #fff;
 	background: #000080;
 	text-align: center;
 	padding: 10px 0 30px 0;
+	margin-top: 20px;
+	@include media-query($ipad-width){
+		width: 100%;
+		color: #fff;
+		background: #000080;
+		text-align: center;
+		padding: 10px 0 30px 0;
+	}
 }

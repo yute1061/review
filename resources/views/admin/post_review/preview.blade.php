@@ -9,7 +9,7 @@
     <div class="wrap">
         <h2 style="text-align: center;">レビューのプレビュー</h2>
         <form method="POST" enctype="multipart/form-data" action={{ route('admin.post_review.create') }}>
-            <table style="margin: 20px auto 0 auto;" width="70%" class="outer" cellspacing="1">
+            <table class="review_preview_tbl" cellspacing="1">
                 @csrf
                 <tr>
                     <td class="head2011a">

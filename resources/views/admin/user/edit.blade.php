@@ -7,7 +7,7 @@
     <h4 style="text-align: center;">ユーザー情報の編集ができます</h4><br>
     <form method="POST" action="{{ route('admin.user.update') }}">
         @csrf
-        <table style="margin: 0 auto;" width="60%" class="outer" cellspacing="1">
+        <table class="mypage_edit_tbl" cellspacing="1">
             @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)

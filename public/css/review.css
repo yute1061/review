@@ -1,14 +1,40 @@
 @charset "UTF-8";
+.item_pankuzu {
+  margin: 20px 0 10px 75px;
+}
+@media screen and (min-width: 768px) {
+  .item_pankuzu {
+    margin: 20px 0 10px 115px;
+  }
+}
+
+.review_pankuzu {
+  margin: 20px 0 10px 40px;
+}
+@media screen and (min-width: 768px) {
+  .review_pankuzu {
+    margin: 20px 0 10px 170px;
+  }
+}
+
 .caption {
   position: relative;
   width: 500px;
 }
 
 .img-review {
-  width: 100%;
-  height: 350px;
+  width: 80%;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover; /* width, heightといっしょに使います */
+}
+@media screen and (min-width: 768px) {
+  .img-review {
+    width: 100%;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover; /* width, heightといっしょに使います */
+  }
 }
 
 .itemlist {

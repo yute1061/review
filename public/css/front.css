@@ -5,8 +5,14 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
 }
 
 h3 {
@@ -25,12 +31,30 @@ body {
   flex-direction: column;
 }
 
+.wrap {
+  width: 700px;
+}
+@media screen and (min-width: 768px) {
+  .wrap {
+    width: 1100px;
+    margin: 20px auto;
+  }
+}
+
 header {
-  font-family: "Arial unicode ms";
-  width: 100%;
+  width: 700px;
   background: #000080;
   color: #ffffff;
   border-bottom: 3px solid #556b2f;
+}
+@media screen and (min-width: 768px) {
+  header {
+    font-family: "Arial unicode ms";
+    width: 100%;
+    background: #000080;
+    color: #ffffff;
+    border-bottom: 3px solid #556b2f;
+  }
 }
 
 header a {
@@ -74,24 +98,31 @@ header .logo2 {
 }
 
 header .logo3 {
-  padding: 20px 0 0 3px;
-  display: inline-block;
-  _display: inline;
+  padding: 0 10px 0 10px;
+}
+@media screen and (min-width: 768px) {
+  header .logo3 {
+    padding: 28px 0 0 3px;
+    display: inline-block;
+    _display: inline;
+  }
 }
 
 header .sightmap {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   display: flex;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  header .sightmap {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 header .sightmap a {
   text-decoration: none;
-}
-
-.wrap {
-  width: 1100px;
-  margin: 20px auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -150,11 +181,22 @@ header .sightmap a {
 }
 
 .new_review {
+  width: 700px;
   height: 150px;
   margin: 1em auto;
   background: #fff7f9; /* 背景色 */
   border: 2px dashed #f79eb6; /* 線の色 */
   box-shadow: 2px 2px 2px #ccc; /* 影の色 */
+}
+@media screen and (min-width: 768px) {
+  .new_review {
+    width: 400px;
+    height: 150px;
+    margin: 1em auto;
+    background: #fff7f9; /* 背景色 */
+    border: 2px dashed #f79eb6; /* 線の色 */
+    box-shadow: 2px 2px 2px #ccc; /* 影の色 */
+  }
 }
 
 .new_review_img {
@@ -202,8 +244,19 @@ header .sightmap a {
 }
 
 footer {
+  width: 700px;
   color: #fff;
   background: #000080;
   text-align: center;
   padding: 10px 0 30px 0;
+  margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    width: 100%;
+    color: #fff;
+    background: #000080;
+    text-align: center;
+    padding: 10px 0 30px 0;
+  }
 }

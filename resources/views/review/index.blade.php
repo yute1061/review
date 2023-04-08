@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="wrap">
-        <div style="margin: 20px 0 20px 170px;">
+        <div class="review_pankuzu">
             <a>{{ $posts->category }}</a>
             <a> > </a>
             <a>{{ $posts->item }}</a>
@@ -12,7 +12,7 @@
             <a>{{ $posts->maker }} &ensp; {{ $posts->product }}</a>
         </div>
         
-        <table style="margin: 0 auto;" width="70%" class="outer" cellspacing="1">
+        <table class="review_index_tbl" cellspacing="1">
             <tr>
                 <td class="head2011a">
                 	<label class="col-md-3">カテゴリー</label>
