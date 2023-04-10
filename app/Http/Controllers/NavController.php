@@ -43,7 +43,7 @@ class NavController extends Controller
     {   
         $user_id = Auth::id();
         if (empty($user_id)) {
-            $user = null; //ダミー情報
+            $user = null; //ログアウト時はnullを渡す
         } else {
             $user = User::find($user_id);
         }
