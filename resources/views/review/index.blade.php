@@ -114,22 +114,23 @@
                 </td>
             </tr>
         </table>
-        @if ($user->email == $posts->contributor)
-            <div class="register_btn">
-                <form method="get" action="{{ route('admin.post_review.edit') }}">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $posts->id }}">
-                    <input class="btn btn--red btn--cubic" type="submit" value="編集">
-                </form>
-            </div>
-            <div class="register_btn">
-                <form method="get" action="{{ route('admin.post_review.delete') }}">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $posts->id }}">
-                    <input class="btn btn--gray btn--cubic" type="submit" value="削除">
-                </form>
-            </div>
-        @else
+        @if ($user != null) 
+            @if ($user->email == $posts->contributor)
+                <div class="register_btn">
+                    <form method="get" action="{{ route('admin.post_review.edit') }}">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $posts->id }}">
+                        <input class="btn btn--red btn--cubic" type="submit" value="編集">
+                    </form>
+                </div>
+                <div class="register_btn">
+                    <form method="get" action="{{ route('admin.post_review.delete') }}">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $posts->id }}">
+                        <input class="btn btn--gray btn--cubic" type="submit" value="削除">
+                    </form>
+                </div>
+            @endif
         @endif
     </div>
 @endsection
