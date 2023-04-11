@@ -71,6 +71,7 @@
                             <option>DEDA</option>
                             <option>DEROSA</option>
                             <option>EDDYMERCKX</option>
+                            <option>EKOI</option>
                             <option>ENVE</option>
                             <option>FELT</option>
                             <option>FIZIK</option>
