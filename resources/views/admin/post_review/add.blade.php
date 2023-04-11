@@ -84,6 +84,7 @@
                             <option>LOOK</option>
                             <option>MERIDA</option>
                             <option>MONTBELL</option>
+                            <option>ORTLIEB</option>
                             <option>ORBEA</option>
                             <option>PANASONIC</option>
                             <option>PEARL IZUMI</option>
