@@ -38,18 +38,6 @@
                                     @enderror
                                 </div>
                             </div>
-    
-                            <div class="row mb-3">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-    
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('パスワードを記憶する') }}
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="register_btn" style="margin-bottom: 20px;">
                                 <input class="btn btn--red btn--cubic" type="submit" value="ログイン">
                             </div>
