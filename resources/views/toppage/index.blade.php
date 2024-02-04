@@ -4,7 +4,7 @@
 
 @section('content')
 	<div class="wrap">
-		<h2 style="text-align: center; margin-bottom: 20px;">RANDONNEUR bike product reviewへようこそ。</h2>
+		<h2 style="text-align: center; margin-bottom: 20px;">RANDONNEUR bike product reviewへようこそ！</h2>
 		<p style="text-align: center; margin-bottom: 20px;">当サイトはユーザー参加型の自転車パーツレビューサイトです。</p>
 
 		<div class="right_column">
